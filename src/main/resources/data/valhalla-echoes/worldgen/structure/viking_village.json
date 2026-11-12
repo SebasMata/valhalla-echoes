@@ -8,8 +8,11 @@
         {
           "type": "valhalla-echoes:mystical_viking",
           "weight": 1,
-          "minCount": 1,
-          "maxCount": 4
+          "count": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 1,
+            "max_inclusive": 4
+          }
         }
       ]
     }
