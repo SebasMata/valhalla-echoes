@@ -2,7 +2,6 @@ package com.mataflex.entity;
 
 import com.mataflex.sound.CustomSounds;
 import com.mataflex.item.ModItems;
-import com.mojang.serialization.Dynamic;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
@@ -16,6 +15,8 @@ import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.ai.Brain;
+import net.minecraft.world.entity.ai.memory.MemoryModuleType;
+import net.minecraft.world.entity.ai.sensing.SensorType;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.piglin.Piglin;
 import net.minecraft.world.item.ItemStack;
@@ -28,7 +29,28 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 import org.jspecify.annotations.NonNull;
 
+import java.util.List;
+
 public class MysticalVikingEntity extends Piglin {
+
+    private static final Brain.Provider<MysticalVikingEntity> BRAIN_PROVIDER = Brain.provider(
+            List.of(
+                    MemoryModuleType.UNIVERSAL_ANGER,
+                    MemoryModuleType.ATE_RECENTLY,
+                    MemoryModuleType.SPEAR_FLEEING_TIME,
+                    MemoryModuleType.SPEAR_FLEEING_POSITION,
+                    MemoryModuleType.SPEAR_CHARGE_POSITION,
+                    MemoryModuleType.SPEAR_ENGAGE_TIME
+            ),
+            List.of(
+                    SensorType.NEAREST_LIVING_ENTITIES,
+                    SensorType.NEAREST_PLAYERS,
+                    SensorType.NEAREST_ITEMS,
+                    SensorType.HURT_BY,
+                    SensorType.PIGLIN_SPECIFIC_SENSOR
+            ),
+            MysticalVikingAi::getActivities
+    );
 
     private Brain<MysticalVikingEntity> mysticalVikingBrain;
 
@@ -70,15 +92,11 @@ public class MysticalVikingEntity extends Piglin {
     }
 
     @Override
-    protected @NonNull Brain<?> makeBrain(@NonNull Dynamic<?> dynamic) {
-        Brain<Piglin> piglinBrain = this.brainProvider().makeBrain(dynamic);
-
-        @SuppressWarnings("unchecked")
-        Brain<MysticalVikingEntity> vikingBrain = (Brain<MysticalVikingEntity>) (Brain<?>) piglinBrain;
-
+    @SuppressWarnings("unchecked")
+    protected @NonNull Brain<Piglin> makeBrain(Brain.@NonNull Packed packedBrain) {
+        Brain<MysticalVikingEntity> vikingBrain = BRAIN_PROVIDER.makeBrain(this, packedBrain);
         this.mysticalVikingBrain = vikingBrain;
-
-        return MysticalVikingAi.makeBrain(vikingBrain);
+        return (Brain<Piglin>) (Brain<?>) vikingBrain;
     }
 
     @Override

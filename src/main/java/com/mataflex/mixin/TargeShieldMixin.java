@@ -50,7 +50,7 @@ public abstract class TargeShieldMixin {
 							SoundEvents.MACE_SMASH_GROUND, SoundSource.PLAYERS, 1.5F, 1.0F);
 
 					if (source.getDirectEntity() instanceof LivingEntity attacker) {
-						attacker.knockback(1.0D, player.getX() - attacker.getX(), player.getZ() - attacker.getZ());
+						attacker.knockback(1.0D, player.getX() - attacker.getX(), player.getZ() - attacker.getZ(), source, amount);
 					}
 					cir.setReturnValue(false);
 
