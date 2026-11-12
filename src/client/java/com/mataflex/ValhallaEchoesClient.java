@@ -5,7 +5,7 @@ import com.mataflex.entity.MysticalVikingRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry;
 import net.minecraft.resources.Identifier;
 
 public class ValhallaEchoesClient implements ClientModInitializer {
@@ -28,7 +28,7 @@ public class ValhallaEchoesClient implements ClientModInitializer {
 				DraugrRenderer::new
 		);
 
-		EntityModelLayerRegistry.registerModelLayer(
+		ModelLayerRegistry.registerModelLayer(
 				HORNED_HELMET_LAYER,
 				com.mataflex.model.HornedHelmetModel::createArmorLayer
 		);
@@ -63,8 +63,7 @@ public class ValhallaEchoesClient implements ClientModInitializer {
                     net.minecraft.client.renderer.texture.OverlayTexture.NO_OVERLAY,
                     0xFFFFFFFF,
                     null,
-                    0,
-                    null
+                    0
             );
 
         }, com.mataflex.item.ModItems.HORNED_HELMET);

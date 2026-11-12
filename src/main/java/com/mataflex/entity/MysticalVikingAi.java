@@ -1,43 +1,40 @@
 package com.mataflex.entity;
 
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
 import com.mataflex.item.ModItems;
 import com.mojang.datafixers.util.Pair;
 import com.mataflex.sound.CustomSounds;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.ActivityData;
 import net.minecraft.world.entity.ai.Brain;
 import net.minecraft.world.entity.ai.behavior.*;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.schedule.Activity;
 import net.minecraft.world.item.ItemStack;
+import java.util.List;
 import java.util.Optional;
 
 public class MysticalVikingAi {
 
     // === CONSTRUCCIÓN DEL CEREBRO ===
 
-    public static Brain<?> makeBrain(Brain<MysticalVikingEntity> brain) {
-        initCoreActivity(brain);
-        initIdleActivity(brain);
-        initFightActivity(brain);
-        initCelebrateActivity(brain);
-
-        brain.setCoreActivities(ImmutableSet.of(Activity.CORE));
-        brain.setDefaultActivity(Activity.IDLE);
-        brain.useDefaultActivity();
-
-        return brain;
+    public static List<ActivityData<MysticalVikingEntity>> getActivities(MysticalVikingEntity viking) {
+        return List.of(
+                initCoreActivity(),
+                initIdleActivity(),
+                initFightActivity(),
+                initCelebrateActivity()
+        );
     }
 
     // === ACTIVIDADES ===
 
-    private static void initCoreActivity(Brain<MysticalVikingEntity> brain) {
-        brain.addActivity(Activity.CORE, 0, ImmutableList.of(
+    private static ActivityData<MysticalVikingEntity> initCoreActivity() {
+        return ActivityData.create(Activity.CORE, 0, ImmutableList.of(
                 new LookAtTargetSink(45, 90),
                 new MoveToTargetSink(),
                 InteractWithDoor.create(),
@@ -50,13 +47,13 @@ public class MysticalVikingAi {
         return (BehaviorControl<MysticalVikingEntity>) behavior;
     }
 
-    private static void initIdleActivity(Brain<MysticalVikingEntity> brain) {
-        brain.addActivity(Activity.IDLE, 10, ImmutableList.of(
+    private static ActivityData<MysticalVikingEntity> initIdleActivity() {
+        return ActivityData.create(Activity.IDLE, 10, ImmutableList.of(
                 cast(SetEntityLookTarget.create(MysticalVikingAi::isPlayerHoldingValuableItem, 14.0F)),
                 cast(StartAttacking.create(MysticalVikingAi::findNearestValidAttackTarget)),
                 new RunOne<MysticalVikingEntity>(ImmutableList.of(
-                        Pair.of(cast(SetEntityLookTarget.create(EntityType.PLAYER, 8.0F)), 1),
-                        Pair.of(cast(SetEntityLookTarget.create(EntityType.PIGLIN, 8.0F)), 1),
+                        Pair.of(cast(SetEntityLookTarget.create(EntityTypes.PLAYER, 8.0F)), 1),
+                        Pair.of(cast(SetEntityLookTarget.create(EntityTypes.PIGLIN, 8.0F)), 1),
                         Pair.of(cast(new DoNothing(30, 60)), 1)
                 )),
                 new RunOne<MysticalVikingEntity>(ImmutableList.of(
@@ -66,8 +63,8 @@ public class MysticalVikingAi {
         ));
     }
 
-    private static void initFightActivity(Brain<MysticalVikingEntity> brain) {
-        brain.addActivityAndRemoveMemoryWhenStopped(
+    private static ActivityData<MysticalVikingEntity> initFightActivity() {
+        return ActivityData.create(
                 Activity.FIGHT,
                 10,
                 ImmutableList.of(
@@ -79,12 +76,12 @@ public class MysticalVikingAi {
         );
     }
 
-    private static void initCelebrateActivity(Brain<MysticalVikingEntity> brain) {
-        brain.addActivityAndRemoveMemoryWhenStopped(
+    private static ActivityData<MysticalVikingEntity> initCelebrateActivity() {
+        return ActivityData.create(
                 Activity.CELEBRATE,
                 10,
                 ImmutableList.of(
-                        SetEntityLookTarget.create(EntityType.PLAYER, 8.0F),
+                        SetEntityLookTarget.create(EntityTypes.PLAYER, 8.0F),
                         new RunOne<>(ImmutableList.of(
                                 Pair.of(RandomStroll.stroll(0.6F, 2, 1), 1),
                                 Pair.of(new DoNothing(10, 20), 1)
@@ -98,8 +95,8 @@ public class MysticalVikingAi {
 
     private static BehaviorControl<? extends LivingEntity> createIdleLookBehaviors() {
         return new RunOne<>(ImmutableList.of(
-                Pair.of(SetEntityLookTarget.create(EntityType.PLAYER, 8.0F), 1),
-                Pair.of(SetEntityLookTarget.create(EntityType.PIGLIN, 8.0F), 1),
+                Pair.of(SetEntityLookTarget.create(EntityTypes.PLAYER, 8.0F), 1),
+                Pair.of(SetEntityLookTarget.create(EntityTypes.PIGLIN, 8.0F), 1),
                 Pair.of(new DoNothing(30, 60), 1)
         ));
     }

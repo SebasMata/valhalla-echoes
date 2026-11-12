@@ -1,12 +1,12 @@
 ## <img width="1920" height="540" alt="logo_ve_large" src="https://github.com/user-attachments/assets/7156b223-a268-4f55-a238-326ec4148244" />
 
-## **Designed for Minecraft Java 1.21.11 & Fabric**
+## **Designed for Minecraft Java 26.3 & Fabric**
 ![Fabric logo](https://cdn.modrinth.com/data/cached_images/513035d1231a86dff137c74e04a5e64633593f10.png)
 
 
 
 
-**Minecraft:** Java version 1.21.11
+**Minecraft:** Java version 26.3
 
 ## Mod Info
 
@@ -28,7 +28,7 @@ You can check the mod's website on Modrinth here:
 
 ### Download
 You can download the mod directly here:
-* Latest version: [v0.3.0-alpha](https://github.com/SebasMata/valhalla-echoes-1.21.11/releases/tag/v0.3.0-alpha)
+* Latest version: [v0.5.0-beta](https://github.com/SebasMata/valhalla-echoes-1.21.11/releases/tag/v0.5.0-beta)
 
 ### Install guide
 >1) Install the [Fabric modloader](https://fabricmc.net).
