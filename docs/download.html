@@ -1,59 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Download Mod</title>
-            <link rel="icon" type="image/x-icon" href="resources/axe_icon.png">
-            <link rel="stylesheet" href="styles/download.css">
-        </head>
-    <body>
-        <div class="hero">
-            <a href="index.html" class="title-link">
-                <img src="resources/logo_large.png" alt="Valhalla Echoes" class="hero-logo">
-            </a>
-            <div class="subtitle">A Norse mythology Minecraft Fabric Mod for 1.21.11</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download — Valhalla Echoes Mod (26.3)</title>
+    <link rel="icon" type="image/png" href="resources/axe_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/download.css">
+</head>
+<body>
+<header class="hero">
+    <div class="hero-glow"></div>
+    <a href="index.html" class="title-link">
+        <img src="resources/logo_large.png" alt="Valhalla Echoes" class="hero-logo">
+    </a>
+    <div class="badges">
+        <span class="badge badge-mc">Minecraft Java 26.3</span>
+        <span class="badge badge-loader">Fabric Loader</span>
+        <span class="badge badge-version">v0.5.0-beta</span>
+    </div>
+    <p class="subtitle">A Norse mythology Minecraft Fabric Mod for 26.3</p>
+</header>
+
+<main class="container">
+    <section class="download-card">
+        <div class="card-header">
+            <img src="resources/axe_icon.png" alt="Mystical Axe" class="pixel-icon">
+            <h2>Download Valhalla Echoes</h2>
         </div>
+        <p>Select a mod version below to download the direct release <code>.jar</code> from GitHub, or get it from Modrinth.</p>
 
-        <div class="container">
-            <h2>Download The Mod</h2>
-            <p>Choose version:</p>
-
-            <div class="download-section">
-                <label for="mod-version"></label><select class="version-select" id="mod-version">
-                <option value="0.4.0-alpha">v0.4.0-alpha</option>
-                <option value="0.3.1-alpha">v0.3.1-alpha</option>
-                <option value="0.3.0-alpha">v0.3.0-alpha</option>
-                <option value="0.2.4-pre-alpha">v0.2.4-pre-alpha</option>
-                <option value="0.2.3-pre-alpha">v0.2.3-pre-alpha</option>
-                <option value="0.2.2-pre-alpha">v0.2.2-pre-alpha</option>
-            </select>
-
-                <a href="#" class="btn-download" id="download-btn">Download</a>
+        <div class="download-section">
+            <div class="select-wrapper">
+                <label for="mod-version" class="select-label">Release Version</label>
+                <select class="version-select" id="mod-version">
+                    <option value="0.5.0-beta" data-mc="26.3" data-loader="Fabric 0.20.1+">v0.5.0-beta (Minecraft 26.3 — Latest)</option>
+                    <option value="0.4.0-alpha" data-mc="1.21.11" data-loader="Fabric 0.18.4+">v0.4.0-alpha (Minecraft 1.21.11)</option>
+                    <option value="0.3.1-alpha" data-mc="1.21.11" data-loader="Fabric 0.18.4+">v0.3.1-alpha (Minecraft 1.21.11)</option>
+                    <option value="0.3.0-alpha" data-mc="1.21.11" data-loader="Fabric 0.18.4+">v0.3.0-alpha (Minecraft 1.21.11)</option>
+                    <option value="0.2.4-pre-alpha" data-mc="1.21.11" data-loader="Fabric 0.18.4+">v0.2.4-pre-alpha (Minecraft 1.21.11)</option>
+                    <option value="0.2.3-pre-alpha" data-mc="1.21.11" data-loader="Fabric 0.18.4+">v0.2.3-pre-alpha (Minecraft 1.21.11)</option>
+                    <option value="0.2.2-pre-alpha" data-mc="1.21.11" data-loader="Fabric 0.18.4+">v0.2.2-pre-alpha (Minecraft 1.21.11)</option>
+                </select>
             </div>
 
-        </div>
-
-        <div class="footer">
-            <p>Valhalla Echoes Mod. Created for Minecraft 1.21.11. By MataFlex29</p>
-            <div class="social-links">
-                <a href="https://x.com/_smata21_" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
-                <a href="https://www.youtube.com/@flexymeerkat" target="_blank" rel="noopener noreferrer">YouTube</a>
-                <a href="https://twitch.tv/mataflex29" target="_blank" rel="noopener noreferrer">Twitch</a>
-                <a href="https://github.com/SebasMata/valhalla-echoes" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <div class="action-buttons">
+                <a href="#" class="btn-download" id="download-btn">Download .JAR</a>
+                <a href="https://modrinth.com/mod/valhalla-echoes/versions" class="btn-modrinth" target="_blank" rel="noopener noreferrer">Modrinth Versions</a>
             </div>
         </div>
-    <script>
-        const versionSelect = document.getElementById('mod-version');
-        const downloadBtn = document.getElementById('download-btn');
 
-        function updateDownloadLink() {
-            const version = versionSelect.value;
-            downloadBtn.href = `https://github.com/SebasMata/valhalla-echoes/releases/download/v${version}/valhalla-echoes-v${version}.jar`;
-        }
+        <div class="release-meta" id="release-meta">
+            <span><strong>Target Minecraft:</strong> <span id="meta-mc">26.3</span></span>
+            <span><strong>Loader:</strong> <span id="meta-loader">Fabric 0.20.1+</span></span>
+            <span><strong>File:</strong> <code id="meta-file">valhalla-echoes-v0.5.0-beta.jar</code></span>
+        </div>
 
-        versionSelect.addEventListener('change', updateDownloadLink);
-        updateDownloadLink();
-    </script>
-    </body>
+        <div class="back-nav">
+            <a href="index.html" class="back-link">&larr; Back to Home &amp; Installation Guide</a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>Valhalla Echoes Mod &bull; Ported to Minecraft 26.3 &bull; Created by <strong>MataFlex29</strong></p>
+    <div class="social-links">
+        <a href="https://x.com/_smata21_" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+        <a href="https://www.youtube.com/@flexymeerkat" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://twitch.tv/mataflex29" target="_blank" rel="noopener noreferrer">Twitch</a>
+        <a href="https://github.com/SebasMata/valhalla-echoes" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+</footer>
+
+<script>
+    const versionSelect = document.getElementById('mod-version');
+    const downloadBtn = document.getElementById('download-btn');
+    const metaMc = document.getElementById('meta-mc');
+    const metaLoader = document.getElementById('meta-loader');
+    const metaFile = document.getElementById('meta-file');
+
+    function updateDownloadLink() {
+        const selectedOption = versionSelect.options[versionSelect.selectedIndex];
+        const version = versionSelect.value;
+        const mcVersion = selectedOption.getAttribute('data-mc');
+        const loaderVersion = selectedOption.getAttribute('data-loader');
+        const fileName = `valhalla-echoes-v${version}.jar`;
+
+        downloadBtn.href = `https://github.com/SebasMata/valhalla-echoes/releases/download/v${version}/${fileName}`;
+        metaMc.textContent = mcVersion;
+        metaLoader.textContent = loaderVersion;
+        metaFile.textContent = fileName;
+    }
+
+    versionSelect.addEventListener('change', updateDownloadLink);
+    updateDownloadLink();
+</script>
+</body>
 </html>

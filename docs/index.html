@@ -3,57 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valhalla Echoes Mod</title>
-    <link rel="icon" type="image/x-icon" href="resources/axe_icon.png">
+    <title>Valhalla Echoes — Minecraft 26.3 Fabric Mod</title>
+    <link rel="icon" type="image/png" href="resources/axe_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
-<div class="hero">
+<header class="hero">
+    <div class="hero-glow"></div>
     <a href="index.html" class="title-link">
         <img src="resources/logo_large.png" alt="Valhalla Echoes" class="hero-logo">
     </a>
-    <div class="subtitle">A Norse mythology Minecraft Fabric Mod for 1.21.11</div>
+    <div class="badges">
+        <span class="badge badge-mc">Minecraft Java 26.3</span>
+        <span class="badge badge-loader">Fabric Loader</span>
+        <span class="badge badge-version">v0.5.0-beta</span>
+    </div>
+    <p class="subtitle">Awaken the legends of the North in a dark, mystical Norse adventure</p>
     <div class="button-group">
-        <a href="download.html" class="btn">Download Now</a>
+        <a href="download.html" class="btn btn-primary">Download v0.5.0-beta</a>
         <a href="https://modrinth.com/mod/valhalla-echoes" class="btn btn-modrinth" target="_blank" rel="noopener noreferrer">Get it on Modrinth</a>
     </div>
-</div>
+</header>
 
-<div class="container">
-    <h2>About The Mod</h2>
-    <p>Welcome to Valhalla Echoes. This mod brings ancient Norse mythology right into your Minecraft world. Explore new structures, fight alongside mystical Vikings, and craft legendary equipment.</p>
-    <h3>Latest version: 0.3.1 Alpha</h3>
+<main class="container">
+    <section class="section-card intro-card">
+        <div class="section-header">
+            <img src="resources/axe_icon.png" alt="Mystical Axe" class="pixel-icon">
+            <h2>About The Mod</h2>
+        </div>
+        <p>Welcome to <strong>Valhalla Echoes</strong>. This mod brings ancient Norse mythology directly into your Minecraft <strong>26.3</strong> world. Explore snowbound settlements, clash with fearsome Mystical Vikings and undead Draugr, and forge legendary runic weaponry and armor.</p>
+        <div class="version-banner">
+            <span class="version-label">Latest Release:</span>
+            <span class="version-tag">v0.5.0-beta (Ported to Minecraft 26.3)</span>
+        </div>
+    </section>
 
-    <h2>Key Features</h2>
-    <ul>
-        <li><strong>Viking Villages:</strong> Discover dynamically generated settlements including big huts and social centers.</li>
-        <li><strong>Mystical Equipment:</strong> Craft powerful mystical swords, axes, and full armor sets to defend yourself.</li>
-        <li><strong>Unique Items:</strong> Find rare materials like Obsidian Rods, Runic Gems, and Suspicious Substances.</li>
-        <li><strong>Custom Entities:</strong> Encounter Mystical Vikings and interact with them in their natural habitat.</li>
-        <li><strong>Combat Enhancements:</strong> Block attacks effectively using the new Targe Shield and Horned Helmet.</li>
-    </ul>
+    <section class="section-block">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Viking Villages</h3>
+                <p>Discover dynamically generated Norse settlements across snowy biomes, complete with great halls, blast huts, and social centers.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Mystical Equipment</h3>
+                <p>Forge high-tier Mystical Swords, Axes, Pickaxes, Shovels, and full armor sets infused with runic power.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Unique Artifacts</h3>
+                <p>Collect rare materials including Obsidian Rods, Runic Gems, Mystical Essence, and Suspicious Substances.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Norse Entities</h3>
+                <p>Encounter fierce Mystical Vikings and ancient Draugr roaming taigas, mountains, and ancestral villages.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Combat &amp; Parrying</h3>
+                <p>Master timed parries with the Targe Shield to knock back attackers and punish foes with the 3D Horned Helmet.</p>
+            </div>
+        </div>
+    </section>
 
-    <h2>Installation</h2>
-    <p>Follow these simple steps to install the mod and start playing.</p>
-    <ul>
-        <li>Download the Fabric Installer and install it for version 1.21.11</li>
-        <li>Download the Fabric API and place it in your mods folder</li>
-        <li>Download the Valhalla Echoes jar file</li>
-        <li>Place the downloaded jar file into your Minecraft mods folder</li>
-        <li>Launch the game and enjoy</li>
-    </ul>
+    <section class="section-card install-card">
+        <h2>Installation Guide</h2>
+        <p>Follow these steps to install <strong>Valhalla Echoes</strong> for Minecraft Java Edition <strong>26.3</strong>:</p>
+        <ol class="install-steps">
+            <li>Download and run the <a href="https://fabricmc.net/use/installer/" target="_blank" rel="noopener noreferrer">Fabric Installer</a> for <strong>Minecraft 26.3</strong> (requires Java 25+).</li>
+            <li>Download the latest <a href="https://modrinth.com/mod/fabric-api" target="_blank" rel="noopener noreferrer">Fabric API (26.3)</a> and place it inside your <code>.minecraft/mods</code> folder.</li>
+            <li>Download the <a href="download.html">Valhalla Echoes (v0.5.0-beta)</a> <code>.jar</code> file.</li>
+            <li>Move the downloaded <code>valhalla-echoes-v0.5.0-beta.jar</code> into your <code>.minecraft/mods</code> folder.</li>
+            <li>Launch Minecraft 26.3 with the Fabric profile and awaken the echoes of Valhalla!</li>
+        </ol>
+    </section>
+</main>
 
-</div>
-
-<div class="footer">
-    <p>Valhalla Echoes Mod. Created for Minecraft 1.21.11. By MataFlex29</p>
+<footer class="footer">
+    <p>Valhalla Echoes Mod &bull; Ported to Minecraft 26.3 &bull; Created by <strong>MataFlex29</strong></p>
     <div class="social-links">
         <a href="https://x.com/_smata21_" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
         <a href="https://www.youtube.com/@flexymeerkat" target="_blank" rel="noopener noreferrer">YouTube</a>
         <a href="https://twitch.tv/mataflex29" target="_blank" rel="noopener noreferrer">Twitch</a>
         <a href="https://github.com/SebasMata/valhalla-echoes" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
-</div>
+</footer>
 </body>
 </html>
