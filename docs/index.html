@@ -7,88 +7,441 @@
     <link rel="icon" type="image/png" href="resources/axe_icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
-<header class="hero">
-    <div class="hero-glow"></div>
-    <a href="index.html" class="title-link">
-        <img src="resources/logo_large.png" alt="Valhalla Echoes" class="hero-logo">
-    </a>
-    <div class="badges">
-        <span class="badge badge-mc">Minecraft Java 26.3</span>
-        <span class="badge badge-loader">Fabric Loader</span>
-        <span class="badge badge-version">v0.5.0-beta</span>
+<!-- FIXED TOP NAVIGATION -->
+<nav class="top-nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-brand">
+            <img src="resources/logo_medium.png" alt="Valhalla Echoes" class="nav-logo">
+        </a>
+        <div class="nav-links">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#artifacts" class="nav-link">Artifacts</a>
+            <a href="#installation" class="nav-link">Installation</a>
+        </div>
+        <div class="nav-actions">
+            <a href="download.html" class="nav-btn nav-btn-iron">Downloads</a>
+            <a href="https://modrinth.com/mod/valhalla-echoes" class="nav-btn nav-btn-modrinth" target="_blank" rel="noopener noreferrer">Modrinth &nearr;</a>
+        </div>
     </div>
-    <p class="subtitle">Awaken the legends of the North in a dark, mystical Norse adventure</p>
-    <div class="button-group">
-        <a href="download.html" class="btn btn-primary">Download v0.5.0-beta</a>
-        <a href="https://modrinth.com/mod/valhalla-echoes" class="btn btn-modrinth" target="_blank" rel="noopener noreferrer">Get it on Modrinth</a>
+</nav>
+
+<!-- FULL-VIEWPORT HERO -->
+<header class="hero">
+    <div class="hero-backdrop"></div>
+    <div class="hero-content">
+        <div class="plate-group">
+            <span class="metal-plate">
+                <span class="plate-rivet"></span>
+                <span class="plate-key">MC</span>
+                <span class="plate-val">26.3</span>
+                <span class="plate-rivet"></span>
+            </span>
+            <span class="metal-plate">
+                <span class="plate-rivet"></span>
+                <span class="plate-key">LOADER</span>
+                <span class="plate-val">FABRIC 0.20.1+</span>
+                <span class="plate-rivet"></span>
+            </span>
+            <span class="metal-plate plate-gold">
+                <span class="plate-rivet"></span>
+                <span class="plate-key">BUILD</span>
+                <span class="plate-val">v0.5.0-beta</span>
+                <span class="plate-rivet"></span>
+            </span>
+        </div>
+
+        <a href="index.html" class="title-link">
+            <img src="resources/logo_large.png" alt="Valhalla Echoes" class="hero-logo">
+        </a>
+
+        <p class="subtitle">Awaken the legends of the North in a dark, mystical Norse adventure</p>
+
+        <div class="button-group">
+            <a href="download.html" class="btn btn-crimson">
+                <span class="btn-label">Download v0.5.0-beta</span>
+                <span class="btn-sub">.JAR &bull; Minecraft 26.3</span>
+            </a>
+            <a href="https://modrinth.com/mod/valhalla-echoes" class="btn btn-forged" target="_blank" rel="noopener noreferrer">
+                <span class="btn-label">Get it on Modrinth</span>
+                <span class="btn-sub">Official Listing</span>
+            </a>
+        </div>
     </div>
 </header>
 
-<main class="container">
-    <section class="section-card intro-card">
-        <div class="section-header">
-            <img src="resources/axe_icon.png" alt="Mystical Axe" class="pixel-icon">
-            <h2>About The Mod</h2>
-        </div>
-        <p>Welcome to <strong>Valhalla Echoes</strong>. This mod brings ancient Norse mythology directly into your Minecraft <strong>26.3</strong> world. Explore snowbound settlements, clash with fearsome Mystical Vikings and undead Draugr, and forge legendary runic weaponry and armor.</p>
-        <div class="version-banner">
-            <span class="version-label">Latest Release:</span>
-            <span class="version-tag">v0.5.0-beta (Ported to Minecraft 26.3)</span>
+<main class="main-wrapper">
+
+    <!-- EDITORIAL ABOUT SECTION -->
+    <section id="about" class="editorial-section">
+        <div class="editorial-grid">
+            <div class="editorial-copy">
+                <div class="eyebrow">CHRONICLES OF THE NORTH // 26.3 PORT</div>
+                <h1 class="editorial-title">About The Mod</h1>
+                <p class="lead-paragraph">Welcome to <strong>Valhalla Echoes</strong>. This mod brings ancient Norse mythology directly into your Minecraft <strong>26.3</strong> world. Explore snowbound settlements, clash with fearsome Mystical Vikings and undead Draugr, and forge legendary runic weaponry and armor.</p>
+                <p>Built natively for the unobfuscated Minecraft 26.3 architecture on Fabric, Valhalla Echoes expands surface exploration and melee combat with custom AI behaviors, timed shield parrying, and high-tier equipment progression.</p>
+
+                <div class="spec-ledger">
+                    <div class="spec-item">
+                        <span class="spec-k">LATEST RELEASE</span>
+                        <span class="spec-v">v0.5.0-beta</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-k">TARGET VERSION</span>
+                        <span class="spec-v">Java 26.3</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-k">RUNTIME</span>
+                        <span class="spec-v">Java 25+ / Fabric</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="editorial-Showcase">
+                <figure class="forged-frame">
+                    <div class="frame-corner tl"></div>
+                    <div class="frame-corner tr"></div>
+                    <div class="frame-corner bl"></div>
+                    <div class="frame-corner br"></div>
+                    <img src="resources/combat_preview.png" alt="Mystical Vikings in Minecraft" class="showcase-img">
+                    <figcaption class="frame-caption">
+                        <span>FIG. 01 &mdash; MYSTICAL VIKING PATROL</span>
+                        <span class="mono-tag">ENTITY: valhalla-echoes:mystical_viking</span>
+                    </figcaption>
+                </figure>
+            </div>
         </div>
     </section>
 
-    <section class="section-block">
-        <h2 class="section-title">Key Features</h2>
-        <div class="features-grid">
-            <div class="feature-card">
+    <!-- RUNIC HORIZONTAL DIVIDER -->
+    <div class="runic-divider" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-glyph">&#5792; &bull; &#5817; &bull; &#5846;</span>
+        <span class="divider-line"></span>
+    </div>
+
+    <!-- ALTERNATING KEY FEATURES SECTION -->
+    <section id="features" class="features-section">
+        <div class="section-heading">
+            <div class="eyebrow">CORE MECHANICS &amp; WORLDGEN</div>
+            <h2>Key Features</h2>
+        </div>
+
+        <!-- Feature Row 1: Image Left / Text Right -->
+        <article class="feature-row">
+            <div class="feature-media">
+                <div class="forged-frame">
+                    <div class="frame-corner tl"></div>
+                    <div class="frame-corner tr"></div>
+                    <div class="frame-corner bl"></div>
+                    <div class="frame-corner br"></div>
+                    <img src="resources/hero_bg.png" alt="Viking Villages in Snowy Biomes" class="feature-img">
+                </div>
+            </div>
+            <div class="feature-text">
+                <span class="feature-index">01 // WORLD GENERATION</span>
                 <h3>Viking Villages</h3>
-                <p>Discover dynamically generated Norse settlements across snowy biomes, complete with great halls, blast huts, and social centers.</p>
+                <p>Discover dynamically generated Norse settlements across snowy biomes, complete with great halls, blast huts, and social centers. Each structure is pieced together via custom jigsaw pools and guarded by resident warriors.</p>
+                <div class="feature-meta-bar">
+                    <span>BIOME TAG: <code>#minecraft:has_structure/village_snowy</code></span>
+                </div>
             </div>
-            <div class="feature-card">
+        </article>
+
+        <!-- Feature Row 2: Text Left / Image Right -->
+        <article class="feature-row feature-row-reverse">
+            <div class="feature-media">
+                <div class="armory-board">
+                    <div class="armory-slot">
+                        <img src="resources/mystical_sword.png" alt="Mystical Sword" class="pixel-sprite">
+                        <span>Mystical Sword</span>
+                    </div>
+                    <div class="armory-slot">
+                        <img src="resources/mystical_axe.png" alt="Mystical Axe" class="pixel-sprite">
+                        <span>Mystical Axe</span>
+                    </div>
+                    <div class="armory-slot">
+                        <img src="resources/mystical_pickaxe.png" alt="Mystical Pickaxe" class="pixel-sprite">
+                        <span>Mystical Pickaxe</span>
+                    </div>
+                    <div class="armory-slot">
+                        <img src="resources/mystical_shovel.png" alt="Mystical Shovel" class="pixel-sprite">
+                        <span>Mystical Shovel</span>
+                    </div>
+                    <div class="armory-slot">
+                        <img src="resources/mystical_helmet.png" alt="Mystical Helmet" class="pixel-sprite">
+                        <span>Mystical Helmet</span>
+                    </div>
+                    <div class="armory-slot">
+                        <img src="resources/mystical_chestplate.png" alt="Mystical Chestplate" class="pixel-sprite">
+                        <span>Chestplate</span>
+                    </div>
+                    <div class="armory-slot">
+                        <img src="resources/mystical_leggings.png" alt="Mystical Leggings" class="pixel-sprite">
+                        <span>Leggings</span>
+                    </div>
+                    <div class="armory-slot">
+                        <img src="resources/mystical_boots.png" alt="Mystical Boots" class="pixel-sprite">
+                        <span>Mystical Boots</span>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-text">
+                <span class="feature-index">02 // FORGED ARSENAL</span>
                 <h3>Mystical Equipment</h3>
-                <p>Forge high-tier Mystical Swords, Axes, Pickaxes, Shovels, and full armor sets infused with runic power.</p>
+                <p>Forge high-tier Mystical Swords, Axes, Pickaxes, Shovels, and full armor sets infused with runic power. Engineered with extreme durability (8192 uses for tools) and devastating base cleave damage to surpass standard Netherite gear.</p>
+                <div class="feature-meta-bar">
+                    <span>TIER: <code>EPIC RARITY</code></span>
+                    <span>REPAIR: <code>MYSTICAL INGOT</code></span>
+                </div>
             </div>
-            <div class="feature-card">
-                <h3>Unique Artifacts</h3>
-                <p>Collect rare materials including Obsidian Rods, Runic Gems, Mystical Essence, and Suspicious Substances.</p>
+        </article>
+
+        <!-- Feature Row 3: Image Left / Text Right -->
+        <article class="feature-row">
+            <div class="feature-media">
+                <div class="forged-frame">
+                    <div class="frame-corner tl"></div>
+                    <div class="frame-corner tr"></div>
+                    <div class="frame-corner bl"></div>
+                    <div class="frame-corner br"></div>
+                    <img src="resources/combat_preview.png" alt="Norse Entities: Mystical Vikings and Draugr" class="feature-img">
+                </div>
             </div>
-            <div class="feature-card">
+            <div class="feature-text">
+                <span class="feature-index">03 // DENIZENS OF THE NORTH</span>
                 <h3>Norse Entities</h3>
-                <p>Encounter fierce Mystical Vikings and ancient Draugr roaming taigas, mountains, and ancestral villages.</p>
+                <p>Encounter fierce Mystical Vikings and ancient Draugr roaming taigas, mountains, and ancestral villages. Mystical Vikings operate on a custom AI brain system—reacting with jealousy if you wield their sacred weapons and celebrating after victorious battles.</p>
+                <div class="entity-spawns">
+                    <div class="spawn-badge">
+                        <img src="resources/viking_spawn_egg.png" alt="Viking Spawn Egg" class="pixel-sprite-sm">
+                        <span>Mystical Viking</span>
+                    </div>
+                    <div class="spawn-badge">
+                        <img src="resources/draugr_spawn_egg.png" alt="Draugr Spawn Egg" class="pixel-sprite-sm">
+                        <span>Draugr</span>
+                    </div>
+                </div>
             </div>
-            <div class="feature-card">
+        </article>
+
+        <!-- Feature Row 4: Text Left / Image Right -->
+        <article class="feature-row feature-row-reverse">
+            <div class="feature-media">
+                <div class="combat-showcase-box">
+                    <div class="combat-relic">
+                        <img src="resources/targe_shield.png" alt="Targe Shield" class="pixel-sprite-lg">
+                        <div class="relic-caption">
+                            <strong>Targe Shield</strong>
+                            <span>&le; 5 Ticks Perfect Parry Window</span>
+                        </div>
+                    </div>
+                    <div class="combat-relic">
+                        <img src="resources/horned_helmet.png" alt="Horned Helmet" class="pixel-sprite-lg">
+                        <div class="relic-caption">
+                            <strong>3D Horned Helmet</strong>
+                            <span>85% Counter-Stab Thorns Damage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-text">
+                <span class="feature-index">04 // TACTICAL WARFARE</span>
                 <h3>Combat &amp; Parrying</h3>
-                <p>Master timed parries with the Targe Shield to knock back attackers and punish foes with the 3D Horned Helmet.</p>
+                <p>Master timed parries with the Targe Shield to knock back attackers and negate incoming damage completely when raised within 5 ticks of impact. Pair it with the custom-modeled 3D Horned Helmet to impale melee aggressors on contact.</p>
+                <div class="feature-meta-bar">
+                    <span>PARRY WINDOW: <code>0.25s (5 TICKS)</code></span>
+                    <span>HELMET PROC: <code>85% CHANCE</code></span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- UNIQUE ARTIFACTS PIXEL VITRINE -->
+    <section id="artifacts" class="vitrine-section">
+        <div class="vitrine-header">
+            <div>
+                <div class="eyebrow">CRAFTING REAGENTS &amp; RELICS</div>
+                <h2>Unique Artifacts</h2>
+            </div>
+            <p>Collect rare materials including Obsidian Rods, Runic Gems, Mystical Essence, and Suspicious Substances.</p>
+        </div>
+
+        <div class="artifact-vitrine">
+            <div class="vitrine-item">
+                <div class="item-pedestal">
+                    <img src="resources/runic_gem.png" alt="Runic Gem" class="pixel-sprite">
+                </div>
+                <div class="item-details">
+                    <h4>Runic Gem</h4>
+                    <code>valhalla-echoes:runic_gem</code>
+                </div>
+            </div>
+
+            <div class="vitrine-item">
+                <div class="item-pedestal">
+                    <img src="resources/mystical_ingot.png" alt="Mystical Ingot" class="pixel-sprite">
+                </div>
+                <div class="item-details">
+                    <h4>Mystical Ingot</h4>
+                    <code>valhalla-echoes:mystical_ingot</code>
+                </div>
+            </div>
+
+            <div class="vitrine-item">
+                <div class="item-pedestal">
+                    <img src="resources/obsidian_rod.png" alt="Obsidian Rod" class="pixel-sprite">
+                </div>
+                <div class="item-details">
+                    <h4>Obsidian Rod</h4>
+                    <code>valhalla-echoes:obsidian_rod</code>
+                </div>
+            </div>
+
+            <div class="vitrine-item">
+                <div class="item-pedestal">
+                    <img src="resources/mystical_essence.png" alt="Mystical Essence" class="pixel-sprite">
+                </div>
+                <div class="item-details">
+                    <h4>Mystical Essence</h4>
+                    <code>valhalla-echoes:mystical_essence</code>
+                </div>
+            </div>
+
+            <div class="vitrine-item">
+                <div class="item-pedestal">
+                    <img src="resources/suspicious_substance.png" alt="Suspicious Substance" class="pixel-sprite">
+                </div>
+                <div class="item-details">
+                    <h4>Suspicious Substance</h4>
+                    <code>valhalla-echoes:suspicious_substance</code>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section-card install-card">
-        <h2>Installation Guide</h2>
-        <p>Follow these steps to install <strong>Valhalla Echoes</strong> for Minecraft Java Edition <strong>26.3</strong>:</p>
-        <ol class="install-steps">
-            <li>Download and run the <a href="https://fabricmc.net/use/installer/" target="_blank" rel="noopener noreferrer">Fabric Installer</a> for <strong>Minecraft 26.3</strong> (requires Java 25+).</li>
-            <li>Download the latest <a href="https://modrinth.com/mod/fabric-api" target="_blank" rel="noopener noreferrer">Fabric API (26.3)</a> and place it inside your <code>.minecraft/mods</code> folder.</li>
-            <li>Download the <a href="download.html">Valhalla Echoes (v0.5.0-beta)</a> <code>.jar</code> file.</li>
-            <li>Move the downloaded <code>valhalla-echoes-v0.5.0-beta.jar</code> into your <code>.minecraft/mods</code> folder.</li>
-            <li>Launch Minecraft 26.3 with the Fabric profile and awaken the echoes of Valhalla!</li>
-        </ol>
+    <!-- RUNIC HORIZONTAL DIVIDER -->
+    <div class="runic-divider" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-glyph">&#5792; &bull; &#5817; &bull; &#5846;</span>
+        <span class="divider-line"></span>
+    </div>
+
+    <!-- TERMINAL / LAUNCHER INSTALLATION GUIDE -->
+    <section id="installation" class="install-section">
+        <div class="section-heading">
+            <div class="eyebrow">DEPLOYMENT INSTRUCTIONS</div>
+            <h2>Installation Guide</h2>
+            <p>Follow these steps to install <strong>Valhalla Echoes</strong> for Minecraft Java Edition <strong>26.3</strong>:</p>
+        </div>
+
+        <div class="launcher-panel">
+            <div class="launcher-topbar">
+                <span class="topbar-title">FABRIC DEPLOYMENT // MINECRAFT 26.3 (JAVA 25+)</span>
+                <span class="topbar-status">STATUS: READY</span>
+            </div>
+
+            <div class="launcher-steps">
+                <div class="step-row">
+                    <div class="step-num">01</div>
+                    <div class="step-body">
+                        <div class="step-title">Install Fabric Loader</div>
+                        <p>Download and run the <a href="https://fabricmc.net/use/installer/" target="_blank" rel="noopener noreferrer" class="dep-badge">Fabric Installer</a> for <strong>Minecraft 26.3</strong> (requires <strong>Java 25+</strong>).</p>
+                    </div>
+                </div>
+
+                <div class="step-row">
+                    <div class="step-num">02</div>
+                    <div class="step-body">
+                        <div class="step-title">Add Required Dependency</div>
+                        <p>Download the latest <a href="https://modrinth.com/mod/fabric-api" target="_blank" rel="noopener noreferrer" class="dep-badge">Fabric API (26.3)</a> and place it inside your mods directory:</p>
+                        <div class="cmd-box">
+                            <code id="path-mods-1">.minecraft/mods</code>
+                            <button type="button" class="copy-btn" data-copy=".minecraft/mods">COPY PATH</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-row">
+                    <div class="step-num">03</div>
+                    <div class="step-body">
+                        <div class="step-title">Download Valhalla Echoes</div>
+                        <p>Download the <a href="download.html" class="dep-badge dep-crimson">Valhalla Echoes (v0.5.0-beta)</a> release package.</p>
+                        <div class="cmd-box">
+                            <code>valhalla-echoes-v0.5.0-beta.jar</code>
+                            <button type="button" class="copy-btn" data-copy="valhalla-echoes-v0.5.0-beta.jar">COPY FILENAME</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-row">
+                    <div class="step-num">04</div>
+                    <div class="step-body">
+                        <div class="step-title">Deploy to Mods Folder &amp; Launch</div>
+                        <p>Move <code>valhalla-echoes-v0.5.0-beta.jar</code> into <code>.minecraft/mods</code>, select the <strong>fabric-loader-26.3</strong> profile in your launcher, and start the game.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
 </main>
 
+<!-- SOBER MULTI-COLUMN FOOTER -->
 <footer class="footer">
-    <p>Valhalla Echoes Mod &bull; Ported to Minecraft 26.3 &bull; Created by <strong>MataFlex29</strong></p>
-    <div class="social-links">
-        <a href="https://x.com/_smata21_" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
-        <a href="https://www.youtube.com/@flexymeerkat" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a href="https://twitch.tv/mataflex29" target="_blank" rel="noopener noreferrer">Twitch</a>
-        <a href="https://github.com/SebasMata/valhalla-echoes" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <div class="footer-grid">
+        <div class="footer-col footer-brand">
+            <img src="resources/logo_medium.png" alt="Valhalla Echoes" class="footer-logo">
+            <p>Valhalla Echoes Mod. Ported to Minecraft Java 26.3. Created and maintained by <strong>MataFlex29</strong>.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="download.html">Download Releases</a></li>
+                <li><a href="#features">Key Features</a></li>
+                <li><a href="#installation">Installation Guide</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Project &amp; Community</h4>
+            <ul class="social-links">
+                <li><a href="https://modrinth.com/mod/valhalla-echoes" target="_blank" rel="noopener noreferrer">Modrinth</a></li>
+                <li><a href="https://github.com/SebasMata/valhalla-echoes" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+                <li><a href="https://x.com/_smata21_" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
+                <li><a href="https://www.youtube.com/@flexymeerkat" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                <li><a href="https://twitch.tv/mataflex29" target="_blank" rel="noopener noreferrer">Twitch</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>LICENSE: CC0-1.0</span>
+        <span>MINECRAFT 26.3 // FABRIC</span>
     </div>
 </footer>
+
+<script>
+    document.querySelectorAll('.copy-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const text = button.getAttribute('data-copy');
+            navigator.clipboard.writeText(text).then(() => {
+                const original = button.textContent;
+                button.textContent = 'COPIED';
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.textContent = original;
+                    button.classList.remove('copied');
+                }, 1600);
+            });
+        });
+    });
+</script>
 </body>
 </html>
