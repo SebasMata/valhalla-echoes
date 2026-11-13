@@ -11,6 +11,7 @@
 ### Sistemas e Items
 - [ ] Sistema de clanes de vikingos
 - [ ] Items especiales para usuarios
+- [x] Soporte multi-idioma adicional (Portugués BR/PT, Alemán, Francés, Italiano, Chino Simplificado/Tradicional y Ruso)
 
 ---
 
