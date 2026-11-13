@@ -1,6 +1,6 @@
 # Valhalla Echoes - Roadmap
 
-## "0.6.x Beta - 1.0.x Release"
+## 0.6.x Beta - 1.0.x Release
 ### Entities & Bosses
 - [ ] Fenrir (Boss)
 
