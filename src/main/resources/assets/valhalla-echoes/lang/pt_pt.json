@@ -1,0 +1,34 @@
+{
+  "item.valhalla-echoes.suspicious_substance": "Substância suspeita",
+  "item.valhalla-echoes.mystical_essence": "Essência Mística",
+  "item.valhalla-echoes.mystical_ingot": "Lingote Místico",
+  "item.valhalla-echoes.obsidian_rod": "Vara de Obsidiana",
+  "item.valhalla-echoes.viking_spawn_egg": "Ovo de Geração de Viking Místico",
+  "item.valhalla-echoes.runic_gem": "Gema Rúnica",
+
+  "item.valhalla-echoes.mystical_sword": "Espada Mística",
+  "item.valhalla-echoes.mystical_shovel": "Pá Mística",
+  "item.valhalla-echoes.mystical_axe": "Machado de Guerra Místico",
+  "item.valhalla-echoes.mystical_pickaxe": "Picareta Mística",
+  "item.valhalla-echoes.targe_shield": "Escudo Místico Targe",
+
+  "item.valhalla-echoes.mystical_helmet": "Capacete Místico",
+  "item.valhalla-echoes.horned_helmet": "Capacete Místico com Chifres",
+  "item.valhalla-echoes.mystical_chestplate": "Couraça Mística",
+  "item.valhalla-echoes.mystical_leggings": "Grevas Místicas",
+  "item.valhalla-echoes.mystical_boots": "Botas Místicas",
+
+  "entity.valhalla-echoes.mystical_viking": "Viking Místico",
+  "entity.valhalla-echoes.draugr": "Draugr",
+
+  "item.valhalla-echoes.draugr_spawn_egg": "Ovo de Geração de Draugr",
+
+  "itemGroup.tumodid.mystical_tab": "Ecos de Valhalla",
+
+  "itemTooltip.valhalla-echoes.horned_helmet": "Retribuição de Valhalla: 85% de probabilidade de apunhalar.",
+
+  "subtitles.valhalla-echoes.draugr_ambient": "Draugr chocalha",
+  "subtitles.valhalla-echoes.draugr_hurt": "Draugr ferido",
+  "subtitles.valhalla-echoes.draugr_death": "Draugr morre",
+  "subtitles.valhalla-echoes.draugr_attack": "Draugr ataca"
+}

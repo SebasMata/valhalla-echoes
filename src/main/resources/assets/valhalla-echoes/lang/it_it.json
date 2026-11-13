@@ -1,0 +1,34 @@
+{
+  "item.valhalla-echoes.suspicious_substance": "Sostanza sospetta",
+  "item.valhalla-echoes.mystical_essence": "Essenza mistica",
+  "item.valhalla-echoes.mystical_ingot": "Lingotto mistico",
+  "item.valhalla-echoes.obsidian_rod": "Verga di ossidiana",
+  "item.valhalla-echoes.viking_spawn_egg": "Uovo generatore di vichingo mistico",
+  "item.valhalla-echoes.runic_gem": "Gemma runica",
+
+  "item.valhalla-echoes.mystical_sword": "Spada mistica",
+  "item.valhalla-echoes.mystical_shovel": "Pala mistica",
+  "item.valhalla-echoes.mystical_axe": "Ascia da guerra mistica",
+  "item.valhalla-echoes.mystical_pickaxe": "Piccone mistico",
+  "item.valhalla-echoes.targe_shield": "Scudo targa mistico",
+
+  "item.valhalla-echoes.mystical_helmet": "Elmo mistico",
+  "item.valhalla-echoes.horned_helmet": "Elmo cornuto mistico",
+  "item.valhalla-echoes.mystical_chestplate": "Corazza mistica",
+  "item.valhalla-echoes.mystical_leggings": "Gambiere mistiche",
+  "item.valhalla-echoes.mystical_boots": "Stivali mistici",
+
+  "entity.valhalla-echoes.mystical_viking": "Vichingo mistico",
+  "entity.valhalla-echoes.draugr": "Draugr",
+
+  "item.valhalla-echoes.draugr_spawn_egg": "Uovo generatore di draugr",
+
+  "itemGroup.tumodid.mystical_tab": "Echi del Valhalla",
+
+  "itemTooltip.valhalla-echoes.horned_helmet": "Punizione del Valhalla: 85% di probabilità di pugnalare.",
+
+  "subtitles.valhalla-echoes.draugr_ambient": "Draugr scricchiola",
+  "subtitles.valhalla-echoes.draugr_hurt": "Draugr ferito",
+  "subtitles.valhalla-echoes.draugr_death": "Draugr muore",
+  "subtitles.valhalla-echoes.draugr_attack": "Draugr attacca"
+}

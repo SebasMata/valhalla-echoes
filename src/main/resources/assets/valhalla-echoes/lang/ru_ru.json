@@ -1,0 +1,34 @@
+{
+  "item.valhalla-echoes.suspicious_substance": "Подозрительное вещество",
+  "item.valhalla-echoes.mystical_essence": "Мистическая эссенция",
+  "item.valhalla-echoes.mystical_ingot": "Мистический слиток",
+  "item.valhalla-echoes.obsidian_rod": "Обсидиановый стержень",
+  "item.valhalla-echoes.viking_spawn_egg": "Яйцо призыва мистического викинга",
+  "item.valhalla-echoes.runic_gem": "Рунический самоцвет",
+
+  "item.valhalla-echoes.mystical_sword": "Мистический меч",
+  "item.valhalla-echoes.mystical_shovel": "Мистическая лопата",
+  "item.valhalla-echoes.mystical_axe": "Мистическая секира",
+  "item.valhalla-echoes.mystical_pickaxe": "Мистическая кирка",
+  "item.valhalla-echoes.targe_shield": "Мистический щит тарч",
+
+  "item.valhalla-echoes.mystical_helmet": "Мистический шлем",
+  "item.valhalla-echoes.horned_helmet": "Мистический рогатый шлем",
+  "item.valhalla-echoes.mystical_chestplate": "Мистический нагрудник",
+  "item.valhalla-echoes.mystical_leggings": "Мистические поножи",
+  "item.valhalla-echoes.mystical_boots": "Мистические ботинки",
+
+  "entity.valhalla-echoes.mystical_viking": "Мистический викинг",
+  "entity.valhalla-echoes.draugr": "Драугр",
+
+  "item.valhalla-echoes.draugr_spawn_egg": "Яйцо призыва драугра",
+
+  "itemGroup.tumodid.mystical_tab": "Эхо Вальхаллы",
+
+  "itemTooltip.valhalla-echoes.horned_helmet": "Возмездие Вальхаллы: 85% шанс пронзить врага.",
+
+  "subtitles.valhalla-echoes.draugr_ambient": "Драугр гремит костями",
+  "subtitles.valhalla-echoes.draugr_hurt": "Драугр ранен",
+  "subtitles.valhalla-echoes.draugr_death": "Драугр погибает",
+  "subtitles.valhalla-echoes.draugr_attack": "Драугр атакует"
+}

@@ -1,0 +1,34 @@
+{
+  "item.valhalla-echoes.suspicious_substance": "Verdächtige Substanz",
+  "item.valhalla-echoes.mystical_essence": "Mystische Essenz",
+  "item.valhalla-echoes.mystical_ingot": "Mystischer Barren",
+  "item.valhalla-echoes.obsidian_rod": "Obsidianstab",
+  "item.valhalla-echoes.viking_spawn_egg": "Mystischer-Wikinger-Spawn-Ei",
+  "item.valhalla-echoes.runic_gem": "Runenedelstein",
+
+  "item.valhalla-echoes.mystical_sword": "Mystisches Schwert",
+  "item.valhalla-echoes.mystical_shovel": "Mystische Schaufel",
+  "item.valhalla-echoes.mystical_axe": "Mystische Streitaxt",
+  "item.valhalla-echoes.mystical_pickaxe": "Mystische Spitzhacke",
+  "item.valhalla-echoes.targe_shield": "Mystischer Targeschild",
+
+  "item.valhalla-echoes.mystical_helmet": "Mystischer Helm",
+  "item.valhalla-echoes.horned_helmet": "Mystischer Hörnerhelm",
+  "item.valhalla-echoes.mystical_chestplate": "Mystischer Brustharnisch",
+  "item.valhalla-echoes.mystical_leggings": "Mystische Beinschutz",
+  "item.valhalla-echoes.mystical_boots": "Mystische Stiefel",
+
+  "entity.valhalla-echoes.mystical_viking": "Mystischer Wikinger",
+  "entity.valhalla-echoes.draugr": "Draugr",
+
+  "item.valhalla-echoes.draugr_spawn_egg": "Draugr-Spawn-Ei",
+
+  "itemGroup.tumodid.mystical_tab": "Valhalla Echoes",
+
+  "itemTooltip.valhalla-echoes.horned_helmet": "Walhallas Vergeltung: 85% Chance zuzustechen.",
+
+  "subtitles.valhalla-echoes.draugr_ambient": "Draugr klappert",
+  "subtitles.valhalla-echoes.draugr_hurt": "Draugr nimmt Schaden",
+  "subtitles.valhalla-echoes.draugr_death": "Draugr stirbt",
+  "subtitles.valhalla-echoes.draugr_attack": "Draugr greift an"
+}

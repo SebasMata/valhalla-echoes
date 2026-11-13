@@ -1,0 +1,34 @@
+{
+  "item.valhalla-echoes.suspicious_substance": "可疑物質",
+  "item.valhalla-echoes.mystical_essence": "神秘精華",
+  "item.valhalla-echoes.mystical_ingot": "神秘錠",
+  "item.valhalla-echoes.obsidian_rod": "黑曜石棒",
+  "item.valhalla-echoes.viking_spawn_egg": "神秘維京人生怪蛋",
+  "item.valhalla-echoes.runic_gem": "符文寶石",
+
+  "item.valhalla-echoes.mystical_sword": "神秘劍",
+  "item.valhalla-echoes.mystical_shovel": "神秘鏟",
+  "item.valhalla-echoes.mystical_axe": "神秘戰斧",
+  "item.valhalla-echoes.mystical_pickaxe": "神秘鎬",
+  "item.valhalla-echoes.targe_shield": "神秘圓盾",
+
+  "item.valhalla-echoes.mystical_helmet": "神秘頭盔",
+  "item.valhalla-echoes.horned_helmet": "神秘角盔",
+  "item.valhalla-echoes.mystical_chestplate": "神秘胸甲",
+  "item.valhalla-echoes.mystical_leggings": "神秘護腿",
+  "item.valhalla-echoes.mystical_boots": "神秘靴子",
+
+  "entity.valhalla-echoes.mystical_viking": "神秘維京人",
+  "entity.valhalla-echoes.draugr": "屍鬼",
+
+  "item.valhalla-echoes.draugr_spawn_egg": "屍鬼生怪蛋",
+
+  "itemGroup.tumodid.mystical_tab": "瓦爾哈拉迴響",
+
+  "itemTooltip.valhalla-echoes.horned_helmet": "瓦爾哈拉的報應：85%的機率刺傷敵人。",
+
+  "subtitles.valhalla-echoes.draugr_ambient": "屍鬼：咔噠聲",
+  "subtitles.valhalla-echoes.draugr_hurt": "屍鬼：受傷",
+  "subtitles.valhalla-echoes.draugr_death": "屍鬼：死亡",
+  "subtitles.valhalla-echoes.draugr_attack": "屍鬼：攻擊"
+}
