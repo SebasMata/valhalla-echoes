@@ -753,6 +753,156 @@ code {
 }
 
 /* ==========================================================================
+   UPCOMING FEATURES & ROADMAP (GITHUB README VIEWER)
+   ========================================================================== */
+.gh-readme-box {
+    background-color: var(--bg-slate);
+    border: 2px solid var(--iron-highlight);
+    border-radius: 2px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.75);
+}
+
+.gh-readme-header {
+    background-color: var(--bg-iron);
+    border-bottom: 2px solid var(--iron-highlight);
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.gh-header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--text-bone);
+}
+
+.gh-doc-icon {
+    color: var(--bronze-gold);
+    flex-shrink: 0;
+}
+
+.gh-filename {
+    font-family: var(--font-mono);
+    font-size: 0.84rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.gh-source-link {
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: var(--bronze-gold);
+    text-decoration: none;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid var(--bronze-dim);
+    background-color: var(--bg-volcanic);
+    border-radius: 2px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.gh-source-link:hover {
+    background-color: var(--bronze-gold);
+    color: var(--bg-volcanic);
+}
+
+.gh-markdown-body {
+    padding: 2.25rem 2.5rem;
+}
+
+.roadmap-loading {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-ash);
+    margin: 0;
+}
+
+.gh-markdown-body .gh-h1 {
+    font-size: 1.75rem;
+    padding-bottom: 0.65rem;
+    margin-bottom: 1.35rem;
+    border-bottom: 1px solid var(--iron-border);
+    color: var(--text-bone);
+}
+
+.gh-markdown-body .gh-h2 {
+    font-size: 1.35rem;
+    padding-bottom: 0.45rem;
+    margin-top: 1.75rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--iron-border);
+    color: var(--bronze-gold);
+}
+
+.gh-markdown-body .gh-h3 {
+    font-size: 1.05rem;
+    margin-top: 1.35rem;
+    margin-bottom: 0.65rem;
+    color: var(--text-bone);
+}
+
+.gh-markdown-body .gh-hr {
+    border: 0;
+    height: 2px;
+    background-color: var(--iron-border);
+    margin: 2rem 0;
+}
+
+.gh-task-list,
+.gh-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 1rem;
+}
+
+.gh-task-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.35rem 0;
+    color: var(--text-steel);
+    font-size: 0.96rem;
+}
+
+.gh-task-item.is-completed .gh-task-label {
+    color: var(--text-bone);
+}
+
+.gh-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    margin: 0.25rem 0 0;
+    flex-shrink: 0;
+    background-color: var(--bg-volcanic);
+    border: 1px solid var(--iron-highlight);
+    border-radius: 2px;
+    position: relative;
+}
+
+.gh-checkbox:checked {
+    background-color: var(--bronze-dim);
+    border-color: var(--bronze-gold);
+}
+
+.gh-checkbox:checked::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 9px;
+    border: solid var(--text-bone);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* ==========================================================================
    INSTALLATION — TERMINAL / LAUNCHER PANEL
    ========================================================================== */
 .launcher-panel {

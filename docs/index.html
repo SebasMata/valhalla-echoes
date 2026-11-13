@@ -22,6 +22,7 @@
             <a href="#about" class="nav-link">About</a>
             <a href="#features" class="nav-link">Features</a>
             <a href="#artifacts" class="nav-link">Artifacts</a>
+            <a href="#roadmap" class="nav-link">Roadmap</a>
             <a href="#installation" class="nav-link">Installation</a>
         </div>
         <div class="nav-actions">
@@ -332,6 +333,36 @@
         <span class="divider-line"></span>
     </div>
 
+    <!-- UPCOMING HORIZONS & DEVELOPMENT ROADMAP (GITHUB README STYLE) -->
+    <section id="roadmap" class="roadmap-section">
+        <div class="section-heading">
+            <div class="eyebrow">FUTURE UPDATES &amp; MILESTONES</div>
+            <h2>Upcoming Features &amp; Roadmap</h2>
+        </div>
+
+        <div class="gh-readme-box">
+            <div class="gh-readme-header">
+                <div class="gh-header-left">
+                    <svg class="gh-doc-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+                        <path fill="currentColor" d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"></path>
+                    </svg>
+                    <span class="gh-filename">ROADMAP.md</span>
+                </div>
+                <a href="https://github.com/SebasMata/valhalla-echoes/blob/master/ROADMAP.md" target="_blank" rel="noopener noreferrer" class="gh-source-link">VIEW ON GITHUB &nearr;</a>
+            </div>
+            <div class="gh-markdown-body" id="roadmap-content">
+                <p class="roadmap-loading">Loading ROADMAP.md from repository...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RUNIC HORIZONTAL DIVIDER -->
+    <div class="runic-divider" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-glyph">&#5792; &bull; &#5817; &bull; &#5846;</span>
+        <span class="divider-line"></span>
+    </div>
+
     <!-- TERMINAL / LAUNCHER INSTALLATION GUIDE -->
     <section id="installation" class="install-section">
         <div class="section-heading">
@@ -406,6 +437,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="download.html">Download Releases</a></li>
                 <li><a href="#features">Key Features</a></li>
+                <li><a href="#roadmap">Upcoming &amp; Roadmap</a></li>
                 <li><a href="#installation">Installation Guide</a></li>
             </ul>
         </div>
@@ -442,6 +474,122 @@
             });
         });
     });
+
+    function escapeHtml(str) {
+        return str
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
+
+    function formatInlineMarkdown(text) {
+        return escapeHtml(text)
+            .replace(/`([^`]+)`/g, '<code>$1</code>')
+            .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    }
+
+    function renderGitHubMarkdown(md) {
+        const lines = md.replace(/\r\n/g, '\n').split('\n');
+        let html = '';
+        let inList = false;
+
+        for (const rawLine of lines) {
+            const line = rawLine.trim();
+
+            if (!line) {
+                if (inList) {
+                    html += '</ul>';
+                    inList = false;
+                }
+                continue;
+            }
+
+            if (/^---+$/.test(line)) {
+                if (inList) {
+                    html += '</ul>';
+                    inList = false;
+                }
+                html += '<hr class="gh-hr">';
+                continue;
+            }
+
+            const headingMatch = line.match(/^(#{1,4})\s+(.*)$/);
+            if (headingMatch) {
+                if (inList) {
+                    html += '</ul>';
+                    inList = false;
+                }
+                const level = headingMatch[1].length;
+                const content = formatInlineMarkdown(headingMatch[2]);
+                html += `<h${level} class="gh-h${level}">${content}</h${level}>`;
+                continue;
+            }
+
+            const taskMatch = line.match(/^-\s+\[([ xX])\]\s+(.*)$/);
+            if (taskMatch) {
+                if (!inList) {
+                    html += '<ul class="gh-task-list">';
+                    inList = true;
+                }
+                const checked = taskMatch[1].toLowerCase() === 'x';
+                const itemText = formatInlineMarkdown(taskMatch[2]);
+                html += `
+                    <li class="gh-task-item ${checked ? 'is-completed' : 'is-pending'}">
+                        <input type="checkbox" class="gh-checkbox" disabled ${checked ? 'checked' : ''}>
+                        <span class="gh-task-label">${itemText}</span>
+                    </li>`;
+                continue;
+            }
+
+            const bulletMatch = line.match(/^-\s+(.*)$/);
+            if (bulletMatch) {
+                if (!inList) {
+                    html += '<ul class="gh-list">';
+                    inList = true;
+                }
+                html += `<li>${formatInlineMarkdown(bulletMatch[1])}</li>`;
+                continue;
+            }
+
+            if (inList) {
+                html += '</ul>';
+                inList = false;
+            }
+            html += `<p>${formatInlineMarkdown(line)}</p>`;
+        }
+
+        if (inList) {
+            html += '</ul>';
+        }
+
+        return html;
+    }
+
+    async function loadRoadmap() {
+        const container = document.getElementById('roadmap-content');
+        const sources = [
+            '../ROADMAP.md',
+            'https://raw.githubusercontent.com/SebasMata/valhalla-echoes/master/ROADMAP.md',
+            'ROADMAP.md'
+        ];
+
+        for (const url of sources) {
+            try {
+                const response = await fetch(url, { cache: 'no-store' });
+                if (response.ok) {
+                    const markdown = await response.text();
+                    container.innerHTML = renderGitHubMarkdown(markdown);
+                    return;
+                }
+            } catch (_) {
+                // Continue to next source
+            }
+        }
+
+        container.innerHTML = `<p>Unable to load live roadmap preview. <a href="https://github.com/SebasMata/valhalla-echoes/blob/master/ROADMAP.md" target="_blank" rel="noopener noreferrer" class="dep-badge">View ROADMAP.md on GitHub &nearr;</a></p>`;
+    }
+
+    loadRoadmap();
 </script>
 </body>
 </html>
