@@ -404,9 +404,8 @@ code {
 
 .selector-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 1.75rem;
-    align-items: end;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
 }
 
 .field-label {
@@ -508,10 +507,10 @@ code {
 /* Telemetry Ledger */
 .spec-ledger {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
     border-top: 1px solid var(--iron-border);
 }
 
