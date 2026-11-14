@@ -671,6 +671,11 @@ code {
     display: grid;
 }
 
+.feature-media,
+.feature-text {
+    min-width: 0;
+}
+
 @keyframes slideFadeIn {
     from {
         opacity: 0;
