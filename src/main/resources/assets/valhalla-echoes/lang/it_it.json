@@ -30,5 +30,19 @@
   "subtitles.valhalla-echoes.draugr_ambient": "Draugr scricchiola",
   "subtitles.valhalla-echoes.draugr_hurt": "Draugr ferito",
   "subtitles.valhalla-echoes.draugr_death": "Draugr muore",
-  "subtitles.valhalla-echoes.draugr_attack": "Draugr attacca"
+  "subtitles.valhalla-echoes.draugr_attack": "Draugr attacca",
+
+  "item.valhalla-echoes.wolf_banner_pattern": "Figura per stendardo del Clan del Lupo",
+  "item.valhalla-echoes.raven_banner_pattern": "Figura per stendardo del Clan del Corvo",
+  "item.valhalla-echoes.bear_banner_pattern": "Figura per stendardo del Clan dell'Orso",
+  "item.valhalla-echoes.serpent_banner_pattern": "Figura per stendardo del Clan del Serpente",
+
+  "block.valhalla-echoes.banner.wolf": "Stemma del Clan del Lupo",
+  "block.valhalla-echoes.banner.wolf.white": "Stemma bianco del Clan del Lupo",
+  "block.valhalla-echoes.banner.raven": "Stemma del Clan del Corvo",
+  "block.valhalla-echoes.banner.raven.black": "Stemma nero del Clan del Corvo",
+  "block.valhalla-echoes.banner.bear": "Stemma del Clan dell'Orso",
+  "block.valhalla-echoes.banner.bear.yellow": "Stemma giallo del Clan dell'Orso",
+  "block.valhalla-echoes.banner.serpent": "Stemma del Clan del Serpente",
+  "block.valhalla-echoes.banner.serpent.lime": "Stemma lime del Clan del Serpente"
 }

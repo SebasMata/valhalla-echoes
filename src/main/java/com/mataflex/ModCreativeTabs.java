@@ -40,6 +40,10 @@ public class ModCreativeTabs {
                             output.accept(ModItems.MYSTICAL_LEGGINGS);
                             output.accept(ModItems.MYSTICAL_BOOTS);
                             output.accept(ModItems.HORNED_HELMET);
+                            output.accept(ModItems.WOLF_BANNER_PATTERN);
+                            output.accept(ModItems.RAVEN_BANNER_PATTERN);
+                            output.accept(ModItems.BEAR_BANNER_PATTERN);
+                            output.accept(ModItems.SERPENT_BANNER_PATTERN);
                             output.accept(ModItems.VIKING_SPAWN_EGG);
                             output.accept(ModItems.DRAUGR_SPAWN_EGG);
                         })

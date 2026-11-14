@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "valhalla-echoes:wolf_banner_pattern",
+    "valhalla-echoes:raven_banner_pattern",
+    "valhalla-echoes:bear_banner_pattern",
+    "valhalla-echoes:serpent_banner_pattern"
+  ]
+}

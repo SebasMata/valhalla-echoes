@@ -30,5 +30,19 @@
   "subtitles.valhalla-echoes.draugr_ambient": "屍鬼：咔噠聲",
   "subtitles.valhalla-echoes.draugr_hurt": "屍鬼：受傷",
   "subtitles.valhalla-echoes.draugr_death": "屍鬼：死亡",
-  "subtitles.valhalla-echoes.draugr_attack": "屍鬼：攻擊"
+  "subtitles.valhalla-echoes.draugr_attack": "屍鬼：攻擊",
+
+  "item.valhalla-echoes.wolf_banner_pattern": "狼族旗幟圖案",
+  "item.valhalla-echoes.raven_banner_pattern": "渡鴉族旗幟圖案",
+  "item.valhalla-echoes.bear_banner_pattern": "巨熊族旗幟圖案",
+  "item.valhalla-echoes.serpent_banner_pattern": "巨蛇族旗幟圖案",
+
+  "block.valhalla-echoes.banner.wolf": "狼族紋章",
+  "block.valhalla-echoes.banner.wolf.white": "白色狼族紋章",
+  "block.valhalla-echoes.banner.raven": "渡鴉族紋章",
+  "block.valhalla-echoes.banner.raven.black": "黑色渡鴉族紋章",
+  "block.valhalla-echoes.banner.bear": "巨熊族紋章",
+  "block.valhalla-echoes.banner.bear.yellow": "黃色巨熊族紋章",
+  "block.valhalla-echoes.banner.serpent": "巨蛇族紋章",
+  "block.valhalla-echoes.banner.serpent.lime": "淺綠色巨蛇族紋章"
 }

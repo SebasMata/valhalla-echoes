@@ -1,5 +1,6 @@
 package com.mataflex;
 
+import com.mataflex.clan.ClanVillageManager;
 import com.mataflex.entity.DraugrEntity;
 import com.mataflex.entity.MysticalVikingEntity;
 import com.mataflex.item.ModItems;
@@ -64,6 +65,7 @@ public class ValhallaEchoes implements ModInitializer {
 		LOGGER.info("Welcome to Valhalla Echoes! Initializing mod...");
 		ModItems.initialize();
 		ModCreativeTabs.register();
+		ClanVillageManager.initialize();
 
 		FabricDefaultAttributeRegistry.register(
 				MYSTICAL_VIKING,

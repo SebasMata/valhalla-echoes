@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "valhalla-echoes:item/bear_banner_pattern"
+  }
+}
