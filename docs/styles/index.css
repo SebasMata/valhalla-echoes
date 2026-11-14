@@ -191,7 +191,7 @@ code {
         linear-gradient(180deg, rgba(11, 13, 16, 0.65) 0%, rgba(11, 13, 16, 0.55) 45%, #0b0d10 100%),
         url('../resources/hero_bg.png');
     background-size: cover;
-    background-position: center 40%;
+    background-position: center 50%;
     background-repeat: no-repeat;
     z-index: 0;
 }
@@ -495,8 +495,21 @@ code {
 }
 
 /* ==========================================================================
-   KEY FEATURES — ALTERNATING ROWS
+   KEY FEATURES — 10-SECOND FORGED IRON SLIDESHOW
    ========================================================================== */
+.features-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.features-header-row .section-heading {
+    margin-bottom: 0;
+}
+
 .section-heading {
     margin-bottom: 3rem;
 }
@@ -506,25 +519,211 @@ code {
     font-weight: 800;
 }
 
-.feature-row {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 3.5rem;
+.slideshow-controls {
+    display: inline-flex;
     align-items: center;
-    padding: 2.75rem 0;
-    border-top: 1px solid var(--iron-border);
+    gap: 0.65rem;
+    background-color: var(--bg-slate);
+    border: 1px solid var(--iron-highlight);
+    padding: 0.35rem;
+    border-radius: 2px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
-.feature-row:last-child {
+.slide-nav-btn {
+    background-color: var(--bg-volcanic);
+    color: var(--text-bone);
+    border: 1px solid var(--iron-border);
+    padding: 0.45rem 0.9rem;
+    font-family: var(--font-display);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.08s ease;
+}
+
+.slide-nav-btn:hover {
+    background-color: var(--bg-iron);
+    border-color: var(--bronze-gold);
+    color: var(--bronze-gold);
+}
+
+.slide-nav-btn:active {
+    transform: translateY(1px);
+}
+
+.slide-counter {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--bronze-gold);
+    padding: 0 0.5rem;
+    min-width: 66px;
+    text-align: center;
+}
+
+/* Feature Selector Tabs */
+.feature-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.feature-tab {
+    background-color: var(--bg-slate);
+    border: 1px solid var(--iron-border);
+    border-bottom: 2px solid var(--iron-highlight);
+    border-radius: 2px;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.08s ease;
+}
+
+.feature-tab:hover {
+    background-color: var(--bg-iron);
+    border-color: var(--bronze-dim);
+}
+
+.feature-tab.is-active {
+    background-color: var(--bg-iron);
+    border-color: var(--bronze-gold);
+    border-bottom: 2px solid var(--bronze-gold);
+    box-shadow: inset 0 1px 0 rgba(200, 157, 84, 0.2);
+}
+
+.tab-num {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--bronze-gold);
+    background-color: var(--bg-volcanic);
+    border: 1px solid var(--iron-border);
+    padding: 0.15rem 0.45rem;
+    border-radius: 2px;
+}
+
+.feature-tab.is-active .tab-num {
+    border-color: var(--bronze-gold);
+    background-color: rgba(200, 157, 84, 0.12);
+}
+
+.tab-label {
+    font-family: var(--font-display);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-steel);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.feature-tab.is-active .tab-label {
+    color: var(--text-bone);
+}
+
+/* Slideshow Frame & 10s Progress Bar */
+.features-slideshow {
+    position: relative;
+    background-color: var(--bg-slate-deep);
+    border: 2px solid var(--iron-highlight);
+    border-radius: 2px;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.slide-progress-track {
+    width: 100%;
+    height: 3px;
+    background-color: var(--bg-volcanic);
     border-bottom: 1px solid var(--iron-border);
+    overflow: hidden;
 }
 
-.feature-row-reverse .feature-media {
-    order: 2;
+.slide-progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: var(--bronze-gold);
 }
 
-.feature-row-reverse .feature-text {
-    order: 1;
+.slides-viewport {
+    position: relative;
+    padding: 2.5rem;
+}
+
+.feature-row.feature-slide {
+    display: none;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 0;
+    border: none;
+    animation: slideFadeIn 0.35s ease-out;
+}
+
+.feature-row.feature-slide.is-active {
+    display: grid;
+}
+
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Viking Village Thumbnail Selector Strip (inside Slide 01) */
+.village-thumb-strip {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.45rem;
+    margin-top: 0.65rem;
+}
+
+.village-thumb {
+    padding: 2px;
+    background-color: var(--bg-slate);
+    border: 1px solid var(--iron-border);
+    border-radius: 2px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.15s ease, transform 0.1s ease;
+}
+
+.village-thumb img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    opacity: 0.65;
+    transition: opacity 0.15s ease;
+}
+
+.village-thumb:hover {
+    border-color: var(--bronze-dim);
+}
+
+.village-thumb:hover img {
+    opacity: 0.9;
+}
+
+.village-thumb.is-selected {
+    border: 2px solid var(--bronze-gold);
+    background-color: var(--bg-iron);
+}
+
+.village-thumb.is-selected img {
+    opacity: 1;
 }
 
 .feature-index {
@@ -1127,17 +1326,13 @@ code {
    ========================================================================== */
 @media (max-width: 960px) {
     .editorial-grid,
-    .feature-row {
+    .feature-row.feature-slide {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-    .feature-row-reverse .feature-media {
-        order: 1;
-    }
-
-    .feature-row-reverse .feature-text {
-        order: 2;
+    .feature-tabs {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .artifact-vitrine {
@@ -1161,6 +1356,18 @@ code {
 
     .spec-ledger {
         grid-template-columns: 1fr;
+    }
+
+    .feature-tabs {
+        grid-template-columns: 1fr;
+    }
+
+    .slides-viewport {
+        padding: 1.35rem;
+    }
+
+    .village-thumb-strip {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .armory-board {

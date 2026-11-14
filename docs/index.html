@@ -109,10 +109,10 @@
                     <div class="frame-corner tr"></div>
                     <div class="frame-corner bl"></div>
                     <div class="frame-corner br"></div>
-                    <img src="resources/combat_preview.png" alt="Mystical Vikings in Minecraft" class="showcase-img">
+                    <img src="resources/village_viking_sunset.png" alt="Mystical Viking overlooking a snowy Norse village" class="showcase-img">
                     <figcaption class="frame-caption">
-                        <span>FIG. 01 &mdash; MYSTICAL VIKING PATROL</span>
-                        <span class="mono-tag">ENTITY: valhalla-echoes:mystical_viking</span>
+                        <span>FIG. 01 &mdash; NORTHERN WATCH AT DUSK</span>
+                        <span class="mono-tag">STRUCTURE: valhalla-echoes:viking_village</span>
                     </figcaption>
                 </figure>
             </div>
@@ -126,141 +126,203 @@
         <span class="divider-line"></span>
     </div>
 
-    <!-- ALTERNATING KEY FEATURES SECTION -->
+    <!-- KEY FEATURES SLIDESHOW SECTION -->
     <section id="features" class="features-section">
-        <div class="section-heading">
-            <div class="eyebrow">CORE MECHANICS &amp; WORLDGEN</div>
-            <h2>Key Features</h2>
+        <div class="features-header-row">
+            <div class="section-heading">
+                <div class="eyebrow">CORE MECHANICS &amp; WORLDGEN</div>
+                <h2>Key Features</h2>
+            </div>
+
+            <div class="slideshow-controls" aria-label="Feature Slideshow Controls">
+                <button type="button" class="slide-nav-btn" id="feature-prev" aria-label="Previous Feature">&larr; PREV</button>
+                <span class="slide-counter" id="feature-counter">01 / 04</span>
+                <button type="button" class="slide-nav-btn" id="feature-next" aria-label="Next Feature">NEXT &rarr;</button>
+            </div>
         </div>
 
-        <!-- Feature Row 1: Image Left / Text Right -->
-        <article class="feature-row">
-            <div class="feature-media">
-                <div class="forged-frame">
-                    <div class="frame-corner tl"></div>
-                    <div class="frame-corner tr"></div>
-                    <div class="frame-corner bl"></div>
-                    <div class="frame-corner br"></div>
-                    <img src="resources/hero_bg.png" alt="Viking Villages in Snowy Biomes" class="feature-img">
-                </div>
-            </div>
-            <div class="feature-text">
-                <span class="feature-index">01 // WORLD GENERATION</span>
-                <h3>Viking Villages</h3>
-                <p>Discover dynamically generated Norse settlements across snowy biomes, complete with great halls, blast huts, and social centers. Each structure is pieced together via custom jigsaw pools and guarded by resident warriors.</p>
-                <div class="feature-meta-bar">
-                    <span>BIOME TAG: <code>#minecraft:has_structure/village_snowy</code></span>
-                </div>
-            </div>
-        </article>
+        <!-- Feature Tabs Bar -->
+        <div class="feature-tabs" role="tablist" aria-label="Key Features">
+            <button type="button" class="feature-tab is-active" role="tab" aria-selected="true" data-slide="0">
+                <span class="tab-num">01</span>
+                <span class="tab-label">Viking Villages</span>
+            </button>
+            <button type="button" class="feature-tab" role="tab" aria-selected="false" data-slide="1">
+                <span class="tab-num">02</span>
+                <span class="tab-label">Mystical Equipment</span>
+            </button>
+            <button type="button" class="feature-tab" role="tab" aria-selected="false" data-slide="2">
+                <span class="tab-num">03</span>
+                <span class="tab-label">Norse Entities</span>
+            </button>
+            <button type="button" class="feature-tab" role="tab" aria-selected="false" data-slide="3">
+                <span class="tab-num">04</span>
+                <span class="tab-label">Combat &amp; Parrying</span>
+            </button>
+        </div>
 
-        <!-- Feature Row 2: Text Left / Image Right -->
-        <article class="feature-row feature-row-reverse">
-            <div class="feature-media">
-                <div class="armory-board">
-                    <div class="armory-slot">
-                        <img src="resources/mystical_sword.png" alt="Mystical Sword" class="pixel-sprite">
-                        <span>Mystical Sword</span>
-                    </div>
-                    <div class="armory-slot">
-                        <img src="resources/mystical_axe.png" alt="Mystical Axe" class="pixel-sprite">
-                        <span>Mystical Axe</span>
-                    </div>
-                    <div class="armory-slot">
-                        <img src="resources/mystical_pickaxe.png" alt="Mystical Pickaxe" class="pixel-sprite">
-                        <span>Mystical Pickaxe</span>
-                    </div>
-                    <div class="armory-slot">
-                        <img src="resources/mystical_shovel.png" alt="Mystical Shovel" class="pixel-sprite">
-                        <span>Mystical Shovel</span>
-                    </div>
-                    <div class="armory-slot">
-                        <img src="resources/mystical_helmet.png" alt="Mystical Helmet" class="pixel-sprite">
-                        <span>Mystical Helmet</span>
-                    </div>
-                    <div class="armory-slot">
-                        <img src="resources/mystical_chestplate.png" alt="Mystical Chestplate" class="pixel-sprite">
-                        <span>Chestplate</span>
-                    </div>
-                    <div class="armory-slot">
-                        <img src="resources/mystical_leggings.png" alt="Mystical Leggings" class="pixel-sprite">
-                        <span>Leggings</span>
-                    </div>
-                    <div class="armory-slot">
-                        <img src="resources/mystical_boots.png" alt="Mystical Boots" class="pixel-sprite">
-                        <span>Mystical Boots</span>
-                    </div>
-                </div>
+        <!-- Slideshow Stage -->
+        <div class="features-slideshow" id="features-slideshow">
+            <div class="slide-progress-track" aria-hidden="true">
+                <div class="slide-progress-bar" id="feature-progress-bar"></div>
             </div>
-            <div class="feature-text">
-                <span class="feature-index">02 // FORGED ARSENAL</span>
-                <h3>Mystical Equipment</h3>
-                <p>Forge high-tier Mystical Swords, Axes, Pickaxes, Shovels, and full armor sets infused with runic power. Engineered with extreme durability (8192 uses for tools) and devastating base cleave damage to surpass standard Netherite gear.</p>
-                <div class="feature-meta-bar">
-                    <span>TIER: <code>EPIC RARITY</code></span>
-                    <span>REPAIR: <code>MYSTICAL INGOT</code></span>
-                </div>
-            </div>
-        </article>
 
-        <!-- Feature Row 3: Image Left / Text Right -->
-        <article class="feature-row">
-            <div class="feature-media">
-                <div class="forged-frame">
-                    <div class="frame-corner tl"></div>
-                    <div class="frame-corner tr"></div>
-                    <div class="frame-corner bl"></div>
-                    <div class="frame-corner br"></div>
-                    <img src="resources/combat_preview.png" alt="Norse Entities: Mystical Vikings and Draugr" class="feature-img">
-                </div>
-            </div>
-            <div class="feature-text">
-                <span class="feature-index">03 // DENIZENS OF THE NORTH</span>
-                <h3>Norse Entities</h3>
-                <p>Encounter fierce Mystical Vikings and ancient Draugr roaming taigas, mountains, and ancestral villages. Mystical Vikings operate on a custom AI brain system—reacting with jealousy if you wield their sacred weapons and celebrating after victorious battles.</p>
-                <div class="entity-spawns">
-                    <div class="spawn-badge">
-                        <img src="resources/viking_spawn_egg.png" alt="Viking Spawn Egg" class="pixel-sprite-sm">
-                        <span>Mystical Viking</span>
-                    </div>
-                    <div class="spawn-badge">
-                        <img src="resources/draugr_spawn_egg.png" alt="Draugr Spawn Egg" class="pixel-sprite-sm">
-                        <span>Draugr</span>
-                    </div>
-                </div>
-            </div>
-        </article>
+            <div class="slides-viewport">
+                <!-- Slide 1: Viking Villages (with multi-photo village selector) -->
+                <article class="feature-row feature-slide is-active" data-slide-index="0">
+                    <div class="feature-media">
+                        <div class="forged-frame village-stage-frame">
+                            <div class="frame-corner tl"></div>
+                            <div class="frame-corner tr"></div>
+                            <div class="frame-corner bl"></div>
+                            <div class="frame-corner br"></div>
+                            <img src="resources/village_overview.png" alt="Viking Villages in Snowy Biomes" class="feature-img" id="village-main-img">
+                            <div class="frame-caption">
+                                <span id="village-main-caption">SETTLEMENT OVERVIEW &mdash; SNOWY TAIGA &amp; ICE SPIKES</span>
+                                <span class="mono-tag" id="village-main-index">VIEW 01 / 06</span>
+                            </div>
+                        </div>
 
-        <!-- Feature Row 4: Text Left / Image Right -->
-        <article class="feature-row feature-row-reverse">
-            <div class="feature-media">
-                <div class="combat-showcase-box">
-                    <div class="combat-relic">
-                        <img src="resources/targe_shield.png" alt="Targe Shield" class="pixel-sprite-lg">
-                        <div class="relic-caption">
-                            <strong>Targe Shield</strong>
-                            <span>&le; 5 Ticks Perfect Parry Window</span>
+                        <div class="village-thumb-strip" aria-label="Viking Village Screenshots">
+                            <button type="button" class="village-thumb is-selected" data-src="resources/village_overview.png" data-caption="SETTLEMENT OVERVIEW — SNOWY TAIGA &amp; ICE SPIKES" data-idx="VIEW 01 / 06">
+                                <img src="resources/village_overview.png" alt="Village Overview">
+                            </button>
+                            <button type="button" class="village-thumb" data-src="resources/village_plaza.png" data-caption="FROZEN PLAZA — TURF-ROOFED LONGHOUSES AT DAWN" data-idx="VIEW 02 / 06">
+                                <img src="resources/village_plaza.png" alt="Frozen Plaza">
+                            </button>
+                            <button type="button" class="village-thumb" data-src="resources/village_great_hall.png" data-caption="GREAT HALL — GUARDED BY RESIDENT MYSTICAL VIKINGS" data-idx="VIEW 03 / 06">
+                                <img src="resources/village_great_hall.png" alt="Great Hall">
+                            </button>
+                            <button type="button" class="village-thumb" data-src="resources/village_interior.png" data-caption="LONGHOUSE INTERIOR — STORAGE, FORGE &amp; QUARTERS" data-idx="VIEW 04 / 06">
+                                <img src="resources/village_interior.png" alt="Longhouse Interior">
+                            </button>
+                            <button type="button" class="village-thumb" data-src="resources/village_turf_hut.png" data-caption="NORSE ARCHITECTURE — OVERGROWN MOSS &amp; TIMBER ROOFS" data-idx="VIEW 05 / 06">
+                                <img src="resources/village_turf_hut.png" alt="Turf Hut Architecture">
+                            </button>
+                            <button type="button" class="village-thumb" data-src="resources/village_snow_path.png" data-caption="VILLAGE PATHWAYS — ARCTIC WILDLIFE &amp; DWELLINGS" data-idx="VIEW 06 / 06">
+                                <img src="resources/village_snow_path.png" alt="Snowy Pathways">
+                            </button>
                         </div>
                     </div>
-                    <div class="combat-relic">
-                        <img src="resources/horned_helmet.png" alt="Horned Helmet" class="pixel-sprite-lg">
-                        <div class="relic-caption">
-                            <strong>3D Horned Helmet</strong>
-                            <span>85% Counter-Stab Thorns Damage</span>
+                    <div class="feature-text">
+                        <span class="feature-index">01 // WORLD GENERATION</span>
+                        <h3>Viking Villages</h3>
+                        <p>Discover dynamically generated Norse settlements across snowy biomes, complete with turf-roofed great halls, blast huts, cozy interiors, and social centers. Each structure is pieced together via custom jigsaw pools and guarded by resident warriors.</p>
+                        <div class="feature-meta-bar">
+                            <span>BIOME TAG: <code>#minecraft:has_structure/village_snowy</code></span>
                         </div>
                     </div>
-                </div>
+                </article>
+
+                <!-- Slide 2: Mystical Equipment -->
+                <article class="feature-row feature-slide" data-slide-index="1">
+                    <div class="feature-media">
+                        <div class="armory-board">
+                            <div class="armory-slot">
+                                <img src="resources/mystical_sword.png" alt="Mystical Sword" class="pixel-sprite">
+                                <span>Mystical Sword</span>
+                            </div>
+                            <div class="armory-slot">
+                                <img src="resources/mystical_axe.png" alt="Mystical Axe" class="pixel-sprite">
+                                <span>Mystical Axe</span>
+                            </div>
+                            <div class="armory-slot">
+                                <img src="resources/mystical_pickaxe.png" alt="Mystical Pickaxe" class="pixel-sprite">
+                                <span>Mystical Pickaxe</span>
+                            </div>
+                            <div class="armory-slot">
+                                <img src="resources/mystical_shovel.png" alt="Mystical Shovel" class="pixel-sprite">
+                                <span>Mystical Shovel</span>
+                            </div>
+                            <div class="armory-slot">
+                                <img src="resources/mystical_helmet.png" alt="Mystical Helmet" class="pixel-sprite">
+                                <span>Mystical Helmet</span>
+                            </div>
+                            <div class="armory-slot">
+                                <img src="resources/mystical_chestplate.png" alt="Mystical Chestplate" class="pixel-sprite">
+                                <span>Chestplate</span>
+                            </div>
+                            <div class="armory-slot">
+                                <img src="resources/mystical_leggings.png" alt="Mystical Leggings" class="pixel-sprite">
+                                <span>Leggings</span>
+                            </div>
+                            <div class="armory-slot">
+                                <img src="resources/mystical_boots.png" alt="Mystical Boots" class="pixel-sprite">
+                                <span>Mystical Boots</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-text">
+                        <span class="feature-index">02 // FORGED ARSENAL</span>
+                        <h3>Mystical Equipment</h3>
+                        <p>Forge high-tier Mystical Swords, Axes, Pickaxes, Shovels, and full armor sets infused with runic power. Engineered with extreme durability (8192 uses for tools) and devastating base cleave damage to surpass standard Netherite gear.</p>
+                        <div class="feature-meta-bar">
+                            <span>TIER: <code>EPIC RARITY</code></span>
+                            <span>REPAIR: <code>MYSTICAL INGOT</code></span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Slide 3: Norse Entities -->
+                <article class="feature-row feature-slide" data-slide-index="2">
+                    <div class="feature-media">
+                        <div class="forged-frame">
+                            <div class="frame-corner tl"></div>
+                            <div class="frame-corner tr"></div>
+                            <div class="frame-corner bl"></div>
+                            <div class="frame-corner br"></div>
+                            <img src="resources/combat_preview.png" alt="Norse Entities: Mystical Vikings and Draugr" class="feature-img">
+                        </div>
+                    </div>
+                    <div class="feature-text">
+                        <span class="feature-index">03 // DENIZENS OF THE NORTH</span>
+                        <h3>Norse Entities</h3>
+                        <p>Encounter fierce Mystical Vikings and ancient Draugr roaming taigas, mountains, and ancestral villages. Mystical Vikings operate on a custom AI brain system—reacting with jealousy if you wield their sacred weapons and celebrating after victorious battles.</p>
+                        <div class="entity-spawns">
+                            <div class="spawn-badge">
+                                <img src="resources/viking_spawn_egg.png" alt="Viking Spawn Egg" class="pixel-sprite-sm">
+                                <span>Mystical Viking</span>
+                            </div>
+                            <div class="spawn-badge">
+                                <img src="resources/draugr_spawn_egg.png" alt="Draugr Spawn Egg" class="pixel-sprite-sm">
+                                <span>Draugr</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Slide 4: Combat & Parrying -->
+                <article class="feature-row feature-slide" data-slide-index="3">
+                    <div class="feature-media">
+                        <div class="combat-showcase-box">
+                            <div class="combat-relic">
+                                <img src="resources/targe_shield.png" alt="Targe Shield" class="pixel-sprite-lg">
+                                <div class="relic-caption">
+                                    <strong>Targe Shield</strong>
+                                    <span>&le; 5 Ticks Perfect Parry Window</span>
+                                </div>
+                            </div>
+                            <div class="combat-relic">
+                                <img src="resources/horned_helmet.png" alt="Horned Helmet" class="pixel-sprite-lg">
+                                <div class="relic-caption">
+                                    <strong>3D Horned Helmet</strong>
+                                    <span>85% Counter-Stab Thorns Damage</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-text">
+                        <span class="feature-index">04 // TACTICAL WARFARE</span>
+                        <h3>Combat &amp; Parrying</h3>
+                        <p>Master timed parries with the Targe Shield to knock back attackers and negate incoming damage completely when raised within 5 ticks of impact. Pair it with the custom-modeled 3D Horned Helmet to impale melee aggressors on contact.</p>
+                        <div class="feature-meta-bar">
+                            <span>PARRY WINDOW: <code>0.25s (5 TICKS)</code></span>
+                            <span>HELMET PROC: <code>85% CHANCE</code></span>
+                        </div>
+                    </div>
+                </article>
             </div>
-            <div class="feature-text">
-                <span class="feature-index">04 // TACTICAL WARFARE</span>
-                <h3>Combat &amp; Parrying</h3>
-                <p>Master timed parries with the Targe Shield to knock back attackers and negate incoming damage completely when raised within 5 ticks of impact. Pair it with the custom-modeled 3D Horned Helmet to impale melee aggressors on contact.</p>
-                <div class="feature-meta-bar">
-                    <span>PARRY WINDOW: <code>0.25s (5 TICKS)</code></span>
-                    <span>HELMET PROC: <code>85% CHANCE</code></span>
-                </div>
-            </div>
-        </article>
+        </div>
     </section>
 
     <!-- UNIQUE ARTIFACTS PIXEL VITRINE -->
@@ -590,6 +652,110 @@
     }
 
     loadRoadmap();
+
+    // KEY FEATURES 10-SECOND SLIDESHOW & VILLAGE GALLERY
+    (function initFeatureSlideshow() {
+        const slides = Array.from(document.querySelectorAll('.feature-slide'));
+        const tabs = Array.from(document.querySelectorAll('.feature-tab'));
+        const prevBtn = document.getElementById('feature-prev');
+        const nextBtn = document.getElementById('feature-next');
+        const counterEl = document.getElementById('feature-counter');
+        const progressBar = document.getElementById('feature-progress-bar');
+        const SLIDE_DURATION_MS = 10000;
+
+        let currentIndex = 0;
+        let slideTimer = null;
+
+        function restartProgressBar() {
+            if (!progressBar) return;
+            progressBar.style.transition = 'none';
+            progressBar.style.width = '0%';
+            // Force reflow so the 10s transition restarts cleanly
+            void progressBar.offsetWidth;
+            progressBar.style.transition = `width ${SLIDE_DURATION_MS}ms linear`;
+            progressBar.style.width = '100%';
+        }
+
+        function goToSlide(index) {
+            const total = slides.length;
+            currentIndex = (index + total) % total;
+
+            slides.forEach((slide, idx) => {
+                slide.classList.toggle('is-active', idx === currentIndex);
+            });
+
+            tabs.forEach((tab, idx) => {
+                const active = idx === currentIndex;
+                tab.classList.toggle('is-active', active);
+                tab.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+
+            if (counterEl) {
+                const num = String(currentIndex + 1).padStart(2, '0');
+                const tot = String(total).padStart(2, '0');
+                counterEl.textContent = `${num} / ${tot}`;
+            }
+
+            resetTimer();
+        }
+
+        function resetTimer() {
+            if (slideTimer) {
+                clearInterval(slideTimer);
+            }
+            restartProgressBar();
+            slideTimer = setInterval(() => {
+                goToSlide(currentIndex + 1);
+            }, SLIDE_DURATION_MS);
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = parseInt(tab.getAttribute('data-slide'), 10);
+                if (!Number.isNaN(target)) {
+                    goToSlide(target);
+                }
+            });
+        });
+
+        // Viking Village 6-screenshot selector inside Slide 01
+        const villageMainImg = document.getElementById('village-main-img');
+        const villageMainCaption = document.getElementById('village-main-caption');
+        const villageMainIndex = document.getElementById('village-main-index');
+        const villageThumbs = Array.from(document.querySelectorAll('.village-thumb'));
+
+        villageThumbs.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                const src = thumb.getAttribute('data-src');
+                const caption = thumb.getAttribute('data-caption');
+                const idxText = thumb.getAttribute('data-idx');
+
+                if (villageMainImg && src) {
+                    villageMainImg.src = src;
+                }
+                if (villageMainCaption && caption) {
+                    villageMainCaption.textContent = caption;
+                }
+                if (villageMainIndex && idxText) {
+                    villageMainIndex.textContent = idxText;
+                }
+
+                villageThumbs.forEach(t => t.classList.toggle('is-selected', t === thumb));
+                // Reset the 10s feature timer so the user can inspect the selected village photo
+                resetTimer();
+            });
+        });
+
+        resetTimer();
+    })();
 </script>
 </body>
 </html>
