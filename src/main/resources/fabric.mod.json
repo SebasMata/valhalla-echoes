@@ -3,14 +3,15 @@
 	"id": "valhalla-echoes",
 	"version": "${version}",
 	"name": "Valhalla Echoes",
-	"description": "Awaken the legends of the North! Valhalla Echoes introduces fearsome Mystical Vikings to Minecraft, featuring uniquely modeled 3D equipment like the iconic Horned Helmet and powerful mystical weaponry. Brace yourself for the sounds of battle as you encounter these ancient warriors.",	"authors": [
-		"Mataflex"
+	"description": "Awaken the legends of the North! Valhalla Echoes introduces fearsome Mystical Vikings to Minecraft, featuring uniquely modeled 3D equipment like the iconic Horned Helmet and powerful mystical weaponry. Brace yourself for the sounds of battle as you encounter these ancient warriors.",
+	"authors": [
+		"MataFlex29"
 	],
 	"contact": {
 		"homepage": "https://sebasmata.github.io/valhalla-echoes/index.html",
-		"sources": "https://github.com/SebasMata/valhalla-echoes-1.21.11"
+		"sources": "https://github.com/SebasMata/valhalla-echoes"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/valhalla-echoes/icon.png",
 	"environment": "*",
 	"entrypoints": {
