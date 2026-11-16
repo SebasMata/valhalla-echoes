@@ -30,5 +30,19 @@
   "subtitles.valhalla-echoes.draugr_ambient": "Draugr cliquette",
   "subtitles.valhalla-echoes.draugr_hurt": "Draugr blessé",
   "subtitles.valhalla-echoes.draugr_death": "Draugr meurt",
-  "subtitles.valhalla-echoes.draugr_attack": "Draugr attaque"
+  "subtitles.valhalla-echoes.draugr_attack": "Draugr attaque",
+
+  "item.valhalla-echoes.wolf_banner_pattern": "Motif de bannière du Clan du Loup",
+  "item.valhalla-echoes.raven_banner_pattern": "Motif de bannière du Clan du Corbeau",
+  "item.valhalla-echoes.bear_banner_pattern": "Motif de bannière du Clan de l'Ours",
+  "item.valhalla-echoes.serpent_banner_pattern": "Motif de bannière du Clan du Serpent",
+
+  "block.valhalla-echoes.banner.wolf": "Emblème du Clan du Loup",
+  "block.valhalla-echoes.banner.wolf.white": "Emblème blanc du Clan du Loup",
+  "block.valhalla-echoes.banner.raven": "Emblème du Clan du Corbeau",
+  "block.valhalla-echoes.banner.raven.black": "Emblème noir du Clan du Corbeau",
+  "block.valhalla-echoes.banner.bear": "Emblème du Clan de l'Ours",
+  "block.valhalla-echoes.banner.bear.yellow": "Emblème jaune du Clan de l'Ours",
+  "block.valhalla-echoes.banner.serpent": "Emblème du Clan du Serpent",
+  "block.valhalla-echoes.banner.serpent.lime": "Emblème vert clair du Clan du Serpent"
 }

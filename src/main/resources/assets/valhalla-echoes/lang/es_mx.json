@@ -30,5 +30,34 @@
   "subtitles.valhalla-echoes.draugr_ambient": "Draugr resuena",
   "subtitles.valhalla-echoes.draugr_hurt": "Draugr duele",
   "subtitles.valhalla-echoes.draugr_death": "Draugr muere",
-  "subtitles.valhalla-echoes.draugr_attack": "Draugr ataca"
+  "subtitles.valhalla-echoes.draugr_attack": "Draugr ataca",
+
+  "item.valhalla-echoes.wolf_banner_pattern": "Diseño de estandarte del Clan del Lobo",
+  "item.valhalla-echoes.raven_banner_pattern": "Diseño de estandarte del Clan del Cuervo",
+  "item.valhalla-echoes.bear_banner_pattern": "Diseño de estandarte del Clan del Oso",
+  "item.valhalla-echoes.serpent_banner_pattern": "Diseño de estandarte del Clan de la Serpiente",
+
+  "block.valhalla-echoes.banner.wolf": "Emblema del Clan del Lobo",
+  "block.valhalla-echoes.banner.wolf.white": "Emblema blanco del Clan del Lobo",
+  "block.valhalla-echoes.banner.wolf.red": "Emblema rojo del Clan del Lobo",
+  "block.valhalla-echoes.banner.wolf.black": "Emblema negro del Clan del Lobo",
+  "block.valhalla-echoes.banner.wolf.gray": "Emblema gris del Clan del Lobo",
+
+  "block.valhalla-echoes.banner.raven": "Emblema del Clan del Cuervo",
+  "block.valhalla-echoes.banner.raven.black": "Emblema negro del Clan del Cuervo",
+  "block.valhalla-echoes.banner.raven.white": "Emblema blanco del Clan del Cuervo",
+  "block.valhalla-echoes.banner.raven.cyan": "Emblema cian del Clan del Cuervo",
+  "block.valhalla-echoes.banner.raven.blue": "Emblema azul del Clan del Cuervo",
+
+  "block.valhalla-echoes.banner.bear": "Emblema del Clan del Oso",
+  "block.valhalla-echoes.banner.bear.yellow": "Emblema amarillo del Clan del Oso",
+  "block.valhalla-echoes.banner.bear.orange": "Emblema naranja del Clan del Oso",
+  "block.valhalla-echoes.banner.bear.red": "Emblema rojo del Clan del Oso",
+  "block.valhalla-echoes.banner.bear.brown": "Emblema café del Clan del Oso",
+
+  "block.valhalla-echoes.banner.serpent": "Emblema del Clan de la Serpiente",
+  "block.valhalla-echoes.banner.serpent.lime": "Emblema lima del Clan de la Serpiente",
+  "block.valhalla-echoes.banner.serpent.green": "Emblema verde del Clan de la Serpiente",
+  "block.valhalla-echoes.banner.serpent.cyan": "Emblema cian del Clan de la Serpiente",
+  "block.valhalla-echoes.banner.serpent.black": "Emblema negro del Clan de la Serpiente"
 }

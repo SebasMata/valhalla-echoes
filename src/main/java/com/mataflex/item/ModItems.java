@@ -1,16 +1,19 @@
 package com.mataflex.item;
 
 import com.mataflex.ValhallaEchoes;
+import com.mataflex.clan.VikingClan;
 import com.mataflex.item.custom.HornedHelmetItem;
 import com.mataflex.item.custom.MysticalShovelItem;
 import com.mataflex.item.custom.TargeShieldItem;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -19,6 +22,7 @@ import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.level.block.entity.BannerPattern;
 
 import java.util.function.Function;
 
@@ -35,6 +39,20 @@ public class ModItems {
         Registry.register(BuiltInRegistries.ITEM, itemKey, item);
 
         return item;
+    }
+
+    private static Item registerBannerPattern(String name, TagKey<BannerPattern> patternTagKey) {
+        return register(
+                name,
+                Item::new,
+                new Item.Properties()
+                        .stacksTo(1)
+                        .rarity(Rarity.RARE)
+                        .delayedComponent(
+                                DataComponents.PROVIDES_BANNER_PATTERNS,
+                                provider -> provider.getOrThrow(patternTagKey)
+                        )
+        );
     }
 
     // ITEMS
@@ -56,6 +74,12 @@ public class ModItems {
     public static final Item OBSIDIAN_ROD = register("obsidian_rod", Item::new, new Item.Properties().rarity(Rarity.EPIC));
 
     public static final Item RUNIC_GEM = register("runic_gem", Item::new, new Item.Properties().rarity(Rarity.EPIC));
+
+    // CLAN BANNER PATTERNS
+    public static final Item WOLF_BANNER_PATTERN = registerBannerPattern("wolf_banner_pattern", VikingClan.WOLF.getPatternItemTag());
+    public static final Item RAVEN_BANNER_PATTERN = registerBannerPattern("raven_banner_pattern", VikingClan.RAVEN.getPatternItemTag());
+    public static final Item BEAR_BANNER_PATTERN = registerBannerPattern("bear_banner_pattern", VikingClan.BEAR.getPatternItemTag());
+    public static final Item SERPENT_BANNER_PATTERN = registerBannerPattern("serpent_banner_pattern", VikingClan.SERPENT.getPatternItemTag());
 
     public static final SpawnEggItem VIKING_SPAWN_EGG = register(
             "viking_spawn_egg",
@@ -180,13 +204,17 @@ public class ModItems {
 
         // ITEMS
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
-                .register((itemGroup) -> itemGroup.accept(ModItems.SUSPICIOUS_SUBSTANCE));
+                .register((itemGroup) -> {
+                    itemGroup.accept(ModItems.SUSPICIOUS_SUBSTANCE);
+                    itemGroup.accept(ModItems.MYSTICAL_INGOT);
+                    itemGroup.accept(ModItems.OBSIDIAN_ROD);
+                    itemGroup.accept(ModItems.WOLF_BANNER_PATTERN);
+                    itemGroup.accept(ModItems.RAVEN_BANNER_PATTERN);
+                    itemGroup.accept(ModItems.BEAR_BANNER_PATTERN);
+                    itemGroup.accept(ModItems.SERPENT_BANNER_PATTERN);
+                });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS)
                 .register((itemGroup) -> itemGroup.accept(ModItems.MYSTICAL_ESSENCE));
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
-                .register((itemGroup) -> itemGroup.accept(ModItems.MYSTICAL_INGOT));
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS)
-                .register((itemGroup) -> itemGroup.accept(ModItems.OBSIDIAN_ROD));
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.SPAWN_EGGS)
                 .register(itemGroup -> {
                     itemGroup.accept(ModItems.VIKING_SPAWN_EGG);

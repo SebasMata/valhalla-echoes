@@ -30,5 +30,19 @@
   "subtitles.valhalla-echoes.draugr_ambient": "Draugr klappert",
   "subtitles.valhalla-echoes.draugr_hurt": "Draugr nimmt Schaden",
   "subtitles.valhalla-echoes.draugr_death": "Draugr stirbt",
-  "subtitles.valhalla-echoes.draugr_attack": "Draugr greift an"
+  "subtitles.valhalla-echoes.draugr_attack": "Draugr greift an",
+
+  "item.valhalla-echoes.wolf_banner_pattern": "Wolfsclan-Bannervorlage",
+  "item.valhalla-echoes.raven_banner_pattern": "Rabenclan-Bannervorlage",
+  "item.valhalla-echoes.bear_banner_pattern": "Bärenclan-Bannervorlage",
+  "item.valhalla-echoes.serpent_banner_pattern": "Schlangenclan-Bannervorlage",
+
+  "block.valhalla-echoes.banner.wolf": "Wolfsclan-Wappen",
+  "block.valhalla-echoes.banner.wolf.white": "Weißes Wolfsclan-Wappen",
+  "block.valhalla-echoes.banner.raven": "Rabenclan-Wappen",
+  "block.valhalla-echoes.banner.raven.black": "Schwarzes Rabenclan-Wappen",
+  "block.valhalla-echoes.banner.bear": "Bärenclan-Wappen",
+  "block.valhalla-echoes.banner.bear.yellow": "Gelbes Bärenclan-Wappen",
+  "block.valhalla-echoes.banner.serpent": "Schlangenclan-Wappen",
+  "block.valhalla-echoes.banner.serpent.lime": "Hellgrünes Schlangenclan-Wappen"
 }

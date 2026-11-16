@@ -6,18 +6,21 @@
 
 ### Biomes & Structures
 - [ ] New Viking biome (similar to Taiga)
-- [ ] Clan banners
+- [x] Clan banners & shield patterns (`Wolf`, `Raven`, `Bear`, and `Serpent` clans)
+- [x] Custom banner pattern scroll items for the Loom & regional clan banner generation in Viking villages
 
 ### Systems & Items
-- [ ] Viking clan system
+- [ ] Viking clan system (clan NPC affiliation, reputation & interactions)
 - [ ] Special player items
-- [x] Additional multi-language support (Portuguese BR/PT, German, French, Italian, Simplified/Traditional Chinese, and Russian)
 
 ---
 
 ## Completed
 
+
+
 ### v0.5.x (Beta)
+- [x] Additional multi-language support (Portuguese BR/PT, German, French, Italian, Simplified/Traditional Chinese, and Russian)
 - [x] Port to Minecraft 26.3 (Java 25+, Fabric Loader 0.20.1+, and Fabric API 0.166.2+26.3)
 - [x] Redesign of the official website and downloads page (`docs/`)
 

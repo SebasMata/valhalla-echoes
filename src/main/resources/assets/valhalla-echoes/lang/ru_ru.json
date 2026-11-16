@@ -30,5 +30,19 @@
   "subtitles.valhalla-echoes.draugr_ambient": "Драугр гремит костями",
   "subtitles.valhalla-echoes.draugr_hurt": "Драугр ранен",
   "subtitles.valhalla-echoes.draugr_death": "Драугр погибает",
-  "subtitles.valhalla-echoes.draugr_attack": "Драугр атакует"
+  "subtitles.valhalla-echoes.draugr_attack": "Драугр атакует",
+
+  "item.valhalla-echoes.wolf_banner_pattern": "Узор флага клана Волка",
+  "item.valhalla-echoes.raven_banner_pattern": "Узор флага клана Ворона",
+  "item.valhalla-echoes.bear_banner_pattern": "Узор флага клана Медведя",
+  "item.valhalla-echoes.serpent_banner_pattern": "Узор флага клана Змея",
+
+  "block.valhalla-echoes.banner.wolf": "Герб клана Волка",
+  "block.valhalla-echoes.banner.wolf.white": "Белый герб клана Волка",
+  "block.valhalla-echoes.banner.raven": "Герб клана Ворона",
+  "block.valhalla-echoes.banner.raven.black": "Чёрный герб клана Ворона",
+  "block.valhalla-echoes.banner.bear": "Герб клана Медведя",
+  "block.valhalla-echoes.banner.bear.yellow": "Жёлтый герб клана Медведя",
+  "block.valhalla-echoes.banner.serpent": "Герб клана Змея",
+  "block.valhalla-echoes.banner.serpent.lime": "Лаймовый герб клана Змея"
 }

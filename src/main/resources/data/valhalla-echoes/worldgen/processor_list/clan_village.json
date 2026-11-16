@@ -1,0 +1,7 @@
+{
+  "processors": [
+    {
+      "processor_type": "valhalla-echoes:clan_village"
+    }
+  ]
+}

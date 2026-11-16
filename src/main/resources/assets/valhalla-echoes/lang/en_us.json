@@ -30,6 +30,35 @@
   "subtitles.valhalla-echoes.draugr_ambient": "Draugr rattles",
   "subtitles.valhalla-echoes.draugr_hurt": "Draugr hurts",
   "subtitles.valhalla-echoes.draugr_death": "Draugr dies",
-  "subtitles.valhalla-echoes.draugr_attack": "Draugr attacks"
+  "subtitles.valhalla-echoes.draugr_attack": "Draugr attacks",
+
+  "item.valhalla-echoes.wolf_banner_pattern": "Wolf Clan Banner Pattern",
+  "item.valhalla-echoes.raven_banner_pattern": "Raven Clan Banner Pattern",
+  "item.valhalla-echoes.bear_banner_pattern": "Bear Clan Banner Pattern",
+  "item.valhalla-echoes.serpent_banner_pattern": "Serpent Clan Banner Pattern",
+
+  "block.valhalla-echoes.banner.wolf": "Wolf Clan Crest",
+  "block.valhalla-echoes.banner.wolf.white": "White Wolf Clan Crest",
+  "block.valhalla-echoes.banner.wolf.red": "Red Wolf Clan Crest",
+  "block.valhalla-echoes.banner.wolf.black": "Black Wolf Clan Crest",
+  "block.valhalla-echoes.banner.wolf.gray": "Gray Wolf Clan Crest",
+
+  "block.valhalla-echoes.banner.raven": "Raven Clan Crest",
+  "block.valhalla-echoes.banner.raven.black": "Black Raven Clan Crest",
+  "block.valhalla-echoes.banner.raven.white": "White Raven Clan Crest",
+  "block.valhalla-echoes.banner.raven.cyan": "Cyan Raven Clan Crest",
+  "block.valhalla-echoes.banner.raven.blue": "Blue Raven Clan Crest",
+
+  "block.valhalla-echoes.banner.bear": "Bear Clan Crest",
+  "block.valhalla-echoes.banner.bear.yellow": "Yellow Bear Clan Crest",
+  "block.valhalla-echoes.banner.bear.orange": "Orange Bear Clan Crest",
+  "block.valhalla-echoes.banner.bear.red": "Red Bear Clan Crest",
+  "block.valhalla-echoes.banner.bear.brown": "Brown Bear Clan Crest",
+
+  "block.valhalla-echoes.banner.serpent": "Serpent Clan Crest",
+  "block.valhalla-echoes.banner.serpent.lime": "Lime Serpent Clan Crest",
+  "block.valhalla-echoes.banner.serpent.green": "Green Serpent Clan Crest",
+  "block.valhalla-echoes.banner.serpent.cyan": "Cyan Serpent Clan Crest",
+  "block.valhalla-echoes.banner.serpent.black": "Black Serpent Clan Crest"
 }
 
