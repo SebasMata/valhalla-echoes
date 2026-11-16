@@ -28,7 +28,7 @@ You can check the mod's website on Modrinth here:
 
 ### Download
 You can download the mod directly here:
-* Latest version: [v0.5.0-beta](https://github.com/SebasMata/valhalla-echoes-1.21.11/releases/tag/v0.5.0-beta)
+* Latest version: [v0.5.1-beta](https://github.com/SebasMata/valhalla-echoes/releases/tag/v0.5.1-beta)
 
 ### Install guide
 >1) Install the [Fabric modloader](https://fabricmc.net).
