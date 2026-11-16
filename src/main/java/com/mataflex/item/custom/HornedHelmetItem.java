@@ -15,6 +15,7 @@ public class HornedHelmetItem extends Item {
     }
 
     @Override
+    @SuppressWarnings("deprecation")
     public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay displayComponent, Consumer<Component> textConsumer, TooltipFlag type) {
         textConsumer.accept(Component.translatable("itemTooltip.valhalla-echoes.horned_helmet").withStyle(ChatFormatting.DARK_RED));
     }

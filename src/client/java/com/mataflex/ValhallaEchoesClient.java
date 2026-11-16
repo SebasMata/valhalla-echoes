@@ -4,8 +4,8 @@ import com.mataflex.entity.DraugrRenderer;
 import com.mataflex.entity.MysticalVikingRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.ArmorRenderer;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.Identifier;
 
 public class ValhallaEchoesClient implements ClientModInitializer {
@@ -18,12 +18,12 @@ public class ValhallaEchoesClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 
-		EntityRendererRegistry.register(
+		EntityRenderers.register(
 				ValhallaEchoes.MYSTICAL_VIKING,
 				MysticalVikingRenderer::new
 		);
 
-		EntityRendererRegistry.register(
+		EntityRenderers.register(
 				ValhallaEchoes.DRAUGR,
 				DraugrRenderer::new
 		);

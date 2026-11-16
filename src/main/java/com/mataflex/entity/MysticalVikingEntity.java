@@ -33,6 +33,7 @@ import java.util.List;
 
 public class MysticalVikingEntity extends Piglin {
 
+    @SuppressWarnings("deprecation")
     private static final Brain.Provider<MysticalVikingEntity> BRAIN_PROVIDER = Brain.provider(
             List.of(
                     MemoryModuleType.UNIVERSAL_ANGER,
