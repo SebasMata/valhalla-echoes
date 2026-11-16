@@ -628,7 +628,7 @@
                 continue;
             }
 
-            const taskMatch = line.match(/^-\s+\[([ xX])\]\s+(.*)$/);
+            const taskMatch = line.match(/^-\s+\[([ xX])]\s+(.*)$/);
             if (taskMatch) {
                 if (!inList) {
                     html += '<ul class="gh-task-list">';
@@ -694,7 +694,7 @@
 
     loadRoadmap();
 
-    // KEY FEATURES 10-SECOND SLIDESHOW & VILLAGE GALLERY
+    // KEY FEATURES 20-SECOND SLIDESHOW & VILLAGE GALLERY
     (function initFeatureSlideshow() {
         const slides = Array.from(document.querySelectorAll('.feature-slide'));
         const tabs = Array.from(document.querySelectorAll('.feature-tab'));
@@ -702,7 +702,7 @@
         const nextBtn = document.getElementById('feature-next');
         const counterEl = document.getElementById('feature-counter');
         const progressBar = document.getElementById('feature-progress-bar');
-        const SLIDE_DURATION_MS = 10000;
+        const SLIDE_DURATION_MS = 20000;
 
         let currentIndex = 0;
         let slideTimer = null;
@@ -711,7 +711,7 @@
             if (!progressBar) return;
             progressBar.style.transition = 'none';
             progressBar.style.width = '0%';
-            // Force reflow so the 10s transition restarts cleanly
+            // Force reflow so the 20s transition restarts cleanly
             void progressBar.offsetWidth;
             progressBar.style.transition = `width ${SLIDE_DURATION_MS}ms linear`;
             progressBar.style.width = '100%';
