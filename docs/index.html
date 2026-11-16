@@ -52,7 +52,7 @@
             <span class="metal-plate plate-gold">
                 <span class="plate-rivet"></span>
                 <span class="plate-key">BUILD</span>
-                <span class="plate-val">v0.5.1-beta</span>
+                <span class="plate-val">v0.6.1-beta</span>
                 <span class="plate-rivet"></span>
             </span>
         </div>
@@ -65,7 +65,7 @@
 
         <div class="button-group">
             <a href="download.html" class="btn btn-crimson">
-                <span class="btn-label">Download v0.5.1-beta</span>
+                <span class="btn-label">Download v0.6.1-beta</span>
                 <span class="btn-sub">.JAR &bull; Minecraft 26.3</span>
             </a>
             <a href="https://modrinth.com/mod/valhalla-echoes" class="btn btn-forged" target="_blank" rel="noopener noreferrer">
@@ -84,13 +84,13 @@
             <div class="editorial-copy">
                 <div class="eyebrow">CHRONICLES OF THE NORTH // 26.3 PORT</div>
                 <h1 class="editorial-title">About The Mod</h1>
-                <p class="lead-paragraph">Welcome to <strong>Valhalla Echoes</strong>. This mod brings ancient Norse mythology directly into your Minecraft <strong>26.3</strong> world. Explore snowbound settlements, clash with fearsome Mystical Vikings and undead Draugr, and forge legendary runic weaponry and armor.</p>
-                <p>Built natively for the unobfuscated Minecraft 26.3 architecture on Fabric, Valhalla Echoes expands surface exploration and melee combat with custom AI behaviors, timed shield parrying, and high-tier equipment progression.</p>
+                <p class="lead-paragraph">Welcome to <strong>Valhalla Echoes</strong>. This mod brings ancient Norse mythology directly into your Minecraft <strong>26.3</strong> world. Explore snowbound settlements flying the banners of ancient Viking clans, clash with fearsome Mystical Vikings and undead Draugr, and forge legendary runic weaponry and armor.</p>
+                <p>Built natively for the unobfuscated Minecraft 26.3 architecture on Fabric, Valhalla Echoes expands surface exploration and melee combat with regional clan settlements, custom AI behaviors, timed shield parrying, and high-tier equipment progression.</p>
 
                 <div class="spec-ledger">
                     <div class="spec-item">
                         <span class="spec-k">LATEST RELEASE</span>
-                        <span class="spec-v">v0.5.1-beta</span>
+                        <span class="spec-v">v0.6.1-beta</span>
                     </div>
                     <div class="spec-item">
                         <span class="spec-k">TARGET VERSION</span>
@@ -206,10 +206,11 @@
                     </div>
                     <div class="feature-text">
                         <span class="feature-index">01 // WORLD GENERATION</span>
-                        <h3>Viking Villages</h3>
-                        <p>Discover dynamically generated Norse settlements across snowy biomes, complete with turf-roofed great halls, blast huts, cozy interiors, and social centers. Each structure is pieced together via custom jigsaw pools and guarded by resident warriors.</p>
+                        <h3>Viking Villages &amp; Clans</h3>
+                        <p>Discover dynamically generated Norse settlements across snowy biomes, complete with turf-roofed great halls, blast huts, cozy interiors, and social centers. Each 512&times;512 region is ruled by one of four Viking clans (<strong>Wolf</strong>, <strong>Raven</strong>, <strong>Bear</strong>, or <strong>Serpent</strong>), flying their heraldic banners and storing Loom banner pattern scrolls in village chests.</p>
                         <div class="feature-meta-bar">
                             <span>BIOME TAG: <code>#minecraft:has_structure/village_snowy</code></span>
+                            <span>CLANS: <code>WOLF / RAVEN / BEAR / SERPENT</code></span>
                         </div>
                     </div>
                 </article>
@@ -330,9 +331,9 @@
         <div class="vitrine-header">
             <div>
                 <div class="eyebrow">CRAFTING REAGENTS &amp; RELICS</div>
-                <h2>Unique Artifacts</h2>
+                <h2>Unique Artifacts &amp; Clan Heraldry</h2>
             </div>
-            <p>Collect rare materials including Obsidian Rods, Runic Gems, Mystical Essence, and Suspicious Substances.</p>
+            <p>Collect rare materials and Viking Clan Banner Patterns (Wolf, Raven, Bear, and Serpent) to customize your banners and shields on the Loom.</p>
         </div>
 
         <div class="artifact-vitrine">
@@ -383,6 +384,46 @@
                 <div class="item-details">
                     <h4>Suspicious Substance</h4>
                     <code>valhalla-echoes:suspicious_substance</code>
+                </div>
+            </div>
+
+            <div class="vitrine-item">
+                <div class="item-pedestal">
+                    <img src="resources/wolf_banner_pattern.png" alt="Wolf Clan Banner Pattern" class="pixel-sprite">
+                </div>
+                <div class="item-details">
+                    <h4>Wolf Banner Pattern</h4>
+                    <code>valhalla-echoes:wolf_banner_pattern</code>
+                </div>
+            </div>
+
+            <div class="vitrine-item">
+                <div class="item-pedestal">
+                    <img src="resources/raven_banner_pattern.png" alt="Raven Clan Banner Pattern" class="pixel-sprite">
+                </div>
+                <div class="item-details">
+                    <h4>Raven Banner Pattern</h4>
+                    <code>valhalla-echoes:raven_banner_pattern</code>
+                </div>
+            </div>
+
+            <div class="vitrine-item">
+                <div class="item-pedestal">
+                    <img src="resources/bear_banner_pattern.png" alt="Bear Clan Banner Pattern" class="pixel-sprite">
+                </div>
+                <div class="item-details">
+                    <h4>Bear Banner Pattern</h4>
+                    <code>valhalla-echoes:bear_banner_pattern</code>
+                </div>
+            </div>
+
+            <div class="vitrine-item">
+                <div class="item-pedestal">
+                    <img src="resources/serpent_banner_pattern.png" alt="Serpent Clan Banner Pattern" class="pixel-sprite">
+                </div>
+                <div class="item-details">
+                    <h4>Serpent Banner Pattern</h4>
+                    <code>valhalla-echoes:serpent_banner_pattern</code>
                 </div>
             </div>
         </div>
@@ -464,10 +505,10 @@
                     <div class="step-num">03</div>
                     <div class="step-body">
                         <div class="step-title">Download Valhalla Echoes</div>
-                        <p>Download the <a href="download.html" class="dep-badge dep-crimson">Valhalla Echoes (v0.5.1-beta)</a> release package.</p>
+                        <p>Download the <a href="download.html" class="dep-badge dep-crimson">Valhalla Echoes (v0.6.1-beta)</a> release package.</p>
                         <div class="cmd-box">
-                            <code>valhalla-echoes-v0.5.1-beta.jar</code>
-                            <button type="button" class="copy-btn" data-copy="valhalla-echoes-v0.5.1-beta.jar">COPY FILENAME</button>
+                            <code>valhalla-echoes-v0.6.1-beta.jar</code>
+                            <button type="button" class="copy-btn" data-copy="valhalla-echoes-v0.6.1-beta.jar">COPY FILENAME</button>
                         </div>
                     </div>
                 </div>
@@ -476,7 +517,7 @@
                     <div class="step-num">04</div>
                     <div class="step-body">
                         <div class="step-title">Deploy to Mods Folder &amp; Launch</div>
-                        <p>Move <code>valhalla-echoes-v0.5.1-beta.jar</code> into <code>.minecraft/mods</code>, select the <strong>fabric-loader-26.3</strong> profile in your launcher, and start the game.</p>
+                        <p>Move <code>valhalla-echoes-v0.6.1-beta.jar</code> into <code>.minecraft/mods</code>, select the <strong>fabric-loader-26.3</strong> profile in your launcher, and start the game.</p>
                     </div>
                 </div>
             </div>
