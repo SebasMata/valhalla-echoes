@@ -22,26 +22,26 @@ import java.util.function.Supplier;
 public enum VikingClan {
     WOLF(
             "wolf",
-            DyeColor.GRAY,
             DyeColor.WHITE,
+            DyeColor.GRAY,
             () -> ModItems.WOLF_BANNER_PATTERN
     ),
     RAVEN(
             "raven",
+            DyeColor.WHITE,
             DyeColor.CYAN,
-            DyeColor.BLACK,
             () -> ModItems.RAVEN_BANNER_PATTERN
     ),
     BEAR(
             "bear",
+            DyeColor.WHITE,
             DyeColor.RED,
-            DyeColor.YELLOW,
             () -> ModItems.BEAR_BANNER_PATTERN
     ),
     SERPENT(
             "serpent",
+            DyeColor.WHITE,
             DyeColor.GREEN,
-            DyeColor.LIME,
             () -> ModItems.SERPENT_BANNER_PATTERN
     );
 
