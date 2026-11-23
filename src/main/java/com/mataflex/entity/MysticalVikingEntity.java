@@ -448,31 +448,37 @@ public class MysticalVikingEntity extends Piglin implements ClanMember {
     }
 
     @Override
+    public boolean isBaby() {
+        return false;
+    }
+
+    @Override
+    public void setBaby(boolean baby) {
+        // Los vikingos místicos son siempre adultos: el modelo bebé de Piglin en 26.3 usa UVs incompatibles con mystical_viking.png
+        super.setBaby(false);
+    }
+
+    @Override
     public @Nullable SpawnGroupData finalizeSpawn(
             ServerLevelAccessor serverLevelAccessor,
             @NonNull DifficultyInstance difficultyInstance,
             @NonNull EntitySpawnReason entitySpawnReason,
             @Nullable SpawnGroupData spawnGroupData
     ) {
-        RandomSource randomSource = serverLevelAccessor.getRandom();
-
         if (!this.clanInitialized) {
             this.setClan(ClanVillageManager.getClanForPos(this.blockPosition()));
         }
 
-        if (entitySpawnReason != EntitySpawnReason.STRUCTURE) {
-            if (randomSource.nextFloat() < 0.125F) {
-                this.setBaby(true);
-            }
-        }
+        SpawnGroupData result = super.finalizeSpawn(serverLevelAccessor, difficultyInstance, entitySpawnReason, spawnGroupData);
 
-        this.populateDefaultEquipmentSlots(randomSource, difficultyInstance);
+        // Garantizar siempre variante adulta incluso si Piglin.finalizeSpawn intenta marcarlo como bebé
+        this.setBaby(false);
 
-        // Los vikingos generados dentro de aldeas siempre portan el escudo Targe de su clan
-        if (entitySpawnReason == EntitySpawnReason.STRUCTURE && !this.isBaby()) {
+        // Los vikingos generados dentro de aldeas siempre portan el escudo Targe 3D de su clan
+        if (entitySpawnReason == EntitySpawnReason.STRUCTURE) {
             this.equipClanShield();
         }
 
-        return super.finalizeSpawn(serverLevelAccessor, difficultyInstance, entitySpawnReason, spawnGroupData);
+        return result;
     }
 }
