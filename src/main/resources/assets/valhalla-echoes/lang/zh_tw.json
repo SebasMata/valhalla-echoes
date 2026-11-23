@@ -67,5 +67,14 @@
   "command.valhalla-echoes.clan.reputation.set": "已將 %s 在 %s 的聲望設為 %s（%s）。",
   "command.valhalla-echoes.clan.reputation.add": "已將 %2$s 在 %3$s 的聲望調整（%1$s）為 %4$s（%5$s）。",
   "command.valhalla-echoes.clan.reputation.reset_all": "已重設 %s 在所有維京氏族的聲望。",
-  "command.valhalla-echoes.clan.reputation.reset_single": "已重設 %s 在 %s 的聲望。"
+  "command.valhalla-echoes.clan.reputation.reset_single": "已重設 %s 在 %s 的聲望。",
+  "command.valhalla-echoes.clan.assign.none": "選定目標中未找到神秘維京人。",
+  "command.valhalla-echoes.clan.assign.success": "已將 %s 名神秘維京人分配至%s。",
+
+  "itemTooltip.valhalla-echoes.targe_shield.clan": "氏族：%s",
+  "entity.valhalla-echoes.mystical_viking.interact.hostile": "%s戰士：離開我們的領地，敵人！",
+  "entity.valhalla-echoes.mystical_viking.interact.busy": "%s戰士：耐心點，旅人。",
+  "entity.valhalla-echoes.mystical_viking.interact.neutral": "%s（%s）— 小心行事，外來者。",
+  "entity.valhalla-echoes.mystical_viking.interact.friendly": "%s（%s）— 歡迎你，氏族的朋友！",
+  "entity.valhalla-echoes.mystical_viking.interact.ally": "%s（%s）— 我們的戰斧與你並肩作戰，血盟兄弟！"
 }

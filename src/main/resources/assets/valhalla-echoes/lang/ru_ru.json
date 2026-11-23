@@ -67,5 +67,14 @@
   "command.valhalla-echoes.clan.reputation.set": "Репутация %s у %s установлена на %s (%s).",
   "command.valhalla-echoes.clan.reputation.add": "Репутация %2$s у %3$s изменена (%1$s) до %4$s (%5$s).",
   "command.valhalla-echoes.clan.reputation.reset_all": "Репутация у всех кланов викингов сброшена для %s.",
-  "command.valhalla-echoes.clan.reputation.reset_single": "Репутация %s у %s сброшена."
+  "command.valhalla-echoes.clan.reputation.reset_single": "Репутация %s у %s сброшена.",
+  "command.valhalla-echoes.clan.assign.none": "Среди выбранных целей не найдено мистических викингов.",
+  "command.valhalla-echoes.clan.assign.success": "%s мистических викингов приписано к «%s».",
+
+  "itemTooltip.valhalla-echoes.targe_shield.clan": "Клан: %s",
+  "entity.valhalla-echoes.mystical_viking.interact.hostile": "Воин («%s»): Убирайся с наших земель, враг!",
+  "entity.valhalla-echoes.mystical_viking.interact.busy": "Воин («%s»): Терпение, путник.",
+  "entity.valhalla-echoes.mystical_viking.interact.neutral": "%s (%s) — Будь осторожен, чужеземец.",
+  "entity.valhalla-echoes.mystical_viking.interact.friendly": "%s (%s) — Добро пожаловать, друг клана!",
+  "entity.valhalla-echoes.mystical_viking.interact.ally": "%s (%s) — Наши топоры сражаются с тобой, побратим!"
 }

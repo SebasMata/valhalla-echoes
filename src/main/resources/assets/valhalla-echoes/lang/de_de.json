@@ -67,5 +67,14 @@
   "command.valhalla-echoes.clan.reputation.set": "Ansehen von %s bei %s auf %s (%s) gesetzt.",
   "command.valhalla-echoes.clan.reputation.add": "Ansehen von %2$s bei %3$s um %1$s geändert: %4$s (%5$s).",
   "command.valhalla-echoes.clan.reputation.reset_all": "Ansehen bei allen Wikingerclans für %s zurückgesetzt.",
-  "command.valhalla-echoes.clan.reputation.reset_single": "Ansehen von %s bei %s zurückgesetzt."
+  "command.valhalla-echoes.clan.reputation.reset_single": "Ansehen von %s bei %s zurückgesetzt.",
+  "command.valhalla-echoes.clan.assign.none": "Keine Mystischen Wikinger unter den ausgewählten Zielen gefunden.",
+  "command.valhalla-echoes.clan.assign.success": "%s Mystische(r) Wikinger dem %s zugewiesen.",
+
+  "itemTooltip.valhalla-echoes.targe_shield.clan": "Clan: %s",
+  "entity.valhalla-echoes.mystical_viking.interact.hostile": "%s-Krieger: Verlass unser Land, Feind!",
+  "entity.valhalla-echoes.mystical_viking.interact.busy": "%s-Krieger: Geduld, Reisender.",
+  "entity.valhalla-echoes.mystical_viking.interact.neutral": "%s (%s) — Sei vorsichtig, Fremder.",
+  "entity.valhalla-echoes.mystical_viking.interact.friendly": "%s (%s) — Sei gegrüßt, Freund des Clans!",
+  "entity.valhalla-echoes.mystical_viking.interact.ally": "%s (%s) — Unsere Äxte stehen an deiner Seite, Blutsbruder!"
 }

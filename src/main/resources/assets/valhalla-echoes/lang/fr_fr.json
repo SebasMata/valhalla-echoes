@@ -67,5 +67,14 @@
   "command.valhalla-echoes.clan.reputation.set": "Réputation de %s auprès de %s définie à %s (%s).",
   "command.valhalla-echoes.clan.reputation.add": "Réputation de %2$s auprès de %3$s modifiée (%1$s) à %4$s (%5$s).",
   "command.valhalla-echoes.clan.reputation.reset_all": "Réputation auprès de tous les clans vikings réinitialisée pour %s.",
-  "command.valhalla-echoes.clan.reputation.reset_single": "Réputation de %s auprès de %s réinitialisée."
+  "command.valhalla-echoes.clan.reputation.reset_single": "Réputation de %s auprès de %s réinitialisée.",
+  "command.valhalla-echoes.clan.assign.none": "Aucun Viking mystique trouvé parmi les cibles sélectionnées.",
+  "command.valhalla-echoes.clan.assign.success": "%s Viking(s) mystique(s) assigné(s) au %s.",
+
+  "itemTooltip.valhalla-echoes.targe_shield.clan": "Clan : %s",
+  "entity.valhalla-echoes.mystical_viking.interact.hostile": "Guerrier du %s : Quitte nos terres, ennemi !",
+  "entity.valhalla-echoes.mystical_viking.interact.busy": "Guerrier du %s : Patience, voyageur.",
+  "entity.valhalla-echoes.mystical_viking.interact.neutral": "%s (%s) — Avance avec prudence, étranger.",
+  "entity.valhalla-echoes.mystical_viking.interact.friendly": "%s (%s) — Salutations, ami du clan !",
+  "entity.valhalla-echoes.mystical_viking.interact.ally": "%s (%s) — Nos haches combattent à tes côtés, frère de sang !"
 }
