@@ -44,5 +44,28 @@
   "block.valhalla-echoes.banner.bear": "Brasão do Clã do Urso",
   "block.valhalla-echoes.banner.bear.yellow": "Brasão Amarelo do Clã do Urso",
   "block.valhalla-echoes.banner.serpent": "Brasão do Clã da Serpente",
-  "block.valhalla-echoes.banner.serpent.lime": "Brasão Verde-lima do Clã da Serpente"
+  "block.valhalla-echoes.banner.serpent.lime": "Brasão Verde-lima do Clã da Serpente",
+
+  "clan.valhalla-echoes.wolf": "Clã do Lobo",
+  "clan.valhalla-echoes.raven": "Clã do Corvo",
+  "clan.valhalla-echoes.bear": "Clã do Urso",
+  "clan.valhalla-echoes.serpent": "Clã da Serpente",
+
+  "clan_reputation.valhalla-echoes.level.hostile": "Hostil",
+  "clan_reputation.valhalla-echoes.level.neutral": "Neutro",
+  "clan_reputation.valhalla-echoes.level.friendly": "Amigável",
+  "clan_reputation.valhalla-echoes.level.ally": "Aliado",
+  "clan_reputation.valhalla-echoes.level_changed": "A tua relação com o %s agora é %s.",
+
+  "command.valhalla-echoes.clan.invalid_clan": "Clã viking desconhecido: '%s'. Clãs válidos: wolf, raven, bear, serpent.",
+  "command.valhalla-echoes.clan.status.header": "=== Reputação com os Clãs Vikings ===",
+  "command.valhalla-echoes.clan.status.header_other": "=== Reputação com os Clãs Vikings (%s) ===",
+  "command.valhalla-echoes.clan.status.entry": "%s: %s (%s)",
+  "command.valhalla-echoes.clan.status.current_region_tag": "[Região atual]",
+  "command.valhalla-echoes.clan.region": "Região atual: %s (Rival: %s) — A tua relação: %s (%s)",
+  "command.valhalla-echoes.clan.reputation.get_single": "Reputação de %s com %s: %s (%s)",
+  "command.valhalla-echoes.clan.reputation.set": "Reputação de %s com %s definida para %s (%s).",
+  "command.valhalla-echoes.clan.reputation.add": "Reputação de %2$s com %3$s alterada (%1$s) para %4$s (%5$s).",
+  "command.valhalla-echoes.clan.reputation.reset_all": "Reputação com todos os clãs vikings reposta para %s.",
+  "command.valhalla-echoes.clan.reputation.reset_single": "Reputação de %s com %s reposta."
 }

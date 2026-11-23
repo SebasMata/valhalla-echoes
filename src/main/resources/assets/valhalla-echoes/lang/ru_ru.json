@@ -44,5 +44,28 @@
   "block.valhalla-echoes.banner.bear": "Герб клана Медведя",
   "block.valhalla-echoes.banner.bear.yellow": "Жёлтый герб клана Медведя",
   "block.valhalla-echoes.banner.serpent": "Герб клана Змея",
-  "block.valhalla-echoes.banner.serpent.lime": "Лаймовый герб клана Змея"
+  "block.valhalla-echoes.banner.serpent.lime": "Лаймовый герб клана Змея",
+
+  "clan.valhalla-echoes.wolf": "Клан Волка",
+  "clan.valhalla-echoes.raven": "Клан Ворона",
+  "clan.valhalla-echoes.bear": "Клан Медведя",
+  "clan.valhalla-echoes.serpent": "Клан Змея",
+
+  "clan_reputation.valhalla-echoes.level.hostile": "Враждебный",
+  "clan_reputation.valhalla-echoes.level.neutral": "Нейтральный",
+  "clan_reputation.valhalla-echoes.level.friendly": "Дружелюбный",
+  "clan_reputation.valhalla-echoes.level.ally": "Союзник",
+  "clan_reputation.valhalla-echoes.level_changed": "Ваше отношение с «%s» теперь: %s.",
+
+  "command.valhalla-echoes.clan.invalid_clan": "Неизвестный клан викингов: '%s'. Доступные кланы: wolf, raven, bear, serpent.",
+  "command.valhalla-echoes.clan.status.header": "=== Репутация у кланов викингов ===",
+  "command.valhalla-echoes.clan.status.header_other": "=== Репутация у кланов викингов (%s) ===",
+  "command.valhalla-echoes.clan.status.entry": "%s: %s (%s)",
+  "command.valhalla-echoes.clan.status.current_region_tag": "[Текущий регион]",
+  "command.valhalla-echoes.clan.region": "Текущий регион: %s (Соперник: %s) — Ваша репутация: %s (%s)",
+  "command.valhalla-echoes.clan.reputation.get_single": "Репутация %s у %s: %s (%s)",
+  "command.valhalla-echoes.clan.reputation.set": "Репутация %s у %s установлена на %s (%s).",
+  "command.valhalla-echoes.clan.reputation.add": "Репутация %2$s у %3$s изменена (%1$s) до %4$s (%5$s).",
+  "command.valhalla-echoes.clan.reputation.reset_all": "Репутация у всех кланов викингов сброшена для %s.",
+  "command.valhalla-echoes.clan.reputation.reset_single": "Репутация %s у %s сброшена."
 }

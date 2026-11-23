@@ -44,5 +44,28 @@
   "block.valhalla-echoes.banner.bear": "Stemma del Clan dell'Orso",
   "block.valhalla-echoes.banner.bear.yellow": "Stemma giallo del Clan dell'Orso",
   "block.valhalla-echoes.banner.serpent": "Stemma del Clan del Serpente",
-  "block.valhalla-echoes.banner.serpent.lime": "Stemma lime del Clan del Serpente"
+  "block.valhalla-echoes.banner.serpent.lime": "Stemma lime del Clan del Serpente",
+
+  "clan.valhalla-echoes.wolf": "Clan del Lupo",
+  "clan.valhalla-echoes.raven": "Clan del Corvo",
+  "clan.valhalla-echoes.bear": "Clan dell'Orso",
+  "clan.valhalla-echoes.serpent": "Clan del Serpente",
+
+  "clan_reputation.valhalla-echoes.level.hostile": "Ostile",
+  "clan_reputation.valhalla-echoes.level.neutral": "Neutrale",
+  "clan_reputation.valhalla-echoes.level.friendly": "Amichevole",
+  "clan_reputation.valhalla-echoes.level.ally": "Alleato",
+  "clan_reputation.valhalla-echoes.level_changed": "La tua reputazione con il %s ora è %s.",
+
+  "command.valhalla-echoes.clan.invalid_clan": "Clan vichingo sconosciuto: '%s'. Clan validi: wolf, raven, bear, serpent.",
+  "command.valhalla-echoes.clan.status.header": "=== Reputazione con i Clan Vichinghi ===",
+  "command.valhalla-echoes.clan.status.header_other": "=== Reputazione con i Clan Vichinghi (%s) ===",
+  "command.valhalla-echoes.clan.status.entry": "%s: %s (%s)",
+  "command.valhalla-echoes.clan.status.current_region_tag": "[Regione attuale]",
+  "command.valhalla-echoes.clan.region": "Regione attuale: %s (Rivale: %s) — La tua reputazione: %s (%s)",
+  "command.valhalla-echoes.clan.reputation.get_single": "Reputazione di %s con %s: %s (%s)",
+  "command.valhalla-echoes.clan.reputation.set": "Reputazione di %s con %s impostata a %s (%s).",
+  "command.valhalla-echoes.clan.reputation.add": "Reputazione di %2$s con %3$s modificata (%1$s) a %4$s (%5$s).",
+  "command.valhalla-echoes.clan.reputation.reset_all": "Reputazione con tutti i clan vichinghi reimpostata per %s.",
+  "command.valhalla-echoes.clan.reputation.reset_single": "Reputazione di %s con %s reimpostata."
 }

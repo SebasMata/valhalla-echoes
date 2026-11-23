@@ -59,6 +59,29 @@
   "block.valhalla-echoes.banner.serpent.lime": "Lime Serpent Clan Crest",
   "block.valhalla-echoes.banner.serpent.green": "Green Serpent Clan Crest",
   "block.valhalla-echoes.banner.serpent.cyan": "Cyan Serpent Clan Crest",
-  "block.valhalla-echoes.banner.serpent.black": "Black Serpent Clan Crest"
+  "block.valhalla-echoes.banner.serpent.black": "Black Serpent Clan Crest",
+
+  "clan.valhalla-echoes.wolf": "Wolf Clan",
+  "clan.valhalla-echoes.raven": "Raven Clan",
+  "clan.valhalla-echoes.bear": "Bear Clan",
+  "clan.valhalla-echoes.serpent": "Serpent Clan",
+
+  "clan_reputation.valhalla-echoes.level.hostile": "Hostile",
+  "clan_reputation.valhalla-echoes.level.neutral": "Neutral",
+  "clan_reputation.valhalla-echoes.level.friendly": "Friendly",
+  "clan_reputation.valhalla-echoes.level.ally": "Ally",
+  "clan_reputation.valhalla-echoes.level_changed": "Your standing with the %s is now %s.",
+
+  "command.valhalla-echoes.clan.invalid_clan": "Unknown Viking clan: '%s'. Valid clans: wolf, raven, bear, serpent.",
+  "command.valhalla-echoes.clan.status.header": "=== Viking Clans Reputation ===",
+  "command.valhalla-echoes.clan.status.header_other": "=== Viking Clans Reputation (%s) ===",
+  "command.valhalla-echoes.clan.status.entry": "%s: %s (%s)",
+  "command.valhalla-echoes.clan.status.current_region_tag": "[Current Region]",
+  "command.valhalla-echoes.clan.region": "Current region: %s (Rival: %s) — Your standing: %s (%s)",
+  "command.valhalla-echoes.clan.reputation.get_single": "%s's reputation with %s: %s (%s)",
+  "command.valhalla-echoes.clan.reputation.set": "Set %s's reputation with %s to %s (%s).",
+  "command.valhalla-echoes.clan.reputation.add": "Changed (%s) %s's reputation with %s to %s (%s).",
+  "command.valhalla-echoes.clan.reputation.reset_all": "Reset all Viking clan reputations for %s.",
+  "command.valhalla-echoes.clan.reputation.reset_single": "Reset %s's reputation with %s."
 }
 

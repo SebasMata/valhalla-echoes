@@ -44,5 +44,28 @@
   "block.valhalla-echoes.banner.bear": "Emblème du Clan de l'Ours",
   "block.valhalla-echoes.banner.bear.yellow": "Emblème jaune du Clan de l'Ours",
   "block.valhalla-echoes.banner.serpent": "Emblème du Clan du Serpent",
-  "block.valhalla-echoes.banner.serpent.lime": "Emblème vert clair du Clan du Serpent"
+  "block.valhalla-echoes.banner.serpent.lime": "Emblème vert clair du Clan du Serpent",
+
+  "clan.valhalla-echoes.wolf": "Clan du Loup",
+  "clan.valhalla-echoes.raven": "Clan du Corbeau",
+  "clan.valhalla-echoes.bear": "Clan de l'Ours",
+  "clan.valhalla-echoes.serpent": "Clan du Serpent",
+
+  "clan_reputation.valhalla-echoes.level.hostile": "Hostile",
+  "clan_reputation.valhalla-echoes.level.neutral": "Neutre",
+  "clan_reputation.valhalla-echoes.level.friendly": "Amical",
+  "clan_reputation.valhalla-echoes.level.ally": "Allié",
+  "clan_reputation.valhalla-echoes.level_changed": "Votre relation avec le %s est désormais %s.",
+
+  "command.valhalla-echoes.clan.invalid_clan": "Clan viking inconnu : '%s'. Clans valides : wolf, raven, bear, serpent.",
+  "command.valhalla-echoes.clan.status.header": "=== Réputation auprès des Clans Vikings ===",
+  "command.valhalla-echoes.clan.status.header_other": "=== Réputation auprès des Clans Vikings (%s) ===",
+  "command.valhalla-echoes.clan.status.entry": "%s : %s (%s)",
+  "command.valhalla-echoes.clan.status.current_region_tag": "[Région actuelle]",
+  "command.valhalla-echoes.clan.region": "Région actuelle : %s (Rival : %s) — Votre relation : %s (%s)",
+  "command.valhalla-echoes.clan.reputation.get_single": "Réputation de %s auprès de %s : %s (%s)",
+  "command.valhalla-echoes.clan.reputation.set": "Réputation de %s auprès de %s définie à %s (%s).",
+  "command.valhalla-echoes.clan.reputation.add": "Réputation de %2$s auprès de %3$s modifiée (%1$s) à %4$s (%5$s).",
+  "command.valhalla-echoes.clan.reputation.reset_all": "Réputation auprès de tous les clans vikings réinitialisée pour %s.",
+  "command.valhalla-echoes.clan.reputation.reset_single": "Réputation de %s auprès de %s réinitialisée."
 }
