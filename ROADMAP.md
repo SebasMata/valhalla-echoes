@@ -10,7 +10,7 @@
 - [x] Custom banner pattern scroll items for the Loom & regional clan banner generation in Viking villages
 
 ### Systems & Items
-- [ ] Viking clan system (clan NPC affiliation, reputation & interactions)
+- [x] Viking clan system (clan NPC affiliation, reputation & interactions)
 - [ ] Special player items
 
 ---
