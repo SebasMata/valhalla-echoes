@@ -1,5 +1,7 @@
 package com.mataflex;
 
+import com.mataflex.clan.ClanComponents;
+import com.mataflex.clan.ClanEvents;
 import com.mataflex.clan.ClanVillageManager;
 import com.mataflex.command.ClanCommand;
 import com.mataflex.entity.DraugrEntity;
@@ -64,9 +66,11 @@ public class ValhallaEchoes implements ModInitializer {
 	public void onInitialize() {
 
 		LOGGER.info("Welcome to Valhalla Echoes! Initializing mod...");
+		ClanComponents.initialize();
 		ModItems.initialize();
 		ModCreativeTabs.register();
 		ClanVillageManager.initialize();
+		ClanEvents.register();
 		ClanCommand.register();
 
 		FabricDefaultAttributeRegistry.register(

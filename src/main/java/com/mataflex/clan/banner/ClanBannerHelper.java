@@ -1,20 +1,28 @@
 package com.mataflex.clan.banner;
 
+import com.mataflex.clan.ClanComponents;
 import com.mataflex.clan.VikingClan;
+import com.mataflex.item.ModItems;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.BannerBlock;
 import net.minecraft.world.level.block.WallBannerBlock;
+import net.minecraft.world.level.block.entity.BannerPattern;
+import net.minecraft.world.level.block.entity.BannerPatternLayers;
 import net.minecraft.world.level.block.state.BlockState;
 
 /**
- * Define la configuración y transformación de los estandartes (Banners) asociados
- * a cada clan vikingo para decorar las aldeas.
+ * Define la configuración y transformación de los estandartes (Banners) y escudos
+ * asociados a cada clan vikingo para decorar aldeas y equipar entidades.
  */
 public class ClanBannerHelper {
 
     private ClanBannerHelper() {
-        // Clase auxiliar para construir los estandartes de cada clan
+        // Clase auxiliar para construir los estandartes y escudos de cada clan
     }
 
     /**
@@ -63,5 +71,49 @@ public class ClanBannerHelper {
 
         nbt.put("patterns", patternsList);
         return nbt;
+    }
+
+    /**
+     * Construye el componente {@link BannerPatternLayers} con el emblema y color del clan.
+     */
+    public static BannerPatternLayers createClanBannerLayers(VikingClan clan, HolderLookup.Provider registries) {
+        BannerPatternLayers.Builder builder = new BannerPatternLayers.Builder();
+        registries.lookup(Registries.BANNER_PATTERN).ifPresent(bannerLookup ->
+                builder.addIfRegistered(bannerLookup, clan.getPatternKey(), clan.getPatternColor())
+        );
+        return builder.build();
+    }
+
+    /**
+     * Estampa la identidad del clan (componente de modelo 3D, color base y capas de patrón)
+     * sobre un {@link ItemStack} de escudo Targe.
+     */
+    public static ItemStack applyClanToTargeShield(ItemStack shieldStack, VikingClan clan, HolderLookup.Provider registries) {
+        shieldStack.set(ClanComponents.CLAN, clan);
+        shieldStack.set(DataComponents.BASE_COLOR, clan.getBaseColor());
+        BannerPatternLayers layers = createClanBannerLayers(clan, registries);
+        if (!layers.layers().isEmpty()) {
+            shieldStack.set(DataComponents.BANNER_PATTERNS, layers);
+        }
+        return shieldStack;
+    }
+
+    /**
+     * Crea un nuevo {@code TargeShield} con el modelo 3D y patrón heráldico del clan indicado.
+     */
+    public static ItemStack createClanTargeShield(VikingClan clan, HolderLookup.Provider registries) {
+        return applyClanToTargeShield(new ItemStack(ModItems.TARGE_SHIELD), clan, registries);
+    }
+
+    /**
+     * Crea un {@link ItemStack} de estandarte del clan (para portaestandartes o recompensas).
+     */
+    public static ItemStack createClanBannerStack(VikingClan clan, HolderLookup.Provider registries) {
+        ItemStack bannerStack = new ItemStack(clan.getStandingBanner().asItem());
+        BannerPatternLayers layers = createClanBannerLayers(clan, registries);
+        if (!layers.layers().isEmpty()) {
+            bannerStack.set(DataComponents.BANNER_PATTERNS, layers);
+        }
+        return bannerStack;
     }
 }

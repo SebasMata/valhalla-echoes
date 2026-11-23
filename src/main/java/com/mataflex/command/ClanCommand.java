@@ -6,6 +6,7 @@ import com.mataflex.clan.reputation.ClanReputationData;
 import com.mataflex.clan.reputation.ClanReputationData.ReputationChangeResult;
 import com.mataflex.clan.reputation.ClanReputationLevel;
 import com.mataflex.clan.reputation.ClanReputationManager;
+import com.mataflex.entity.MysticalVikingEntity;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.arguments.StringArgumentType;
@@ -21,13 +22,15 @@ import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.Entity;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.EnumMap;
 
 /**
  * Comando {@code /clan} para consultar la reputación del jugador con los 4 clanes vikingos,
- * identificar el clan territorial de la región actual y gestionar reputaciones como administrador.
+ * identificar el clan territorial de la región actual y gestionar reputaciones o afiliaciones como administrador.
  */
 public final class ClanCommand {
 
@@ -58,6 +61,19 @@ public final class ClanCommand {
                 )
                 .then(Commands.literal("region")
                         .executes(context -> showCurrentRegion(context.getSource()))
+                )
+                .then(Commands.literal("assign")
+                        .requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
+                        .then(Commands.argument("targets", EntityArgument.entities())
+                                .then(Commands.argument("clan", StringArgumentType.word())
+                                        .suggests(CLAN_SUGGESTIONS)
+                                        .executes(context -> assignEntitiesClan(
+                                                context.getSource(),
+                                                EntityArgument.getEntities(context, "targets"),
+                                                parseClan(StringArgumentType.getString(context, "clan"))
+                                        ))
+                                )
+                        )
                 )
                 .then(Commands.literal("reputation")
                         .requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
@@ -128,6 +144,37 @@ public final class ClanCommand {
                         )
                 )
         );
+    }
+
+    private static int assignEntitiesClan(
+            CommandSourceStack source,
+            Collection<? extends Entity> targets,
+            VikingClan clan
+    ) {
+        int updated = 0;
+        for (Entity entity : targets) {
+            if (entity instanceof MysticalVikingEntity viking) {
+                viking.setClan(clan);
+                viking.equipClanShield();
+                updated++;
+            }
+        }
+
+        if (updated == 0) {
+            source.sendFailure(Component.translatable("command.valhalla-echoes.clan.assign.none"));
+            return 0;
+        }
+
+        int finalCount = updated;
+        source.sendSuccess(
+                () -> Component.translatable(
+                        "command.valhalla-echoes.clan.assign.success",
+                        finalCount,
+                        clan.getDisplayName()
+                ),
+                true
+        );
+        return updated;
     }
 
     private static VikingClan parseClan(String rawClanId) throws CommandSyntaxException {
