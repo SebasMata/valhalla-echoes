@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/index.css?v=20261114">
+    <link rel="stylesheet" href="styles/index.css?v=20261123b">
 </head>
 
 <body>
@@ -21,6 +21,7 @@
         <div class="nav-links">
             <a href="#about" class="nav-link">About</a>
             <a href="#features" class="nav-link">Features</a>
+            <a href="#clans" class="nav-link">Clans</a>
             <a href="#artifacts" class="nav-link">Artifacts</a>
             <a href="#roadmap" class="nav-link">Roadmap</a>
             <a href="#installation" class="nav-link">Installation</a>
@@ -52,7 +53,7 @@
             <span class="metal-plate plate-gold">
                 <span class="plate-rivet"></span>
                 <span class="plate-key">BUILD</span>
-                <span class="plate-val">v0.6.1-beta</span>
+                <span class="plate-val">v0.6.2-beta</span>
                 <span class="plate-rivet"></span>
             </span>
         </div>
@@ -65,7 +66,7 @@
 
         <div class="button-group">
             <a href="download.html" class="btn btn-crimson">
-                <span class="btn-label">Download v0.6.1-beta</span>
+                <span class="btn-label">Download v0.6.2-beta</span>
                 <span class="btn-sub">.JAR &bull; Minecraft 26.3</span>
             </a>
             <a href="https://modrinth.com/mod/valhalla-echoes" class="btn btn-forged" target="_blank" rel="noopener noreferrer">
@@ -84,13 +85,13 @@
             <div class="editorial-copy">
                 <div class="eyebrow">CHRONICLES OF THE NORTH // 26.3 PORT</div>
                 <h1 class="editorial-title">About The Mod</h1>
-                <p class="lead-paragraph">Welcome to <strong>Valhalla Echoes</strong>. This mod brings ancient Norse mythology directly into your Minecraft <strong>26.3</strong> world. Explore snowbound settlements flying the banners of ancient Viking clans, clash with fearsome Mystical Vikings and undead Draugr, and forge legendary runic weaponry and armor.</p>
-                <p>Built natively for the unobfuscated Minecraft 26.3 architecture on Fabric, Valhalla Echoes expands surface exploration and melee combat with regional clan settlements, custom AI behaviors, timed shield parrying, and high-tier equipment progression.</p>
+                <p class="lead-paragraph">Welcome to <strong>Valhalla Echoes</strong>. This mod brings ancient Norse mythology directly into your Minecraft <strong>26.3</strong> world. Explore snowbound settlements ruled by four rival Viking clans, build world-persistent reputation through offerings and Draugr hunts, and forge legendary runic weaponry and armor.</p>
+                <p>Built natively for the unobfuscated Minecraft 26.3 architecture on Fabric, Valhalla Echoes expands surface exploration and melee combat with populated clan villages, reputation-driven Viking AI, 3D clan Targe Shields with timed parrying, and high-tier equipment progression.</p>
 
                 <div class="spec-ledger">
                     <div class="spec-item">
                         <span class="spec-k">LATEST RELEASE</span>
-                        <span class="spec-v">v0.6.1-beta</span>
+                        <span class="spec-v">v0.6.2-beta</span>
                     </div>
                     <div class="spec-item">
                         <span class="spec-k">TARGET VERSION</span>
@@ -207,7 +208,7 @@
                     <div class="feature-text">
                         <span class="feature-index">01 // WORLD GENERATION</span>
                         <h3>Viking Villages &amp; Clans</h3>
-                        <p>Discover dynamically generated Norse settlements across snowy biomes, complete with turf-roofed great halls, blast huts, cozy interiors, and social centers. Each 512&times;512 region is ruled by one of four Viking clans (<strong>Wolf</strong>, <strong>Raven</strong>, <strong>Bear</strong>, or <strong>Serpent</strong>), flying their heraldic banners and storing Loom banner pattern scrolls in village chests.</p>
+                        <p>Discover dynamically generated Norse settlements across snowy biomes, complete with turf-roofed great halls, blast huts, cozy interiors, and social centers. Each 512&times;512 region is ruled by one of four Viking clans (<strong>Wolf</strong>, <strong>Raven</strong>, <strong>Bear</strong>, or <strong>Serpent</strong>), populated with persistent resident Vikings wielding their clan's 3D Targe Shield and storing Loom banner pattern scrolls in village chests.</p>
                         <div class="feature-meta-bar">
                             <span>BIOME TAG: <code>#minecraft:has_structure/village_snowy</code></span>
                             <span>CLANS: <code>WOLF / RAVEN / BEAR / SERPENT</code></span>
@@ -278,7 +279,7 @@
                     <div class="feature-text">
                         <span class="feature-index">03 // DENIZENS OF THE NORTH</span>
                         <h3>Norse Entities</h3>
-                        <p>Encounter fierce Mystical Vikings and ancient Draugr roaming taigas, mountains, and ancestral villages. Mystical Vikings operate on a custom AI brain system—reacting with jealousy if you wield their sacred weapons and celebrating after victorious battles.</p>
+                        <p>Encounter clan-affiliated Mystical Vikings and undead Draugr roaming taigas, mountains, and ancestral villages. Mystical Vikings run on a custom reputation-driven AI brain—reacting to your clan standing, fighting Draugr on sight, accepting clan offerings, and celebrating victorious hunts.</p>
                         <div class="entity-spawns">
                             <div class="spawn-badge">
                                 <img src="resources/viking_spawn_egg.png" alt="Viking Spawn Egg" class="pixel-sprite-sm">
@@ -299,8 +300,8 @@
                             <div class="combat-relic">
                                 <img src="resources/targe_shield.png" alt="Targe Shield" class="pixel-sprite-lg">
                                 <div class="relic-caption">
-                                    <strong>Targe Shield</strong>
-                                    <span>&le; 5 Ticks Perfect Parry Window</span>
+                                    <strong>3D Clan Targe Shield</strong>
+                                    <span>&le; 5 Ticks Perfect Parry &bull; 4 Clan Variants</span>
                                 </div>
                             </div>
                             <div class="combat-relic">
@@ -315,14 +316,203 @@
                     <div class="feature-text">
                         <span class="feature-index">04 // TACTICAL WARFARE</span>
                         <h3>Combat &amp; Parrying</h3>
-                        <p>Master timed parries with the Targe Shield to knock back attackers and negate incoming damage completely when raised within 5 ticks of impact. Pair it with the custom-modeled 3D Horned Helmet to impale melee aggressors on contact.</p>
+                        <p>Master timed parries with the 3D Targe Shield—now featuring heraldic Wolf, Raven, Bear, and Serpent clan variants—to knock back attackers and negate incoming damage within 5 ticks of impact. Pair it with the 3D Horned Helmet to impale melee aggressors on contact.</p>
                         <div class="feature-meta-bar">
                             <span>PARRY WINDOW: <code>0.25s (5 TICKS)</code></span>
-                            <span>HELMET PROC: <code>85% CHANCE</code></span>
+                            <span>CLAN SHIELDS: <code>4 3D VARIANTS</code></span>
                         </div>
                     </div>
                 </article>
             </div>
+        </div>
+    </section>
+
+    <!-- RUNIC HORIZONTAL DIVIDER -->
+    <div class="runic-divider" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-glyph">&#5792; &bull; &#5817; &bull; &#5846;</span>
+        <span class="divider-line"></span>
+    </div>
+
+    <!-- VIKING CLAN SYSTEM SECTION (v0.6.2-BETA) -->
+    <section id="clans" class="clans-section">
+        <div class="clans-header-row">
+            <div class="section-heading">
+                <div class="eyebrow">NEW IN v0.6.2-BETA // FACTION ALLEGIANCE &amp; REPUTATION</div>
+                <h2>The Four Viking Clans</h2>
+            </div>
+            <p class="clans-intro">Every 512&times;512 territory in your world belongs to one of four rival clans. Earn world-persistent reputation by slaying Draugr and delivering clan offerings, unlock Ally blessings, and wield heraldic 3D clan shields.</p>
+        </div>
+
+        <!-- Interactive 4-Clan Selector Tabs -->
+        <div class="clan-tabs" role="tablist" aria-label="Viking Clans">
+            <button type="button" class="clan-tab clan-wolf is-active" role="tab" aria-selected="true" data-clan="wolf">
+                <img src="resources/wolf_banner_pattern.png" alt="Wolf Clan Crest" class="pixel-sprite-sm">
+                <span class="clan-tab-text">
+                    <strong>Wolf Clan</strong>
+                    <span>Rival: Serpent</span>
+                </span>
+            </button>
+            <button type="button" class="clan-tab clan-raven" role="tab" aria-selected="false" data-clan="raven">
+                <img src="resources/raven_banner_pattern.png" alt="Raven Clan Crest" class="pixel-sprite-sm">
+                <span class="clan-tab-text">
+                    <strong>Raven Clan</strong>
+                    <span>Rival: Bear</span>
+                </span>
+            </button>
+            <button type="button" class="clan-tab clan-bear" role="tab" aria-selected="false" data-clan="bear">
+                <img src="resources/bear_banner_pattern.png" alt="Bear Clan Crest" class="pixel-sprite-sm">
+                <span class="clan-tab-text">
+                    <strong>Bear Clan</strong>
+                    <span>Rival: Raven</span>
+                </span>
+            </button>
+            <button type="button" class="clan-tab clan-serpent" role="tab" aria-selected="false" data-clan="serpent">
+                <img src="resources/serpent_banner_pattern.png" alt="Serpent Clan Crest" class="pixel-sprite-sm">
+                <span class="clan-tab-text">
+                    <strong>Serpent Clan</strong>
+                    <span>Rival: Wolf</span>
+                </span>
+            </button>
+        </div>
+
+        <!-- Clan Codex Stage -->
+        <div class="clan-codex-stage" id="clan-codex-stage" data-active-clan="wolf">
+            <div class="clan-codex-grid">
+                <figure class="forged-frame clan-media-frame">
+                    <div class="frame-corner tl"></div>
+                    <div class="frame-corner tr"></div>
+                    <div class="frame-corner bl"></div>
+                    <div class="frame-corner br"></div>
+                    <img src="resources/clan_wolf.png" alt="Wolf Clan Showcase" class="feature-img clan-stage-img" id="clan-stage-img">
+                    <figcaption class="frame-caption">
+                        <span id="clan-stage-caption">WOLF CLAN &mdash; GREY &amp; WHITE HERALDRY</span>
+                        <span class="mono-tag" id="clan-stage-tag">ID: valhalla-echoes:wolf</span>
+                    </figcaption>
+                </figure>
+
+                <div class="clan-dossier-body">
+                    <div class="clan-dossier-head">
+                        <div class="clan-crest-pedestal">
+                            <img src="resources/wolf_banner_pattern.png" alt="Active Clan Pattern" class="pixel-sprite" id="clan-dossier-icon">
+                        </div>
+                        <div>
+                            <span class="clan-eyebrow" id="clan-dossier-eyebrow">PACK HUNTERS OF THE SNOWY TAIGA</span>
+                            <h3 id="clan-dossier-title">Wolf Clan</h3>
+                        </div>
+                    </div>
+
+                    <p id="clan-dossier-desc">Relentless trackers and pack fighters who patrol snowy pine frontiers. Wolf Clan villages fly ash-grey banners and reward hunters who clear Draugr threats from their roads.</p>
+
+                    <div class="clan-meta-grid">
+                        <div class="clan-meta-cell">
+                            <span class="meta-k">HERALDRY COLORS</span>
+                            <span class="meta-v" id="clan-dossier-colors">White &amp; Gray</span>
+                        </div>
+                        <div class="clan-meta-cell">
+                            <span class="meta-k">RIVAL CLAN (-25% REP)</span>
+                            <span class="meta-v" id="clan-dossier-rival">Serpent Clan</span>
+                        </div>
+                    </div>
+
+                    <div class="clan-offerings-block">
+                        <span class="meta-k">CLAN-FAVORITE OFFERINGS</span>
+                        <div class="offering-pills" id="clan-dossier-offerings">
+                            <span class="offering-pill">Cooked Mutton <code>+6</code></span>
+                            <span class="offering-pill">Cooked Beef <code>+6</code></span>
+                            <span class="offering-pill">Bone <code>+3</code></span>
+                        </div>
+                        <p class="offerings-note">All clans also accept general treasures: <code>Runic Gem (+15)</code>, <code>Mystical Ingot (+12)</code>, <code>Mystical Essence (+10)</code>, and <code>Gold Ingot / Emerald (+4)</code>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reputation Standing Tiers & Rivalry Ledger -->
+        <div class="standing-panel">
+            <div class="standing-topbar">
+                <span>WORLD-PERSISTENT REPUTATION // RANGE -100 TO +150</span>
+                <span class="mono-tag">CROSS-CLAN RIVALRY: WOLF &harr; SERPENT &bull; BEAR &harr; RAVEN</span>
+            </div>
+            <div class="standing-ledger">
+                <div class="standing-tier tier-hostile">
+                    <div class="tier-head">
+                        <strong>Hostile</strong>
+                        <code>-100 .. -50</code>
+                    </div>
+                    <p>Clan Vikings attack on sight, reject all offerings, and rally nearby clanmates against you.</p>
+                </div>
+                <div class="standing-tier tier-neutral">
+                    <div class="tier-head">
+                        <strong>Neutral</strong>
+                        <code>-49 .. +24</code>
+                    </div>
+                    <p>Starting standing. Vikings accept offerings and only grow jealous if you flaunt sacred mystical gear.</p>
+                </div>
+                <div class="standing-tier tier-friendly">
+                    <div class="tier-head">
+                        <strong>Friendly</strong>
+                        <code>+25 .. +99</code>
+                    </div>
+                    <p>No gear jealousy. Vikings greet you warmly and toss reciprocal gifts—including clan banner patterns—on offerings.</p>
+                </div>
+                <div class="standing-tier tier-ally">
+                    <div class="tier-head">
+                        <strong>Ally</strong>
+                        <code>+100 .. +150</code>
+                    </div>
+                    <p>Full clan brotherhood: higher-tier gifts plus 45-second <strong>Strength</strong> or <strong>Regeneration</strong> battle blessings.</p>
+                </div>
+            </div>
+            <div class="clan-commands-bar">
+                <span class="cmd-bar-label">IN-GAME COMMANDS</span>
+                <div class="cmd-chips">
+                    <code>/clan</code>
+                    <code>/clan status</code>
+                    <code>/clan region</code>
+                    <code>/clan reputation &lt;get|set|add|reset&gt;</code>
+                    <code>/clan assign &lt;targets&gt; &lt;clan&gt;</code>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2-Column Visual Showcase -->
+        <div class="clan-showcase-grid">
+            <article class="clan-showcase-card">
+                <figure class="forged-frame">
+                    <div class="frame-corner tl"></div>
+                    <div class="frame-corner tr"></div>
+                    <div class="frame-corner bl"></div>
+                    <div class="frame-corner br"></div>
+                    <img src="resources/clan_shields_3d.png" alt="3D Clan Targe Shields Showcase" class="feature-img">
+                    <figcaption class="frame-caption">
+                        <span>FIG. 02 &mdash; 3D CLAN TARGE SHIELDS</span>
+                        <span class="mono-tag">valhalla-echoes:clan</span>
+                    </figcaption>
+                </figure>
+                <div class="showcase-card-copy">
+                    <h4>3D Clan Targe Shields</h4>
+                    <p>Each clan equips its warriors with a dedicated 3D Targe Shield model and texture (both idle and blocking) displaying their emblem and clan tooltip.</p>
+                </div>
+            </article>
+
+            <article class="clan-showcase-card">
+                <figure class="forged-frame">
+                    <div class="frame-corner tl"></div>
+                    <div class="frame-corner tr"></div>
+                    <div class="frame-corner bl"></div>
+                    <div class="frame-corner br"></div>
+                    <img src="resources/clan_reputation_hud.png" alt="Clan Offerings and Reputation HUD Showcase" class="feature-img">
+                    <figcaption class="frame-caption">
+                        <span>FIG. 03 &mdash; OFFERINGS &amp; /CLAN HUD</span>
+                        <span class="mono-tag">ACTION BAR + CHAT</span>
+                    </figcaption>
+                </figure>
+                <div class="showcase-card-copy">
+                    <h4>Offerings &amp; Living World Events</h4>
+                    <p>Slay Draugr in clan lands (<code>+5</code>) or before Viking witnesses (<code>+10</code>) to trigger celebrations, or deliver offerings directly to raise standing across all 11 languages.</p>
+                </div>
+            </article>
         </div>
     </section>
 
@@ -505,10 +695,10 @@
                     <div class="step-num">03</div>
                     <div class="step-body">
                         <div class="step-title">Download Valhalla Echoes</div>
-                        <p>Download the <a href="download.html" class="dep-badge dep-crimson">Valhalla Echoes (v0.6.1-beta)</a> release package.</p>
+                        <p>Download the <a href="download.html" class="dep-badge dep-crimson">Valhalla Echoes (v0.6.2-beta)</a> release package.</p>
                         <div class="cmd-box">
-                            <code>valhalla-echoes-v0.6.1-beta.jar</code>
-                            <button type="button" class="copy-btn" data-copy="valhalla-echoes-v0.6.1-beta.jar">COPY FILENAME</button>
+                            <code>valhalla-echoes-v0.6.2-beta.jar</code>
+                            <button type="button" class="copy-btn" data-copy="valhalla-echoes-v0.6.2-beta.jar">COPY FILENAME</button>
                         </div>
                     </div>
                 </div>
@@ -517,7 +707,7 @@
                     <div class="step-num">04</div>
                     <div class="step-body">
                         <div class="step-title">Deploy to Mods Folder &amp; Launch</div>
-                        <p>Move <code>valhalla-echoes-v0.6.1-beta.jar</code> into <code>.minecraft/mods</code>, select the <strong>fabric-loader-26.3</strong> profile in your launcher, and start the game.</p>
+                        <p>Move <code>valhalla-echoes-v0.6.2-beta.jar</code> into <code>.minecraft/mods</code>, select the <strong>fabric-loader-26.3</strong> profile in your launcher, and start the game.</p>
                     </div>
                 </div>
             </div>
@@ -540,6 +730,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="download.html">Download Releases</a></li>
                 <li><a href="#features">Key Features</a></li>
+                <li><a href="#clans">Viking Clans</a></li>
                 <li><a href="#roadmap">Upcoming &amp; Roadmap</a></li>
                 <li><a href="#installation">Installation Guide</a></li>
             </ul>
@@ -796,6 +987,129 @@
         });
 
         resetTimer();
+    })();
+
+    // VIKING CLAN CODEX SELECTOR
+    (function initClanCodex() {
+        const clanData = {
+            wolf: {
+                title: 'Wolf Clan',
+                eyebrow: 'PACK HUNTERS OF THE SNOWY TAIGA',
+                desc: 'Relentless trackers and pack fighters who patrol snowy pine frontiers. Wolf Clan villages fly ash-grey banners and reward hunters who clear Draugr threats from their roads.',
+                colors: 'White & Gray',
+                rival: 'Serpent Clan',
+                icon: 'resources/wolf_banner_pattern.png',
+                image: 'resources/clan_wolf.png',
+                alt: 'Wolf Clan Showcase',
+                caption: 'WOLF CLAN — GREY & WHITE HERALDRY',
+                tag: 'ID: valhalla-echoes:wolf',
+                offerings: [
+                    { name: 'Cooked Mutton', rep: '+6' },
+                    { name: 'Cooked Beef', rep: '+6' },
+                    { name: 'Bone', rep: '+3' }
+                ]
+            },
+            raven: {
+                title: 'Raven Clan',
+                eyebrow: 'WATCHERS OF ODIN & RUNELORE',
+                desc: 'Keen-eyed scouts and keepers of mystic relics drawn to rare stones and the Void. Raven Clan warriors carry cyan-crested 3D Targe Shields and favor esoteric offerings.',
+                colors: 'White & Cyan',
+                rival: 'Bear Clan',
+                icon: 'resources/raven_banner_pattern.png',
+                image: 'resources/clan_raven.png',
+                alt: 'Raven Clan Showcase',
+                caption: 'RAVEN CLAN — CYAN & WHITE HERALDRY',
+                tag: 'ID: valhalla-echoes:raven',
+                offerings: [
+                    { name: 'Ender Pearl', rep: '+8' },
+                    { name: 'Amethyst Shard', rep: '+6' },
+                    { name: 'Feather', rep: '+3' }
+                ]
+            },
+            bear: {
+                title: 'Bear Clan',
+                eyebrow: 'IRONCLAD GUARDIANS OF THE GREAT HALLS',
+                desc: 'Fierce berserkers and steadfast defenders draped in crimson banners. Bear Clan strongholds prize hearty provisions from the wilderness and stand firm against undead incursions.',
+                colors: 'White & Red',
+                rival: 'Raven Clan',
+                icon: 'resources/bear_banner_pattern.png',
+                image: 'resources/clan_bear.png',
+                alt: 'Bear Clan Showcase',
+                caption: 'BEAR CLAN — CRIMSON & WHITE HERALDRY',
+                tag: 'ID: valhalla-echoes:bear',
+                offerings: [
+                    { name: 'Honey Bottle', rep: '+6' },
+                    { name: 'Cooked Salmon', rep: '+6' },
+                    { name: 'Sweet Berries', rep: '+3' }
+                ]
+            },
+            serpent: {
+                title: 'Serpent Clan',
+                eyebrow: 'RAIDERS OF THE FROZEN SEA',
+                desc: 'Cunning seafarers and treasure seekers who wear emerald serpent heraldry across their shields and sails. They trade favor most generously for ocean relics and precious gems.',
+                colors: 'White & Green',
+                rival: 'Wolf Clan',
+                icon: 'resources/serpent_banner_pattern.png',
+                image: 'resources/clan_serpent.png',
+                alt: 'Serpent Clan Showcase',
+                caption: 'SERPENT CLAN — EMERALD & WHITE HERALDRY',
+                tag: 'ID: valhalla-echoes:serpent',
+                offerings: [
+                    { name: 'Nautilus Shell', rep: '+8' },
+                    { name: 'Prismarine Shard', rep: '+6' },
+                    { name: 'Emerald', rep: '+6' }
+                ]
+            }
+        };
+
+        const tabs = Array.from(document.querySelectorAll('.clan-tab'));
+        const stage = document.getElementById('clan-codex-stage');
+        const imgEl = document.getElementById('clan-stage-img');
+        const captionEl = document.getElementById('clan-stage-caption');
+        const tagEl = document.getElementById('clan-stage-tag');
+        const iconEl = document.getElementById('clan-dossier-icon');
+        const eyebrowEl = document.getElementById('clan-dossier-eyebrow');
+        const titleEl = document.getElementById('clan-dossier-title');
+        const descEl = document.getElementById('clan-dossier-desc');
+        const colorsEl = document.getElementById('clan-dossier-colors');
+        const rivalEl = document.getElementById('clan-dossier-rival');
+        const offeringsEl = document.getElementById('clan-dossier-offerings');
+
+        function selectClan(clanId) {
+            const data = clanData[clanId];
+            if (!data) return;
+
+            tabs.forEach(tab => {
+                const active = tab.getAttribute('data-clan') === clanId;
+                tab.classList.toggle('is-active', active);
+                tab.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+
+            if (stage) stage.setAttribute('data-active-clan', clanId);
+            if (imgEl) {
+                imgEl.src = data.image;
+                imgEl.alt = data.alt;
+            }
+            if (captionEl) captionEl.textContent = data.caption;
+            if (tagEl) tagEl.textContent = data.tag;
+            if (iconEl) iconEl.src = data.icon;
+            if (eyebrowEl) eyebrowEl.textContent = data.eyebrow;
+            if (titleEl) titleEl.textContent = data.title;
+            if (descEl) descEl.textContent = data.desc;
+            if (colorsEl) colorsEl.textContent = data.colors;
+            if (rivalEl) rivalEl.textContent = data.rival;
+            if (offeringsEl) {
+                offeringsEl.innerHTML = data.offerings
+                    .map(o => `<span class="offering-pill">${escapeHtml(o.name)} <code>${escapeHtml(o.rep)}</code></span>`)
+                    .join('');
+            }
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                selectClan(tab.getAttribute('data-clan'));
+            });
+        });
     })();
 </script>
 </body>
