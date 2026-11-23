@@ -28,11 +28,11 @@ You can check the mod's website on Modrinth here:
 
 ### Download
 You can download the mod directly here:
-* Latest version: [v0.6.1-beta](https://github.com/SebasMata/valhalla-echoes/releases/tag/v0.6.1-beta)
+* Latest version: [v0.6.2-beta](https://github.com/SebasMata/valhalla-echoes/releases/tag/v0.6.2-beta)
 
 ### Install guide
 >1) Install the [Fabric modloader](https://fabricmc.net).
->1) Download and put the `valhalla-echoes-v0.6.1-beta.jar` file into `.minecraft/mods` folder.
+>1) Download and put the `valhalla-echoes-v0.6.2-beta.jar` file into `.minecraft/mods` folder.
 >1) You're ready to play!
 
 ## Notes

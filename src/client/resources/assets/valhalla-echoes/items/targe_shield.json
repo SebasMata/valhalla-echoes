@@ -1,14 +1,81 @@
 {
   "model": {
-    "type": "minecraft:condition",
-    "property": "minecraft:using_item",
-    "on_true": {
-      "type": "minecraft:model",
-      "model": "valhalla-echoes:item/targe_shield_blocking"
-    },
-    "on_false": {
-      "type": "minecraft:model",
-      "model": "valhalla-echoes:item/targe_shield"
+    "type": "minecraft:select",
+    "property": "minecraft:component",
+    "component": "valhalla-echoes:clan",
+    "cases": [
+      {
+        "when": "wolf",
+        "model": {
+          "type": "minecraft:condition",
+          "property": "minecraft:using_item",
+          "on_true": {
+            "type": "minecraft:model",
+            "model": "valhalla-echoes:item/targe_shield_wolf_blocking"
+          },
+          "on_false": {
+            "type": "minecraft:model",
+            "model": "valhalla-echoes:item/targe_shield_wolf"
+          }
+        }
+      },
+      {
+        "when": "raven",
+        "model": {
+          "type": "minecraft:condition",
+          "property": "minecraft:using_item",
+          "on_true": {
+            "type": "minecraft:model",
+            "model": "valhalla-echoes:item/targe_shield_raven_blocking"
+          },
+          "on_false": {
+            "type": "minecraft:model",
+            "model": "valhalla-echoes:item/targe_shield_raven"
+          }
+        }
+      },
+      {
+        "when": "bear",
+        "model": {
+          "type": "minecraft:condition",
+          "property": "minecraft:using_item",
+          "on_true": {
+            "type": "minecraft:model",
+            "model": "valhalla-echoes:item/targe_shield_bear_blocking"
+          },
+          "on_false": {
+            "type": "minecraft:model",
+            "model": "valhalla-echoes:item/targe_shield_bear"
+          }
+        }
+      },
+      {
+        "when": "serpent",
+        "model": {
+          "type": "minecraft:condition",
+          "property": "minecraft:using_item",
+          "on_true": {
+            "type": "minecraft:model",
+            "model": "valhalla-echoes:item/targe_shield_serpent_blocking"
+          },
+          "on_false": {
+            "type": "minecraft:model",
+            "model": "valhalla-echoes:item/targe_shield_serpent"
+          }
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:condition",
+      "property": "minecraft:using_item",
+      "on_true": {
+        "type": "minecraft:model",
+        "model": "valhalla-echoes:item/targe_shield_blocking"
+      },
+      "on_false": {
+        "type": "minecraft:model",
+        "model": "valhalla-echoes:item/targe_shield"
+      }
     }
   }
 }

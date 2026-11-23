@@ -44,5 +44,37 @@
   "block.valhalla-echoes.banner.bear": "巨熊族纹章",
   "block.valhalla-echoes.banner.bear.yellow": "黄色巨熊族纹章",
   "block.valhalla-echoes.banner.serpent": "巨蛇族纹章",
-  "block.valhalla-echoes.banner.serpent.lime": "黄绿色巨蛇族纹章"
+  "block.valhalla-echoes.banner.serpent.lime": "黄绿色巨蛇族纹章",
+
+  "clan.valhalla-echoes.wolf": "狼族",
+  "clan.valhalla-echoes.raven": "渡鸦族",
+  "clan.valhalla-echoes.bear": "巨熊族",
+  "clan.valhalla-echoes.serpent": "巨蛇族",
+
+  "clan_reputation.valhalla-echoes.level.hostile": "敌对",
+  "clan_reputation.valhalla-echoes.level.neutral": "中立",
+  "clan_reputation.valhalla-echoes.level.friendly": "友善",
+  "clan_reputation.valhalla-echoes.level.ally": "盟友",
+  "clan_reputation.valhalla-echoes.level_changed": "你与%s的关系现在变为%s。",
+
+  "command.valhalla-echoes.clan.invalid_clan": "未知的维京氏族：'%s'。可用氏族：wolf, raven, bear, serpent。",
+  "command.valhalla-echoes.clan.status.header": "=== 维京氏族声望 ===",
+  "command.valhalla-echoes.clan.status.header_other": "=== 维京氏族声望（%s）===",
+  "command.valhalla-echoes.clan.status.entry": "%s：%s（%s）",
+  "command.valhalla-echoes.clan.status.current_region_tag": "[当前区域]",
+  "command.valhalla-echoes.clan.region": "当前区域：%s（宿敌：%s）— 你的声望：%s（%s）",
+  "command.valhalla-echoes.clan.reputation.get_single": "%s 在 %s 的声望：%s（%s）",
+  "command.valhalla-echoes.clan.reputation.set": "已将 %s 在 %s 的声望设为 %s（%s）。",
+  "command.valhalla-echoes.clan.reputation.add": "已将 %2$s 在 %3$s 的声望调整（%1$s）为 %4$s（%5$s）。",
+  "command.valhalla-echoes.clan.reputation.reset_all": "已重置 %s 在所有维京氏族的声望。",
+  "command.valhalla-echoes.clan.reputation.reset_single": "已重置 %s 在 %s 的声望。",
+  "command.valhalla-echoes.clan.assign.none": "选定目标中未找到神秘维京人。",
+  "command.valhalla-echoes.clan.assign.success": "已将 %s 名神秘维京人分配至%s。",
+
+  "itemTooltip.valhalla-echoes.targe_shield.clan": "氏族：%s",
+  "entity.valhalla-echoes.mystical_viking.interact.hostile": "%s战士：滚出我们的领地，敌人！",
+  "entity.valhalla-echoes.mystical_viking.interact.busy": "%s战士：耐心点，旅人。",
+  "entity.valhalla-echoes.mystical_viking.interact.neutral": "%s（%s）— 小心行事，外来者。",
+  "entity.valhalla-echoes.mystical_viking.interact.friendly": "%s（%s）— 欢迎你，氏族的朋友！",
+  "entity.valhalla-echoes.mystical_viking.interact.ally": "%s（%s）— 我们的战斧与你并肩作战，血盟兄弟！"
 }

@@ -28,6 +28,10 @@ loom {
 		}
 	}
 
+	runs.configureEach {
+		jvmArguments.add("--enable-final-field-mutation=ALL-UNNAMED")
+	}
+
 }
 
 dependencies {

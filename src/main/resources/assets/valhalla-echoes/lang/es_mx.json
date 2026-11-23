@@ -59,5 +59,37 @@
   "block.valhalla-echoes.banner.serpent.lime": "Emblema lima del Clan de la Serpiente",
   "block.valhalla-echoes.banner.serpent.green": "Emblema verde del Clan de la Serpiente",
   "block.valhalla-echoes.banner.serpent.cyan": "Emblema cian del Clan de la Serpiente",
-  "block.valhalla-echoes.banner.serpent.black": "Emblema negro del Clan de la Serpiente"
+  "block.valhalla-echoes.banner.serpent.black": "Emblema negro del Clan de la Serpiente",
+
+  "clan.valhalla-echoes.wolf": "Clan del Lobo",
+  "clan.valhalla-echoes.raven": "Clan del Cuervo",
+  "clan.valhalla-echoes.bear": "Clan del Oso",
+  "clan.valhalla-echoes.serpent": "Clan de la Serpiente",
+
+  "clan_reputation.valhalla-echoes.level.hostile": "Hostil",
+  "clan_reputation.valhalla-echoes.level.neutral": "Neutral",
+  "clan_reputation.valhalla-echoes.level.friendly": "Amistoso",
+  "clan_reputation.valhalla-echoes.level.ally": "Aliado",
+  "clan_reputation.valhalla-echoes.level_changed": "Tu relación con el %s ahora es %s.",
+
+  "command.valhalla-echoes.clan.invalid_clan": "Clan vikingo desconocido: '%s'. Clanes válidos: wolf, raven, bear, serpent.",
+  "command.valhalla-echoes.clan.status.header": "=== Reputación con los Clanes Vikingos ===",
+  "command.valhalla-echoes.clan.status.header_other": "=== Reputación con los Clanes Vikingos (%s) ===",
+  "command.valhalla-echoes.clan.status.entry": "%s: %s (%s)",
+  "command.valhalla-echoes.clan.status.current_region_tag": "[Región actual]",
+  "command.valhalla-echoes.clan.region": "Región actual: %s (Rival: %s) — Tu relación: %s (%s)",
+  "command.valhalla-echoes.clan.reputation.get_single": "Reputación de %s con %s: %s (%s)",
+  "command.valhalla-echoes.clan.reputation.set": "Se estableció la reputación de %s con %s a %s (%s).",
+  "command.valhalla-echoes.clan.reputation.add": "Se modificó (%s) la reputación de %s con %s a %s (%s).",
+  "command.valhalla-echoes.clan.reputation.reset_all": "Se restableció la reputación con todos los clanes vikingos para %s.",
+  "command.valhalla-echoes.clan.reputation.reset_single": "Se restableció la reputación de %s con %s.",
+  "command.valhalla-echoes.clan.assign.none": "No se encontraron vikingos místicos entre los objetivos seleccionados.",
+  "command.valhalla-echoes.clan.assign.success": "Se asignaron %s vikingo(s) místico(s) al %s.",
+
+  "itemTooltip.valhalla-echoes.targe_shield.clan": "Clan: %s",
+  "entity.valhalla-echoes.mystical_viking.interact.hostile": "Guerrero del %s: ¡Fuera de nuestras tierras, enemigo!",
+  "entity.valhalla-echoes.mystical_viking.interact.busy": "Guerrero del %s: Paciencia, viajero.",
+  "entity.valhalla-echoes.mystical_viking.interact.neutral": "%s (%s) — Camina con cuidado, forastero.",
+  "entity.valhalla-echoes.mystical_viking.interact.friendly": "%s (%s) — ¡Bienvenido, amigo del clan!",
+  "entity.valhalla-echoes.mystical_viking.interact.ally": "%s (%s) — ¡Nuestras hachas luchan contigo, hermano juramentado!"
 }

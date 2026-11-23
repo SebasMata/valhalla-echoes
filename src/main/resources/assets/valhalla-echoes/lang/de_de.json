@@ -44,5 +44,37 @@
   "block.valhalla-echoes.banner.bear": "Bärenclan-Wappen",
   "block.valhalla-echoes.banner.bear.yellow": "Gelbes Bärenclan-Wappen",
   "block.valhalla-echoes.banner.serpent": "Schlangenclan-Wappen",
-  "block.valhalla-echoes.banner.serpent.lime": "Hellgrünes Schlangenclan-Wappen"
+  "block.valhalla-echoes.banner.serpent.lime": "Hellgrünes Schlangenclan-Wappen",
+
+  "clan.valhalla-echoes.wolf": "Wolfsclan",
+  "clan.valhalla-echoes.raven": "Rabenclan",
+  "clan.valhalla-echoes.bear": "Bärenclan",
+  "clan.valhalla-echoes.serpent": "Schlangenclan",
+
+  "clan_reputation.valhalla-echoes.level.hostile": "Feindlich",
+  "clan_reputation.valhalla-echoes.level.neutral": "Neutral",
+  "clan_reputation.valhalla-echoes.level.friendly": "Freundlich",
+  "clan_reputation.valhalla-echoes.level.ally": "Verbündet",
+  "clan_reputation.valhalla-echoes.level_changed": "Dein Ansehen beim %s ist jetzt %s.",
+
+  "command.valhalla-echoes.clan.invalid_clan": "Unbekannter Wikingerclan: '%s'. Gültige Clans: wolf, raven, bear, serpent.",
+  "command.valhalla-echoes.clan.status.header": "=== Ansehen bei den Wikingerclans ===",
+  "command.valhalla-echoes.clan.status.header_other": "=== Ansehen bei den Wikingerclans (%s) ===",
+  "command.valhalla-echoes.clan.status.entry": "%s: %s (%s)",
+  "command.valhalla-echoes.clan.status.current_region_tag": "[Aktuelle Region]",
+  "command.valhalla-echoes.clan.region": "Aktuelle Region: %s (Rivale: %s) — Dein Ansehen: %s (%s)",
+  "command.valhalla-echoes.clan.reputation.get_single": "Ansehen von %s bei %s: %s (%s)",
+  "command.valhalla-echoes.clan.reputation.set": "Ansehen von %s bei %s auf %s (%s) gesetzt.",
+  "command.valhalla-echoes.clan.reputation.add": "Ansehen von %2$s bei %3$s um %1$s geändert: %4$s (%5$s).",
+  "command.valhalla-echoes.clan.reputation.reset_all": "Ansehen bei allen Wikingerclans für %s zurückgesetzt.",
+  "command.valhalla-echoes.clan.reputation.reset_single": "Ansehen von %s bei %s zurückgesetzt.",
+  "command.valhalla-echoes.clan.assign.none": "Keine Mystischen Wikinger unter den ausgewählten Zielen gefunden.",
+  "command.valhalla-echoes.clan.assign.success": "%s Mystische(r) Wikinger dem %s zugewiesen.",
+
+  "itemTooltip.valhalla-echoes.targe_shield.clan": "Clan: %s",
+  "entity.valhalla-echoes.mystical_viking.interact.hostile": "%s-Krieger: Verlass unser Land, Feind!",
+  "entity.valhalla-echoes.mystical_viking.interact.busy": "%s-Krieger: Geduld, Reisender.",
+  "entity.valhalla-echoes.mystical_viking.interact.neutral": "%s (%s) — Sei vorsichtig, Fremder.",
+  "entity.valhalla-echoes.mystical_viking.interact.friendly": "%s (%s) — Sei gegrüßt, Freund des Clans!",
+  "entity.valhalla-echoes.mystical_viking.interact.ally": "%s (%s) — Unsere Äxte stehen an deiner Seite, Blutsbruder!"
 }

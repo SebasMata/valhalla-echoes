@@ -2,15 +2,15 @@
   "type": "minecraft:jigsaw",
   "step": "surface_structures",
   "spawn_overrides": {
-    "creature": {
-      "bounding_box": "piece",
+    "monster": {
+      "bounding_box": "full",
       "spawns": [
         {
           "type": "valhalla-echoes:mystical_viking",
-          "weight": 1,
+          "weight": 100,
           "count": {
             "type": "minecraft:uniform",
-            "min_inclusive": 1,
+            "min_inclusive": 2,
             "max_inclusive": 4
           }
         }

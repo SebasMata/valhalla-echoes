@@ -1,0 +1,7 @@
+{
+  "parent": "valhalla-echoes:item/targe_shield",
+  "textures": {
+    "0": "valhalla-echoes:item/targe_shield_wolf",
+    "particle": "valhalla-echoes:item/targe_shield_wolf"
+  }
+}
