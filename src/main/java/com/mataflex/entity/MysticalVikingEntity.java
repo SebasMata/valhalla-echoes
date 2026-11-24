@@ -266,6 +266,8 @@ public class MysticalVikingEntity extends Piglin implements ClanMember {
                 return true;
             }
 
+            this.getMysticalBrain().eraseMemory(MemoryModuleType.CELEBRATE_LOCATION);
+
             if (attacker instanceof ServerPlayer player && !player.isCreative() && !player.isSpectator()) {
                 long gameTime = serverLevel.getGameTime();
                 long lastPenalty = this.lastHurtPenaltyTicks.getOrDefault(player.getUUID(), Long.MIN_VALUE);
