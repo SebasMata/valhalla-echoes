@@ -1,23 +1,16 @@
 # Valhalla Echoes - Roadmap
 
-## 0.6.x Beta - 1.0.x Release
-### Entities & Bosses
-- [ ] Fenrir (Boss)
+## New `0.6.x Beta` - `1.0.x Release` planning
 
-### Biomes & Structures
-- [ ] New Viking biome (similar to Taiga)
-- [x] Clan banners & shield patterns (`Wolf`, `Raven`, `Bear`, and `Serpent` clans)
-- [x] Custom banner pattern scroll items for the Loom & regional clan banner generation in Viking villages
-
-### Systems & Items
-- [x] Viking clan system (clan NPC affiliation, reputation & interactions)
-- [ ] Special player items
+| To Do | WIP | Done |
+| :--- | :--- | :--- |
+| **`Systems & Items`** (`v0.7.x`)<br>Food, potions, crafting and more | **`Maintenance`** (`v0.6.3-beta`)<br>Balancing and bug fixes | **`Biomes & Structures`** (`v0.6.x`)<br>Clan banners & shield patterns (`Wolf`, `Raven`, `Bear`, and `Serpent` clans) |
+| **`Entities & Bosses`** (`v0.8.x`)<br>Fenrir (Boss) | | **`Biomes & Structures`** (`v0.6.x`)<br>Custom banner pattern scroll items for the Loom & regional clan banner generation in Viking villages |
+| **`Biomes & Structures`** (`v0.9.x`)<br>New Viking biome (similar to Taiga) | | **`Systems & Items`** (`v0.6.x`)<br>Viking clan system (clan NPC affiliation, reputation & interactions) |
 
 ---
 
-## Completed
-
-
+## Completed Releases
 
 ### v0.5.x (Beta)
 - [x] Additional multi-language support (Portuguese BR/PT, German, French, Italian, Simplified/Traditional Chinese, and Russian)
