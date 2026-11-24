@@ -1505,6 +1505,172 @@ code {
     transform: rotate(45deg);
 }
 
+/* Roadmap Kanban Board & Markdown Tables */
+.gh-kanban-board {
+    display: grid;
+    grid-template-columns: repeat(var(--kanban-cols, 3), minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0 1.5rem;
+    align-items: start;
+}
+
+.gh-kanban-col {
+    background-color: var(--bg-volcanic);
+    border: 1px solid var(--iron-border);
+    border-top: 3px solid var(--iron-highlight);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.gh-kanban-col[data-col="todo"] {
+    border-top-color: #9ba3b0;
+}
+
+.gh-kanban-col[data-col="wip"] {
+    border-top-color: var(--bronze-gold);
+}
+
+.gh-kanban-col[data-col="done"] {
+    border-top-color: #22c55e;
+}
+
+.gh-kanban-col-header {
+    background-color: var(--bg-slate-deep);
+    border-bottom: 1px solid var(--iron-border);
+    padding: 0.7rem 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.gh-kanban-col-title {
+    font-family: var(--font-display);
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-bone);
+}
+
+.gh-kanban-col[data-col="todo"] .gh-kanban-col-title {
+    color: var(--text-bone);
+}
+
+.gh-kanban-col[data-col="wip"] .gh-kanban-col-title {
+    color: var(--bronze-gold);
+}
+
+.gh-kanban-col[data-col="done"] .gh-kanban-col-title {
+    color: #4ade80;
+}
+
+.gh-kanban-count {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-ash);
+    background-color: var(--bg-slate);
+    border: 1px solid var(--iron-border);
+    border-radius: 2px;
+    padding: 0.08rem 0.45rem;
+}
+
+.gh-kanban-cards {
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.gh-kanban-card {
+    background-color: var(--bg-slate);
+    border: 1px solid var(--iron-border);
+    border-left: 3px solid var(--iron-highlight);
+    border-radius: 2px;
+    padding: 0.75rem 0.85rem;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--text-steel);
+    overflow-wrap: break-word;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.gh-kanban-card:hover {
+    background-color: var(--bg-iron);
+    border-color: var(--iron-highlight);
+}
+
+.gh-kanban-col[data-col="todo"] .gh-kanban-card {
+    border-left-color: var(--iron-highlight);
+}
+
+.gh-kanban-col[data-col="wip"] .gh-kanban-card {
+    border-left-color: var(--bronze-gold);
+}
+
+.gh-kanban-col[data-col="done"] .gh-kanban-card {
+    border-left-color: #22c55e;
+}
+
+.gh-kanban-card code {
+    font-size: 0.74rem;
+    padding: 0.08rem 0.38rem;
+}
+
+.gh-kanban-card strong code {
+    color: var(--text-bone);
+    border-color: var(--iron-highlight);
+}
+
+.gh-kanban-empty {
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    color: var(--text-ash);
+    text-align: center;
+    padding: 0.85rem 0.5rem;
+    border: 1px dashed var(--iron-border);
+    border-radius: 2px;
+}
+
+.gh-table-wrap {
+    overflow-x: auto;
+    margin: 1.25rem 0 1.5rem;
+    border: 1px solid var(--iron-border);
+    border-radius: 2px;
+}
+
+.gh-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background-color: var(--bg-volcanic);
+}
+
+.gh-table th,
+.gh-table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--iron-border);
+    vertical-align: top;
+    color: var(--text-steel);
+}
+
+.gh-table thead th {
+    background-color: var(--bg-iron);
+    font-family: var(--font-display);
+    font-size: 0.84rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--bronze-gold);
+    border-bottom: 2px solid var(--iron-highlight);
+}
+
+.gh-table tbody tr:nth-child(even) {
+    background-color: var(--bg-slate-deep);
+}
+
 /* ==========================================================================
    INSTALLATION — TERMINAL / LAUNCHER PANEL
    ========================================================================== */
@@ -1747,6 +1913,10 @@ code {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .gh-kanban-board {
+        grid-template-columns: 1fr;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -1774,7 +1944,8 @@ code {
     }
 
     .slides-viewport,
-    .clan-codex-stage {
+    .clan-codex-stage,
+    .gh-markdown-body {
         padding: 1.35rem;
     }
 

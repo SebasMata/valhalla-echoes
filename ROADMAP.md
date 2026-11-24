@@ -4,9 +4,9 @@
 
 | To Do | WIP | Done |
 | :--- | :--- | :--- |
-| **`Systems & Items`** (`v0.7.x`)<br>Food, potions, crafting and more | **`Maintenance`** (`v0.6.3-beta`)<br>Balancing and bug fixes | **`Biomes & Structures`** (`v0.6.x`)<br>Clan banners & shield patterns (`Wolf`, `Raven`, `Bear`, and `Serpent` clans) |
-| **`Entities & Bosses`** (`v0.8.x`)<br>Fenrir (Boss) | | **`Biomes & Structures`** (`v0.6.x`)<br>Custom banner pattern scroll items for the Loom & regional clan banner generation in Viking villages |
-| **`Biomes & Structures`** (`v0.9.x`)<br>New Viking biome (similar to Taiga) | | **`Systems & Items`** (`v0.6.x`)<br>Viking clan system (clan NPC affiliation, reputation & interactions) |
+| **`Systems & Items`** (`v0.7.x`)<br>Food, potions, crafting and more | **`Maintenance`** (`v0.6.3-beta`)<br>Balancing and bug fixes | **`Biomes & Structures`** (`v0.6.1`)<br>Clan banners & shield patterns (`Wolf`, `Raven`, `Bear`, and `Serpent` clans) |
+| **`Entities & Bosses`** (`v0.8.x`)<br>Fenrir (Boss) | | **`Biomes & Structures`** (`v0.6.1`)<br>Custom banner pattern scroll items for the Loom & regional clan banner generation in Viking villages |
+| **`Biomes & Structures`** (`v0.9.x`)<br>New Viking biome (similar to Taiga) | | **`Viking clan system`** (`v0.6.2`)<br>clan NPC affiliation, reputation & interactions |
 
 ---
 

@@ -778,8 +778,88 @@
 
     function formatInlineMarkdown(text) {
         return escapeHtml(text)
+            .replace(/&lt;br\s*\/?&gt;/gi, '<br>')
             .replace(/`([^`]+)`/g, '<code>$1</code>')
-            .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+            .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+            .replace(/(^|[^*])\*([^*]+)\*(?!\*)/g, '$1<em>$2</em>');
+    }
+
+    function splitTableRow(row) {
+        let trimmed = row.trim();
+        if (trimmed.startsWith('|')) trimmed = trimmed.slice(1);
+        if (trimmed.endsWith('|')) trimmed = trimmed.slice(0, -1);
+        return trimmed.split('|').map(cell => cell.trim());
+    }
+
+    function isTableSeparator(line) {
+        return /^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?$/.test(line.trim());
+    }
+
+    function getColumnAlignments(separatorLine) {
+        return splitTableRow(separatorLine).map(cell => {
+            if (cell.startsWith(':') && cell.endsWith(':')) return 'center';
+            if (cell.endsWith(':')) return 'right';
+            return 'left';
+        });
+    }
+
+    function getKanbanColumnType(headerText) {
+        const normalized = headerText.trim().toLowerCase();
+        if (normalized === 'to do' || normalized === 'todo') return 'todo';
+        if (normalized === 'wip' || normalized === 'in progress') return 'wip';
+        if (normalized === 'done' || normalized === 'completed') return 'done';
+        return '';
+    }
+
+    function renderMarkdownTable(headers, alignments, rows) {
+        const colTypes = headers.map(getKanbanColumnType);
+        const isKanban = colTypes.filter(Boolean).length >= 2;
+
+        if (isKanban) {
+            const columnsHtml = headers.map((header, colIdx) => {
+                const colType = colTypes[colIdx] || 'default';
+                const cards = rows
+                    .map(row => (row[colIdx] || '').trim())
+                    .filter(cell => cell.length > 0);
+
+                const cardsHtml = cards.length > 0
+                    ? cards.map(cell => `<div class="gh-kanban-card">${formatInlineMarkdown(cell)}</div>`).join('')
+                    : '<div class="gh-kanban-empty">No items</div>';
+
+                return `
+                    <div class="gh-kanban-col" data-col="${colType}">
+                        <div class="gh-kanban-col-header">
+                            <span class="gh-kanban-col-title">${formatInlineMarkdown(header)}</span>
+                            <span class="gh-kanban-count">${cards.length}</span>
+                        </div>
+                        <div class="gh-kanban-cards">${cardsHtml}</div>
+                    </div>`;
+            }).join('');
+
+            return `<div class="gh-kanban-board" style="--kanban-cols: ${headers.length};">${columnsHtml}</div>`;
+        }
+
+        const theadHtml = headers
+            .map((h, idx) => `<th style="text-align: ${alignments[idx] || 'left'};">${formatInlineMarkdown(h)}</th>`)
+            .join('');
+
+        const tbodyHtml = rows.map(row => {
+            const cellsHtml = headers.map((_, idx) => {
+                const cell = (row[idx] || '').trim();
+                const align = alignments[idx] || 'left';
+                const emptyClass = cell ? '' : ' class="is-empty"';
+                return `<td${emptyClass} style="text-align: ${align};">${cell ? formatInlineMarkdown(cell) : ''}</td>`;
+            }).join('');
+            return `<tr>${cellsHtml}</tr>`;
+        }).join('');
+
+        return `
+            <div class="gh-table-wrap">
+                <table class="gh-table">
+                    <thead><tr>${theadHtml}</tr></thead>
+                    <tbody>${tbodyHtml}</tbody>
+                </table>
+            </div>`;
     }
 
     function renderGitHubMarkdown(md) {
@@ -787,14 +867,32 @@
         let html = '';
         let inList = false;
 
-        for (const rawLine of lines) {
-            const line = rawLine.trim();
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].trim();
 
             if (!line) {
                 if (inList) {
                     html += '</ul>';
                     inList = false;
                 }
+                continue;
+            }
+
+            if (line.includes('|') && i + 1 < lines.length && isTableSeparator(lines[i + 1])) {
+                if (inList) {
+                    html += '</ul>';
+                    inList = false;
+                }
+                const headers = splitTableRow(line);
+                const alignments = getColumnAlignments(lines[i + 1]);
+                const rows = [];
+                i += 2;
+                while (i < lines.length && lines[i].trim() && lines[i].includes('|')) {
+                    rows.push(splitTableRow(lines[i]));
+                    i++;
+                }
+                i--;
+                html += renderMarkdownTable(headers, alignments, rows);
                 continue;
             }
 
